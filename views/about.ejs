@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <head>
+        <title>Web Development</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/assets/css/main.css" rel="stylesheet">
+        <link href="/assets/css/animate.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="landing">
+            <div class="navbar">
+                <div>
+                    <ul class="navlinks">
+                        <li><a href="/">Home</a></li>
+                        <li class="active"><a href="/about">About Me</a></li>
+                        <li><a href="/offers">Offers</a></li>
+                        <li><a href="/impressum">Impressum</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="personal-info-wrapper">
+                <div class="personal-information">
+                    <h1>Who am I?</h1>
+                    <p>My name is <strong>Manuel Neumayer</strong> and I'm a young ongoing Software Developer living near Munich.
+                        At the moment I'm still studying Computer Science and Computational Linguistics at the Ludwig-Maximilians-Universität in Munich.
+                    </p>
+                </div>
+            </div>
+            <div class="code"></div>
+
+            <%- include partials/select-country.ejs %>
+        </header>
+                
+        <div class="container">
+            <div class="timeline-intro">
+                <h1>What have i been doing in the past years?</h1>
+            </div>
+
+            <div class="timeline">
+                <div class="content-container right">
+                    <div class="content">
+                        <h2>2018 - Today</h2>
+                        <h4>Studies of Computer Science and Computational Linguistics</h4>
+                        <p>Ludwig-Maximilians-Universität Munich</p>
+                    </div>
+                </div>
+                <div class="content-container left">
+                    <div class="content">
+                        <h2>2017</h2>
+                        <h4>Allgemeine Hochschulreife</h4>
+                        <p>Staatliche Fachoberschule Bad Tölz</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include partials/footer.ejs %>
+
+        <!-- FOR CHANGING NAVBAR ON SCROLL-->
+        <script src="/assets/js/navbar.js"></script>
+    </body>
+</html>
