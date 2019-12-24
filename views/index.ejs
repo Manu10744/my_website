@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="<%- language %>">
 
 <head>
     <title>Web Development</title>
@@ -14,10 +14,10 @@
         <div class="navbar">
             <div>
                 <ul class="navlinks">
-                    <li class="active"><a href="/">Home</a></li>
-                    <li><a href="/about">About Me</a></li>
-                    <li><a href="/offers">Offers</a></li>
-                    <li><a href="/impressum">Impressum</a></li>
+                    <li class="active"><a href="/<%- language %>"><%- docText.index_page.home %> </a></li>
+                    <li><a href="/<%- language %>/about"> <%- docText.index_page.about %> </a></li>
+                    <li><a href="/<%- language %>/offers"> <%- docText.index_page.offers %> </a></li>
+                    <li><a href="/<%- language %>/impressum"> <%- docText.index_page.impressum %> </a></li>
                 </ul>
             </div>
         </div>
@@ -28,7 +28,7 @@
                 <div class="subtitle">
                     <hr class="bar"><h3>By Manuel Neumayer</h3><hr class="bar">
                 </div>
-                <a class="contact-btn">Get in touch</a>
+                <a class="contact-btn"> <%- docText.index_page.contact %> </a>
             </div>
         </div>
         <div class="code"></div>
@@ -42,24 +42,24 @@
             <div class="modal-bg">
                 <div class="contact-box">
                     <button class="close">X</button>
-                    <h1 class="contact-heading">Kontaktformular</h1>
+                    <h1 class="contact-heading"> <%- docText.index_page.contact_form.form_heading %> </h1>
                     <form action="/send" method="POST">
-                        <label>Ihre Email-Addresse</label>
-                        <input type="text" required placeholder="Email-Addresse..." name="emailFrom">
+                        <label> <%- docText.index_page.contact_form.form_email_label %> </label>
+                        <input type="text" required placeholder="<%- docText.index_page.contact_form.form_email_placeholder %>" name="emailFrom">
             
-                        <label>Ihr Vorname</label>
-                        <input type="text" required placeholder="Vorname..." name="name">
+                        <label> <%- docText.index_page.contact_form.form_name_label %> </label>
+                        <input type="text" required placeholder="<%- docText.index_page.contact_form.form_name_placeholder %>" name="name">
             
-                        <label>Ihr Nachname</label>
-                        <input type="text" required placeholder="Nachname..." name="surname">
+                        <label> <%- docText.index_page.contact_form.form_surname_label %> </label>
+                        <input type="text" required placeholder="<%- docText.index_page.contact_form.form_surname_placeholder %>" name="surname">
             
-                        <label>Betreff</label>
-                        <input type="text" required placeholder="Betreff..." name="topic">
+                        <label><%- docText.index_page.contact_form.form_topic_label %> </label>
+                        <input type="text" required placeholder="<%- docText.index_page.contact_form.form_topic_placeholder %>" name="topic">
             
-                        <label>Ihr Anliegen</label>
+                        <label> <%- docText.index_page.contact_form.form_text_label %> </label>
                         <textarea required name="emailBody"></textarea>
                                 
-                        <button class="contact-submit">Senden</button>
+                        <button class="contact-submit"> <%- docText.index_page.contact_form.form_submit_text %> </button>
                     </form>
                 </div>
             </div>
@@ -77,10 +77,8 @@
             <% } %>
 
             <div class="jumbotron animated fadeInUp">
-                <h1>Creating Web applications...</h1>
-                <p>... has been my passion for years. As a computer science student and self-taught programmer I have the knowledge to create well-designed 
-                    and fast applications. If you're interested, don't hesitate to get in touch with me. I'd be glad to hear from you!
-                </p>
+                <h1> <%- docText.index_page.jumbo_heading %> </h1>
+                <p> <%- docText.index_page.jumbo_text %> </p>
             </div>
 
             <div class="devices animated fadeInUp">
@@ -88,14 +86,10 @@
                     <img src="/assets/img/devices.png">
                 </div>
                 <div class="description">
-                    <h1>Responsive on all devices</h1>
-                    <p>There are approximately 7 billion devices connected to the internet and the number 
-                        is getting bigger and bigger. Each device has a different screen resolution and size
-                        which requires websites to be fully responsive.
-                        <br><br>
-                        You don't have to worry about this - all of my products are completely 
-                        responsive.
-                    </p>
+                    <h1> <%- docText.index_page.products_heading %> </h1>
+                    <p> <%- docText.index_page.products_text_upper %> </p>
+                    <br><br>
+                    <p> <%- docText.index_page.products_text_lower %> </p>
                 </div>
             </div>
         </div>

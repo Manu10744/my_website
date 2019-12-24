@@ -14,20 +14,18 @@
             <div class="navbar">
                 <div>
                     <ul class="navlinks">
-                        <li><a href="/">Home</a></li>
-                        <li class="active"><a href="/about">About Me</a></li>
-                        <li><a href="/offers">Offers</a></li>
-                        <li><a href="/impressum">Impressum</a></li>
+                        <li><a href="/<%- language %>"> <%- docText.index_page.home %> </a></li>
+                        <li class="active"><a href="/<%- language %>/about"> <%- docText.index_page.about %> </a></li>
+                        <li><a href="/<%- language %>/offers"> <%- docText.index_page.offers %> </a></li>
+                        <li><a href="/<%- language %>/impressum"> <%- docText.index_page.impressum %> </a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="personal-info-wrapper">
                 <div class="personal-information">
-                    <h1>Who am I?</h1>
-                    <p>My name is <strong>Manuel Neumayer</strong> and I'm a young ongoing Software Developer living near Munich.
-                        At the moment I'm still studying Computer Science and Computational Linguistics at the Ludwig-Maximilians-Universität in Munich.
-                    </p>
+                    <h1> <%- docText.about_page.about_heading %> </h1>
+                    <p> <%- docText.about_page.about_text %> </p>
                 </div>
             </div>
             <div class="code"></div>
@@ -37,22 +35,22 @@
                 
         <div class="container">
             <div class="timeline-intro">
-                <h1>What have i been doing in the past years?</h1>
+                <h1> <%- docText.about_page.CV_heading %> </h1>
             </div>
 
             <div class="timeline">
                 <div class="content-container right">
                     <div class="content">
-                        <h2>2018 - Today</h2>
-                        <h4>Studies of Computer Science and Computational Linguistics</h4>
-                        <p>Ludwig-Maximilians-Universität Munich</p>
+                        <h2> <%- docText.about_page.CV_2018_heading %> </h2>
+                        <h4> <%- docText.about_page.CV_2018_desc %> </h4>
+                        <p> <%- docText.about_page.CV_2018_location %> </p>
                     </div>
                 </div>
                 <div class="content-container left">
                     <div class="content">
-                        <h2>2017</h2>
-                        <h4>Allgemeine Hochschulreife</h4>
-                        <p>Staatliche Fachoberschule Bad Tölz</p>
+                        <h2> <%- docText.about_page.CV_2017_heading %> </h2>
+                        <h4> <%- docText.about_page.CV_2017_desc %> </h4>
+                        <p> <%- docText.about_page.CV_2017_location %> </p>
                     </div>
                 </div>
             </div>

@@ -4,6 +4,7 @@ const session = require("express-session");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
+const fs = require('fs');
 
 const router = express.Router();
 
@@ -19,12 +20,19 @@ router.use(session({ cookie: { maxAge: 60000 },
 router.use(flash());
 
 // Routing
-router.get("/", (req, res) => {
-    res.render("index.ejs", { flashMessages: req.flash("success") });
+router.get("/", (req, res) => res.redirect("/de"));
+router.get("/:lang/", (req, res) => {
+    const selectedLang = req.params.lang;
+    const docText = JSON.parse(fs.readFileSync('./resources/lang/' + selectedLang + '.json').toString());
+
+    res.render("index.ejs", { flashMessages: req.flash("success"), docText: docText, language: selectedLang});
 });
 
-router.get("/about", (req, res) => {
-    res.render("about.ejs");
+router.get("/:lang/about", (req, res) => {
+    const selectedLang = req.params.lang;
+    const docText = JSON.parse(fs.readFileSync('./resources/lang/' + selectedLang + '.json').toString());
+    
+    res.render("about.ejs", { docText: docText, language: selectedLang });
 });
 
 router.get("/offers", (req, res) => {

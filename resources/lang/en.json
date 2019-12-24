@@ -1,0 +1,40 @@
+{
+    "index_page": {
+        "home": "Home",
+        "about": "About me",
+        "offers": "Offers",
+        "impressum": "Impressum",
+        "contact": "Get in touch",
+        "contact_form": {
+            "form_heading": "Contact Form",
+            "form_email_label": "Your Email-Address",
+            "form_email_placeholder": "Email-Address...",
+            "form_name_label": "Your Name",
+            "form_name_placeholder": "Name...",
+            "form_surname_label": "Your Surname",
+            "form_surname_placeholder": "Surname...",
+            "form_topic_label": "Topic",
+            "form_topic_placeholder": "Topic...",
+            "form_text_label": "What can I do for you?",
+            "form_submit_text": "Send"
+        },
+        "jumbo_heading": "Creating Web Applications...",
+        "jumbo_text": "... has been my passion for years. As a computer science student and self-taught programmer I have the knowledge to create well-designed and fast applications. If you're interested, don't hesitate to get in touch with me. I'd be glad to hear from you!",
+        "products_heading": "Responsive on all devices",
+        "products_text_upper": "There are approximately 7 billion devices connected to the internet and the number is getting bigger and bigger. Each device has a different screen resolution and size which requires websites to be fully responsive.",
+        "products_text_lower": "You don't have to worry about this - all of my products are completely responsive."
+    },
+    "about_page": { 
+        "about_heading": "Who am I?",
+        "about_text": "My name is Manuel Neumayer and I'm a young ongoing Software Developer living near Munich. At the moment I'm still studying Computer Science and Computational Linguistics at the Ludwig-Maximilians-Universität in Munich.",
+        "CV_heading": "What have I been doing in my life?",
+        "CV_2018_heading": "2018 - Today",
+        "CV_2018_desc": "Studies of Computer Science and Computational Linguistics",
+        "CV_2018_location": "Ludwig-Maximilians-University of Munich",
+        "CV_2017_heading": "2017",
+        "CV_2017_desc": "GCE A-Levels",
+        "CV_2017_location": "College of Further Education, Bad Tölz"
+    },
+    "offers_page": { },
+    "impressum_page": { }
+}
