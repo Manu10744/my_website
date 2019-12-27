@@ -405,7 +405,9 @@ header {
 
 .info-wrapper h1 {
     text-align: center;
+    width: auto;
     margin-bottom: 30px;
+    word-wrap: break-word;
 }
 
 .proglang-container {
@@ -522,6 +524,8 @@ footer {
 
     .right::after { left: -20px; }
     .left::after { left: -22px; }
+
+    .proglang-container { width: calc(100% - 10px); }
 }
     
 @media (min-width: 481px) and (max-width: 800px) {
@@ -546,6 +550,8 @@ footer {
 
     .right::after { left: -20px; }
     .left::after { left: -22px; }
+
+    .proglang-container { width: calc(50% - 10px);  }
 }
     
 @media (min-width: 801px) and (max-width: 1024px) { 
@@ -554,6 +560,8 @@ footer {
     .jumbotron p { width: 85%; }
     .devices { display: block; }
     .personal-information { width: 75%; }
+
+    .proglang-container { width: calc(50% - 10px);  }
 }
     
 @media (min-width: 1024px) and (max-width: 1920px) {
@@ -562,4 +570,6 @@ footer {
     .jumbotron p { width: 85%; }
     .devices { display: block; }
     .personal-information { width: 70%; }
+
+    .proglang-container { width: calc(50% - 10px);  }
 }
