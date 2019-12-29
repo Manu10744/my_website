@@ -22,9 +22,10 @@
         "jumbo_text": "... ist meine Leidenschaft seit Jahren. Als Informatikstudent, der sich das Programmieren selbst beigebracht hat, habe ich das nötige Wissen, um schnelle Anwendungen mit abgestimmtem Design zu entwickeln. Falls Sie Interesse haben, treten Sie gerne mit mir in Kontakt. Ich würde mich freuen, von Ihnen zu hören!",
         "products_heading": "Responsiv auf allen Endgeräten",
         "products_text_upper": "Es sind circa 7 Milliarden Endgeräte mit dem Internet verbunden und die Zahl wächst stetig an. Jedes Gerät hat eine eigene Bildschirmauflösung, was eine korrekte Darstellung von Websites auf den verschiedensten Auflösungen erfordert.",
-        "products_text_lower": "Sie müssen sich darum nicht kümmern - Jedes meiner Produkte sind komplett responsiv entwickelt."
+        "products_text_lower": "Sie müssen sich darum nicht kümmern - Jedes meiner Produkte ist komplett responsiv entwickelt."
     },
     "about_page": { 
+        "doc_title": "Über mich - Web Development",
         "about_heading": "Wer bin Ich?",
         "about_text": "Mein Name ist Manuel Neumayer und ich bin ein im Münchner Raum wohnhafter, angehender Softwareentwickler. Zur Zeit studiere ich Informatik und Computerlinguistik an der Ludwig-Maximilians-Universität München.",
         "CV_heading": "Wie sieht mein bisheriger Lebensweg aus?",

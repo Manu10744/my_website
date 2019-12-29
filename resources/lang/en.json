@@ -25,6 +25,7 @@
         "products_text_lower": "You don't have to worry about this - all of my products are completely responsive."
     },
     "about_page": { 
+        "doc_title": "About me - Web Development",
         "about_heading": "Who am I?",
         "about_text": "My name is Manuel Neumayer and I'm a young ongoing Software Developer living near Munich. At the moment I'm still studying Computer Science and Computational Linguistics at the Ludwig-Maximilians-Universität in Munich.",
         "CV_heading": "What have I been doing in my life?",

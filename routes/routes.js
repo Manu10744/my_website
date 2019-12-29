@@ -83,7 +83,7 @@ router.post("/send", (req, res) => {
     res.redirect("/");
 });
 
-router.get("/impressum", (req, res) => {
+router.get("/:lang/impressum", (req, res) => {
     res.render("impressum.ejs");
 })
 
