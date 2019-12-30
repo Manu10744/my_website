@@ -9,6 +9,22 @@
 
 body { background-color: #eee; position: absolute; min-width: 100%; }
 
+#typewriter {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+#typewriter::after {
+    content: '';
+    border-right: 2px solid;
+    border-color: inherit;
+    animation: blink 1s step-start 0s infinite;
+    margin-left: 4px;
+}
+
+
 /**************************************
              HEADER CONTENT 
 **************************************/
@@ -572,4 +588,10 @@ footer {
     .personal-information { width: 70%; }
 
     .proglang-container { width: calc(50% - 10px);  }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.0
+    }
 }
