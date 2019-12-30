@@ -10,7 +10,6 @@
 body { background-color: #eee; position: absolute; min-width: 100%; }
 
 #typewriter {
-    display: table;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -423,7 +422,8 @@ header {
     text-align: center;
     width: auto;
     margin-bottom: 30px;
-    word-wrap: break-word;
+    word-wrap    : break-word;
+    overflow-wrap: break-word;
 }
 
 .proglang-container {
