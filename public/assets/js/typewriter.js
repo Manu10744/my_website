@@ -1,17 +1,18 @@
-const Typewriter = function(element, wordsToPrint, wait = 3000) {
+const Typewriter = function(element, wordsToPrint, condition) {
     this.element = element;
     this.wordsToPrint = wordsToPrint;
+    this.condition = condition;
     this.currValue = '';
-    this.currentIndex = 0;
-    this.wait = parseInt(wait, 10);
     this.type();
 }
 
 // Method for the typing effect
 Typewriter.prototype.type = function() {
-    // Add char to the element
-    this.currValue = this.wordsToPrint.substring(0, this.currValue.length + 1);
-    this.element.innerHTML = this.currValue;
+    if (this.condition == null || this.condition != null && this.condition()) {
+        // Add char to the element
+        this.currValue = this.wordsToPrint.substring(0, this.currValue.length + 1);
+        this.element.innerHTML = this.currValue;
+    }
 
     setTimeout(() => this.type(), 80);
 }
@@ -34,8 +35,13 @@ function init() {
     programmingTW.element.innerHTML = '';
     personalInfoTW.element.innerHTML = '';
 
+    const hasScrolledEnough = function() {
+        if (document.scrollingElement.scrollTop > 400) return true
+        else return false;
+    }
+
     // Create Typewriters
-    new Typewriter(programmingTW.element, programmingTW.content); 
-    new Typewriter(personalInfoTW.element, personalInfoTW.content);
+    new Typewriter(programmingTW.element, programmingTW.content, hasScrolledEnough); 
+    new Typewriter(personalInfoTW.element, personalInfoTW.content, null);
 }
 
