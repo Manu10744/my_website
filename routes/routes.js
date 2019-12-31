@@ -35,6 +35,7 @@ router.get("/:lang/about", (req, res) => {
     res.render("about.ejs", { docText: docText, language: selectedLang });
 });
 
+/**
 router.get("/offers", (req, res) => {
     res.render("offers.ejs");
 });
@@ -42,6 +43,8 @@ router.get("/offers", (req, res) => {
 router.get("/portfolio", (req, res) => {
     res.render("portfolio.ejs");
 });
+
+*/
 
 router.post("/send", (req, res) => {
     async function main() {
@@ -84,12 +87,16 @@ router.post("/send", (req, res) => {
 });
 
 router.get("/:lang/impressum", (req, res) => {
-    res.render("impressum.ejs");
+    const selectedLang = req.params.lang;
+    res.render("impressum.ejs", { language: selectedLang });
 })
 
 // Catch everything else because of 404
-router.get("*", (req, res) => {
-    res.render("404.ejs");
+router.get("/:lang/*", (req, res) => {
+    const selectedLang = req.params.lang;
+    const docText = JSON.parse(fs.readFileSync('./resources/lang/' + selectedLang + '.json').toString());
+    
+    res.render("404.ejs", { docText: docText, language: selectedLang });
 });
 
 module.exports = router;

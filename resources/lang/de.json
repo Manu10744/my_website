@@ -1,9 +1,11 @@
 {
-    "index_page": {
+    "common": { 
         "home": "Home",
         "about": "Über mich",
         "offers": "Angebot",
-        "impressum": "Impressum",
+        "impressum": "Impressum"
+    },
+    "index_page": {
         "contact": "Kontakt",
         "contact_form": {
             "form_heading": "Kontaktformular",
@@ -38,5 +40,9 @@
         "programming_info_heading": "Programmiersprachen und andere Technologien"
     },
     "offers_page": { },
-    "impressum_page": { }
+    "impressum_page": { },
+    "not_found_page": { 
+        "doc_title": "Seite wurde nicht gefunden - Web Development",
+        "error_desc": "Entschuldigung, die angeforderte Seite konnte nicht gefunden werden."
+    }
 }

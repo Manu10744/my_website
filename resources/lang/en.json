@@ -1,9 +1,11 @@
 {
-    "index_page": {
+    "common": { 
         "home": "Home",
         "about": "About me",
         "offers": "Offers",
-        "impressum": "Impressum",
+        "impressum": "Impressum"
+    },
+    "index_page": {
         "contact": "Get in touch",
         "contact_form": {
             "form_heading": "Contact Form",
@@ -38,5 +40,9 @@
         "programming_info_heading": "Programming languages and other technologies"
     },
     "offers_page": { },
-    "impressum_page": { }
+    "impressum_page": { },
+    "not_found_page": { 
+        "doc_title": "Requested site could not be found - Web Development",
+        "error_desc": "Sorry, the page that you requested could not be found."
+    }
 }
