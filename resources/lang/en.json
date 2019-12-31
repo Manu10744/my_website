@@ -2,7 +2,6 @@
     "common": { 
         "home": "Home",
         "about": "About me",
-        "offers": "Offers",
         "impressum": "Impressum"
     },
     "index_page": {

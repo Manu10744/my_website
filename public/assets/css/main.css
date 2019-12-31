@@ -442,7 +442,7 @@ header {
 .proglang-container:hover { transform: translateY(-20px); }
 
 .proglang-container img { height: 100px; width: 100px; }
-.proglang-container h3 { position: absolute; top: 50%; left: 55%; transform: translateY(-50%); font-size: 1.3em; font-family: Arial, sans-serif; }
+.proglang-container h3 { position: absolute; top: 50%; left: 55%; transform: translateY(-50%); font-size: 1.3em; font-weight: lighter;}
 
 /**************************************
         404 ERROR PAGE CONTENT
