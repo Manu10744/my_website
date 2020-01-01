@@ -88,7 +88,8 @@ router.post("/send", (req, res) => {
 
 router.get("/:lang/impressum", (req, res) => {
     const selectedLang = req.params.lang;
-    res.render("impressum.ejs", { language: selectedLang });
+    const docText = JSON.parse(fs.readFileSync('./resources/lang/' + selectedLang + '.json').toString());
+    res.render("impressum.ejs", { docText: docText, language: selectedLang });
 })
 
 // Catch everything else because of 404
