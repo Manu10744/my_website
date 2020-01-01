@@ -2,7 +2,8 @@
     "common": { 
         "home": "Home",
         "about": "Über mich",
-        "impressum": "Impressum"
+        "impressum": "Impressum",
+        "select_lang_text": "Sprache auswählen..."
     },
     "index_page": {
         "contact": "Kontakt",

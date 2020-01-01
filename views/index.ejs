@@ -32,8 +32,6 @@
             </div>
         </div>
         <div class="code"></div>
-        
-        <%- include partials/select-country.ejs %>
     </header>
 
     <div class="container-wrapper">
@@ -94,11 +92,13 @@
             </div>
         </div>
     </div>
+    <%- include partials/select-language.ejs %>
 
     <%- include partials/footer.ejs %>
     <script src="https://unpkg.com/popmotion@8.4.2/dist/popmotion.global.min.js"></script>
     <script src="/assets/js/navbar.js"></script>
     <script src="/assets/js/contactbox.js"></script>
     <script src="/assets/js/svg-animation.js"></script>
+    <script src="/assets/js/select-language.js"></script>
 </body>
 </html>
