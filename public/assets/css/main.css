@@ -7,7 +7,15 @@
     font-family: 'Raleway', sans-serif;
 }
 
-body { background-color: #eee; position: absolute; min-width: 100%; }
+body { background-color: #eee; position: absolute; min-width: 100%;  }
+
+#snow-particle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 
 #typewriter {
     margin-left: auto;
@@ -596,6 +604,8 @@ footer {
 
     .container, .timeline { margin: 100px auto; }
 
+    /* disable snow particle due to poor performance */
+    #snow-particle { display: none; }
 }
     
 @media (min-width: 481px) and (max-width: 800px) {
