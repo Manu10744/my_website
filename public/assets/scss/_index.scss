@@ -1,0 +1,192 @@
+//  SCSS File for /views/index.ejs   //
+//  IMPORTED into /public/scss/global.scss //
+
+@import 'utilities/variables.scss';
+
+
+/*  INDEX PAGE */
+
+// Modal for the contact form
+.modal-shade {
+    display: none;
+    opacity: 0;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.4) 0, rgba(0,0,0,0.8) 100%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    will-change: opacity;
+    z-index: 3;
+}
+
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    background: rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+.contact-box {
+    width: 40%;
+    background-color: #222326;
+    margin: 0 auto;
+    padding: 50px 70px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .contact-heading {
+        color: #bbb; 
+        margin-bottom: 10px;
+    }
+    
+    .contact-close-btn {
+        position: absolute; 
+        top: 20px;
+        right: 30px;
+        width: 30px;
+        background-color: #222326;
+        color: lightskyblue;
+        border: none;
+        font-size: 22px;
+        cursor: pointer;
+        transition: 0.4s all;
+        outline: none;
+    }
+
+    .contact-close-btn:hover { 
+        background: lightskyblue;
+        color: #222326;
+    }
+
+    .contact-submit-btn {
+        font-size: 14px;
+        font-family: Raleway;
+        font-weight: bold;
+        color: lightskyblue;
+        height: 25px;
+        width: 90px;
+        border: 1px solid lightskyblue;
+        background-color: #222326;
+        cursor: pointer;
+        transition: 0.4s all;
+        margin-top: 10px;
+    }
+
+    .contact-submit-btn:hover {
+        background-color: lightskyblue;
+        color: #222326;
+    }
+
+    button, input, textarea { display: block;  }
+
+    label {
+        color: #bbb;
+        font-size: 11px;
+        color: lightskyblue;
+    }
+
+    input {
+        width: 100%;
+        height: 25px;
+        border-radius: 2px;
+        border: none;
+        padding-left: 10px;
+        outline: none;
+        margin: 2px 0 5px 0;
+    }
+
+    textarea {
+        width: 100%; 
+        height: 150px; 
+        resize: none; 
+        margin: 2px 0 5px 0; 
+        outline: none; 
+        border-radius: 2px; 
+        padding: 10px;
+    }
+}
+
+.flash-msg-container {
+    height: 80px;
+    width: 70%;
+    margin: 0 auto;
+    background: rgba(230, 230, 230, 0.9);
+    padding: 20px 5px;
+    border-radius: 10px;
+    z-index: 4;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 { 
+        display: inline-block; 
+        vertical-align: top; 
+        margin: 0 15px; 
+        color: $darkGray;
+    }
+}
+
+.jumbotron {
+    text-align: center;
+    background: #f3f3f3;
+    border-radius: 5px;
+    padding: 50px;
+    margin: 250px 0;
+    -webkit-box-shadow: 0px 0px 18px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 18px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 18px -13px rgba(0,0,0,0.75);
+    z-index: 0;
+    position: relative;
+
+    h1 {
+        font-size: 60px;
+        font-weight: lighter;
+        margin-bottom: 20px;
+        letter-spacing: -2px;
+    }
+
+    p {
+        width: 50%;
+        line-height: 25px;
+        margin: 0 auto;
+    }
+}
+
+.devices {
+    width: 100%;
+    margin: 250px auto;
+    display: flex;
+
+    .devices-img-container { flex: 6; }
+
+    img { width: 100%; }
+
+    .devices-description {
+        flex: 5;
+        text-align: center;
+        line-height: 22px;
+        padding: 20px 0;
+
+        h1 {
+            font-weight: lighter;
+            padding: 30px 0;
+            color: #444;
+            font-weight: bold;
+        }
+    }
+}
+
+// changed: .close, .contact-submit, .landing-content, .landing-content-wrapper

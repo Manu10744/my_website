@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/img/favicon.ico">
-    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/compiled.css" rel="stylesheet">
     <link href="/assets/css/animate.css" rel="stylesheet">
 </head>
 
@@ -22,8 +22,8 @@
             </div>
         </div>
 
-        <div class="landing-content">
-            <div class="content-wrapper">
+        <div class="landing-content-wrapper">
+            <div class="landing-content">
                 <h1>Web Development</h1>
                 <div class="subtitle">
                     <hr class="bar"><h3>By Manuel Neumayer</h3><hr class="bar">
@@ -41,7 +41,7 @@
             <div class="modal-shade"></div>
             <div class="modal-bg">
                 <div class="contact-box">
-                    <button class="close">X</button>
+                    <button class="contact-close-btn">X</button>
                     <h1 class="contact-heading"> <%- docText.index_page.contact_form.form_heading %> </h1>
                     <form action="/send" method="POST">
                         <label> <%- docText.index_page.contact_form.form_email_label %> </label>
@@ -59,13 +59,13 @@
                         <label> <%- docText.index_page.contact_form.form_text_label %> </label>
                         <textarea required name="emailBody"></textarea>
                                 
-                        <button class="contact-submit"> <%- docText.index_page.contact_form.form_submit_text %> </button>
+                        <button class="contact-submit-btn"> <%- docText.index_page.contact_form.form_submit_text %> </button>
                     </form>
                 </div>
             </div>
 
             <% if (flashMessages != undefined && flashMessages.length > 0) { %>
-                <div class="flash animated fadeOut delay-3s contact-success">
+                <div class="flash-msg-container animated fadeOut delay-3s contact-success">
                         <svg class="progress-icon" width="50" height="50" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                             <g class="tick-icon" stroke-width="2" stroke="#222326" fill="none" transform="translate(1, 1.2)">
                                 <path id="tick-outline-path" d="M14 28c7.732 0 14-6.268 14-14S21.732 0 14 0 0 6.268 0 14s6.268 14 14 14z" opacity="0" />
@@ -85,7 +85,7 @@
                 <div class="devices-img-container">
                     <img src="/assets/img/devices.png">
                 </div>
-                <div class="description">
+                <div class="devices-description">
                     <h1> <%- docText.index_page.products_heading %> </h1>
                     <p> <%- docText.index_page.products_text_upper %> </p>
                     <br><br>

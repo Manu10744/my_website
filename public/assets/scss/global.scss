@@ -1,0 +1,373 @@
+@use 'index.scss';
+@use 'about.scss';
+@use 'not-found.scss';
+@use 'impressum.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
+
+@import 'utilities/variables.scss';
+
+// ******************************************************************** //
+/*                            GLOBAL STYLES                             */                  
+// ******************************************************************** //
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body { background-color: #eee; position: absolute; min-width: 100%;  }
+
+#snow-particle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#typewriter {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+#typewriter::after {
+    content: '';
+    border-right: 2px solid;
+    border-color: inherit;
+    animation: blink 1s step-start 0s infinite;
+    margin-left: 4px;
+}
+
+.code {
+    background: url('../img/code.svg') no-repeat;
+    margin-top: 70px;
+    flex: 6;
+}
+
+.select-language {
+    width: 100%;
+    background-color: rgba(0,0,0,0.9);
+    color: $darkWhite;
+    position: relative;
+
+    // For activating/deactivating the select language dropdown
+    button {
+        width: 100%;
+        cursor: pointer;
+        background-color: rgba(0,0,0,0.9);
+        padding: 10px 0;
+        color: $darkWhite;
+        border: none;
+        outline: none;
+        transition: 0.4s all;
+    }
+
+    // Assigned when select language dropdown was clicked
+    .selection-activated {
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid lightskyblue;
+        border-bottom: none;
+        top: 16px;
+    }
+
+    // Containing all languages that can be selected
+    .language-options {
+        height: 0; 
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    .option a {
+        text-decoration: none;
+        color: #f7f7f7;
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        transition: 0.4s all;
+        background-color: rgba(0,0,0,0.2);
+    }
+
+    .option a:hover {
+        color: lightskyblue; 
+        background: rgba(0,0,0,0.9);
+    }
+}
+
+// Arrow indicator looking up or down depending on state of select-language dropdown
+.selection-indicator {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 6px solid $darkWhite;
+}
+
+header {
+    width: 100%;
+    height: 500px;
+    background: $darkGray;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-shadow: 40px 11px 66px -15px rgba(0,0,0,0.75);
+    -moz-box-shadow: 40px 11px 66px -15px rgba(0,0,0,0.75);
+    box-shadow: 40px 11px 66px -15px rgba(0,0,0,0.75);
+
+    .active { border-bottom: 2px solid lightskyblue!important; }
+    .active > a { color: lightskyblue!important; }
+
+    .navbar {
+        width: 100%;
+        height: 70px;
+        background-color: rgba(0,0,0,0.25);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        top: 0; 
+        left: 0;
+        transition: 0.3s background-color;
+        z-index: 3;
+    }
+
+    .navbar-scrolled { background-color: #fff; }
+
+    .navlinks {
+        display: flex;
+        height: 70px;
+
+        a {
+            color: $darkWhite;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: lighter;
+            display: block;
+            padding: 25px 15px;
+            transition: 0.3s all;
+        }
+
+        a:hover { color: lightskyblue!important; }
+
+        li {
+            list-style: none; 
+            transition: border 0.3s;
+        }
+
+        li:hover { border-bottom: 2px solid lightskyblue!important; }
+    }
+}
+
+footer {
+    width: 100%;
+    background: $darkGray;
+    text-align: center;
+    color: $darkWhite;
+    font-size: 14px;
+
+    .footer-information {
+        padding: 20px 0; 
+        display: flex; 
+        justify-content: center;
+
+        p {
+            margin: 10px 0;
+        }
+    }
+
+    .copyright-wrapper {
+        width: 30%;
+        float: left;
+        z-index: 3;
+
+        a {
+            margin-top: 15px; 
+            color: $darkWhite;
+        }
+    }
+
+    .social-media-wrapper {
+        width: 10%;
+        display: flex;
+        justify-content: right;
+        z-index: 3;
+
+        .social-media {
+            height: 50px;
+            width: 50px;
+            fill: $darkWhite;
+            padding: 10px;
+            transition: 0.4s all;
+        }
+
+        .social-media:hover {
+            background: #333;
+            fill: lightskyblue;
+        }
+    }
+}
+
+.container {
+    width: 50%;
+    margin: 200px auto;
+    position: relative;
+}
+
+.landing-content-wrapper { 
+    margin-top: 70px; 
+    flex: 8;
+    z-index: 2;
+ 
+    .landing-content {
+        color: $darkGray;
+        text-align: center;
+        margin: 75px 100px 130px 100px;
+        cursor: default;
+        color: $darkWhite;
+    
+        h1 {
+            font-size: 60px;
+            margin-bottom: 10px; 
+            letter-spacing: 1.3px;
+        }
+
+        .bar {
+            flex: 1%; 
+            height: 1px; 
+            border: none; 
+            background: #eee;
+        }
+
+        .subtitle {
+            display: flex; 
+            flex-direction: row; 
+            align-items: center; 
+            margin-bottom: 50px; 
+            width: 400px; 
+            margin: 0 auto 50px auto;
+
+            h3 {
+                color: #eee; 
+                padding: 0 15px; 
+                font-weight: lighter; 
+            }
+        }
+
+        .contact-btn {
+            color: lightskyblue;
+            padding: 15px 30px;
+            border: 1px solid lightskyblue;
+            text-decoration: none;
+            transition: 0.4s all;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contact-btn:hover {
+            background-color: lightskyblue;
+            color: #000;
+            border-color: lightskyblue;
+        }
+    }
+}
+
+
+/* Cursor-like animation for the Typewriter effect */
+@keyframes blink {
+    50% {
+        opacity: 0.0
+    }
+}
+
+/*              UTILITY CLASSES              */
+.header-min { height: 70px; }
+.underlined { text-decoration: underline; font-weight: lighter; }
+.contact-success { background: rgba(105, 255, 147, 0.8); }
+
+
+/*              MEDIA QUERIES              */
+@media (max-width: 480px) {
+    .code { display: none; }
+    .container { width: 90%; }
+    .jumbotron { margin: 150px 0;}
+    .jumbotron h1 { font-size: 45px; }
+    .jumbotron p { width: 85%; }
+    .devices { display: block; }
+    .contact-box { width: 80%; padding: 20px 40px; }
+    .personal-information { width: 100%; padding: 0 30px; }
+    .personal-information h1 { font-size: 3em; }
+
+    .timeline { width: 100%; }
+    .timeline::after { left: 30px; }
+    .timeline .right { left: -2px; }
+
+    .timeline .tl-content-container { padding: 20px 10px 20px 30px; margin-left: 60px; width: 80%; }
+    .timeline .tl-content-container::before { 
+        left: 15px;
+        border: medium solid #222326;
+        border-width: 13px 15px 13px 0;
+        border-color: transparent #222326 transparent transparent;
+    }
+
+    .timeline .right::after { left: -40px; }
+    .timeline .left::after { left: -42px; }
+
+    .proglang-container { width: calc(100% - 10px); }
+
+    .container, .timeline { margin: 100px auto; }
+
+    /* disable snow particle due to poor performance */
+    #snow-particle { display: none; }
+}
+    
+@media (min-width: 481px) and (max-width: 800px) {
+    .code { display: none; }
+    .jumbotron h1 { font-size: 30px; }
+    .jumbotron p { width: 85%; }
+    .devices { display: block; }
+    .flash-msg-container { width: 95%; font-size: 0.8em; padding: 20px; }
+    .personal-information { width: 75%; }
+    .container { width: 85%; }
+
+    .timeline::after { left: 50px; }
+    .timeline .right { left: -2px; }
+
+    .timeline .tl-content-container { padding: 20px 40px; margin-left: 60px; width: 100%; }
+    .timeline .tl-content-container::before { 
+        left: 30px;
+        border: medium solid #222326;
+        border-width: 13px 15px 13px 0;
+        border-color: transparent #222326 transparent transparent;
+    }
+
+    .timeline .right::after { left: -20px; }
+    .timeline .left::after { left: -22px; }
+
+    .proglang-container { width: calc(50% - 10px);  }
+}
+    
+@media (min-width: 801px) and (max-width: 1024px) { 
+    .container { width: 85%;}
+    .jumbotron h1 { font-size: 30px; }
+    .jumbotron p { width: 85%; }
+    .devices { display: block; }
+    .personal-information { width: 75%; }
+
+    .proglang-container { width: calc(50% - 10px);  }
+}
+    
+@media (min-width: 1024px) and (max-width: 1920px) {
+    .container { width: 65%; }
+    .jumbotron h1 { font-size: 35px; }
+    .jumbotron p { width: 85%; }
+    .devices { display: block; }
+    .personal-information { width: 70%; }
+
+    .proglang-container { width: calc(50% - 10px);  }
+}

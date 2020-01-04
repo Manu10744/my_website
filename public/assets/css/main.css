@@ -142,10 +142,11 @@ header {
 }
 .navlinks a:hover { color: lightskyblue!important; }
 
+.landing-content-wrapper { margin: 75px 100px 130px 100px; flex: 8; z-index: 3;}
+
 .landing-content {
     color: #eee;
     text-align: center;
-    flex: 8;
     margin-top: 70px;
     cursor: default;
 }
@@ -161,8 +162,6 @@ header {
     margin-top: 70px;
     flex: 6;
 }
-
-.content-wrapper { margin: 75px 100px 130px 100px; }
 
 .subtitle { display: flex; flex-direction: row; align-items: center; margin-bottom: 50px; width: 400px; margin: 0 auto 50px auto; }
 .subtitle h3 { color: #eee; padding: 0 15px; font-weight: lighter; }
@@ -187,7 +186,6 @@ header {
 /**************************************
              INDEX BODY CONTENT 
 **************************************/
-.container-wrapper { width: 100%; padding-bottom: 300px; position: relative; }
 .container {
     width: 50%;
     margin: 200px auto;
@@ -248,13 +246,13 @@ header {
 }
 
 .contact-box textarea {
-     width: 100%; 
-     height: 150px; 
-     resize: none; 
-     margin: 2px 0 5px 0; 
-     outline: none; 
-     border-radius: 2px; 
-     padding: 10px;
+    width: 100%; 
+    height: 150px; 
+    resize: none; 
+    margin: 2px 0 5px 0; 
+    outline: none; 
+    border-radius: 2px; 
+    padding: 10px;
 }
 
 .contact-box input, .contact-box textarea, .contact-box button {
@@ -375,11 +373,6 @@ header {
 /**************************************
         ABOUT ME CONTENT
 **************************************/
-.personal-info-wrapper {
-    flex: 8;
-    color: #eee;
-    margin-top: 70px;
-}
 
 .personal-information { 
     width: 50%;
@@ -412,13 +405,13 @@ header {
     border-radius: 10px;
 }
 
-.content-container {
+.tl-content-container {
     position: relative;
     width: 50%;
     padding: 20px 40px;
 }
 
-.content-container::after {
+.tl-content-container::after {
     content: '';
     position: absolute;
     height: 25px;
@@ -430,11 +423,6 @@ header {
     transform: translateY(-50%);
     z-index: 1;
     border: 4px solid #222326;
-}
-
-.timeline .startingpoint {
-    bottom: -65px;
-    position: absolute;
 }
 
 .left { left: 0; }
@@ -468,14 +456,14 @@ header {
     transform: translateY(-50%);
 }
 
-.content {
+.tl-content {
     background: #222326;
     padding: 20px;
     border-radius: 5px;
     color: #eee;
 }
 
-.content h4 { margin-bottom: 10px; }
+.tl-content h4 { margin-bottom: 10px; }
 
 .info-wrapper h1 {
     text-align: center;
@@ -589,8 +577,8 @@ footer {
     .timeline::after { left: 50px; }
     .right { left: -2px; }
 
-    .content-container { padding: 20px 40px; margin-left: 60px; width: 80%; /**TODO: CHECK WHY 100% breaks Layout */ }
-    .content-container::before { 
+    .tl-content-container { padding: 20px 40px; margin-left: 60px; width: 80%; /**TODO: CHECK WHY 100% breaks Layout */ }
+    .tl-content-container::before { 
         left: 30px;
         border: medium solid #222326;
         border-width: 13px 15px 13px 0;
@@ -620,8 +608,8 @@ footer {
     .timeline::after { left: 50px; }
     .right { left: -2px; }
 
-    .content-container { padding: 20px 40px; margin-left: 60px; width: 100%; }
-    .content-container::before { 
+    .tl-content-container { padding: 20px 40px; margin-left: 60px; width: 100%; }
+    .tl-content-container::before { 
         left: 30px;
         border: medium solid #222326;
         border-width: 13px 15px 13px 0;
@@ -654,6 +642,7 @@ footer {
     .proglang-container { width: calc(50% - 10px);  }
 }
 
+/* Cursor-like animation for the Typewriter effect */
 @keyframes blink {
     50% {
         opacity: 0.0
