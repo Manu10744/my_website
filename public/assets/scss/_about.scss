@@ -18,7 +18,7 @@
 .timeline-intro { text-align: center; }
 
 .timeline {
-    margin: 200px auto;
+    margin: 45px auto;
     width: 90%;
     height: 500px;
     position: relative;
@@ -93,6 +93,38 @@
     left: 50%;
     top: 0;
     border-radius: 10px;
+}
+
+.personal {
+    background: $darkGray;
+    display: flex;
+    
+    .personal-text-container, .image-container {
+        padding: 6rem 3rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .personal-text-container { 
+        width: 60%; 
+
+        .personal-text {
+            text-align: center;
+            color: $darkWhite;
+            width: 50%;
+            margin: 0 auto;
+
+            p, ul { line-height: 1.5em; }
+            h1, .info { margin-bottom: 30px; }
+            ul { list-style-position: inside; }
+        }
+    }
+
+    .image-container { 
+        width: 40%;
+
+        .personal-image img { width: 100%; height: auto; max-height: 400px; max-width: 400px; border-radius: 50%; }
+    }
 }
 
 .info-wrapper h1 {

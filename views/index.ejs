@@ -26,7 +26,9 @@
             <div class="landing-content">
                 <h1>Web Development</h1>
                 <div class="subtitle">
-                    <hr class="bar"><h3>By Manuel Neumayer</h3><hr class="bar">
+                    <hr class="bar">
+                    <h3>By Manuel Neumayer</h3>
+                    <hr class="bar">
                 </div>
                 <a class="contact-btn"> <%- docText.index_page.contact %> </a>
             </div>
@@ -36,61 +38,65 @@
 
     <div id="snow-particle"></div>
 
-    <div class="container-wrapper">
-        <div class="container">
-            <div class="modal-shade"></div>
-            <div class="modal-bg">
-                <div class="contact-box">
-                    <button class="contact-close-btn">X</button>
-                    <h1 class="contact-heading"> <%- docText.index_page.contact_form.form_heading %> </h1>
-                    <form action="/send" method="POST">
-                        <label> <%- docText.index_page.contact_form.form_email_label %> </label>
-                        <input type="text" required placeholder="<%- docText.index_page.contact_form.form_email_placeholder %>" name="emailFrom">
-            
-                        <label> <%- docText.index_page.contact_form.form_name_label %> </label>
-                        <input type="text" required placeholder="<%- docText.index_page.contact_form.form_name_placeholder %>" name="name">
-            
-                        <label> <%- docText.index_page.contact_form.form_surname_label %> </label>
-                        <input type="text" required placeholder="<%- docText.index_page.contact_form.form_surname_placeholder %>" name="surname">
-            
-                        <label><%- docText.index_page.contact_form.form_topic_label %> </label>
-                        <input type="text" required placeholder="<%- docText.index_page.contact_form.form_topic_placeholder %>" name="topic">
-            
-                        <label> <%- docText.index_page.contact_form.form_text_label %> </label>
-                        <textarea required name="emailBody"></textarea>
-                                
-                        <button class="contact-submit-btn"> <%- docText.index_page.contact_form.form_submit_text %> </button>
-                    </form>
-                </div>
+    <div class="container">
+        <div class="modal-shade"></div>
+        <div class="modal-bg">
+            <div class="contact-box">
+                <button class="contact-close-btn">X</button>
+                <h1 class="contact-heading"> <%- docText.index_page.contact_form.form_heading %> </h1>
+                <form action="/send" method="POST">
+                    <label> <%- docText.index_page.contact_form.form_email_label %> </label>
+                    <input type="text" required
+                        placeholder="<%- docText.index_page.contact_form.form_email_placeholder %>" name="emailFrom">
+
+                    <label> <%- docText.index_page.contact_form.form_name_label %> </label>
+                    <input type="text" required
+                        placeholder="<%- docText.index_page.contact_form.form_name_placeholder %>" name="name">
+
+                    <label> <%- docText.index_page.contact_form.form_surname_label %> </label>
+                    <input type="text" required
+                        placeholder="<%- docText.index_page.contact_form.form_surname_placeholder %>" name="surname">
+
+                    <label><%- docText.index_page.contact_form.form_topic_label %> </label>
+                    <input type="text" required
+                        placeholder="<%- docText.index_page.contact_form.form_topic_placeholder %>" name="topic">
+
+                    <label> <%- docText.index_page.contact_form.form_text_label %> </label>
+                    <textarea required name="emailBody"></textarea>
+
+                    <button class="contact-submit-btn"> <%- docText.index_page.contact_form.form_submit_text %>
+                    </button>
+                </form>
             </div>
+        </div>
 
-            <% if (flashMessages != undefined && flashMessages.length > 0) { %>
-                <div class="flash-msg-container animated fadeOut delay-3s contact-success">
-                        <svg class="progress-icon" width="50" height="50" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                            <g class="tick-icon" stroke-width="2" stroke="#222326" fill="none" transform="translate(1, 1.2)">
-                                <path id="tick-outline-path" d="M14 28c7.732 0 14-6.268 14-14S21.732 0 14 0 0 6.268 0 14s6.268 14 14 14z" opacity="0" />
-                                <path id="tick-path" d="M6.173 16.252l5.722 4.228 9.22-12.69" opacity="0"/>
-                            </g>
-                        </svg>
-                    <h1> <%= flashMessages %> </h1>
-                </div>
-            <% } %>
+        <% if (flashMessages != undefined && flashMessages.length > 0) { %>
+        <div class="flash-msg-container animated fadeOut delay-3s contact-success">
+            <svg class="progress-icon" width="50" height="50" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <g class="tick-icon" stroke-width="2" stroke="#222326" fill="none" transform="translate(1, 1.2)">
+                    <path id="tick-outline-path"
+                        d="M14 28c7.732 0 14-6.268 14-14S21.732 0 14 0 0 6.268 0 14s6.268 14 14 14z" opacity="0" />
+                    <path id="tick-path" d="M6.173 16.252l5.722 4.228 9.22-12.69" opacity="0" />
+                </g>
+            </svg>
+            <h1> <%= flashMessages %> </h1>
+        </div>
+        <% } %>
 
-            <div class="jumbotron animated fadeInUp">
-                <h1> <%- docText.index_page.jumbo_heading %> </h1>
-                <p> <%- docText.index_page.jumbo_text %> </p>
+        <div class="jumbotron animated fadeInUp">
+            <h1> <%- docText.index_page.jumbo_heading %> </h1>
+            <p> <%- docText.index_page.jumbo_text %> </p>
+        </div>
+
+        <div class="devices animated fadeInUp">
+            <div class="devices-img-container">
+                <img src="/assets/img/devices.png">
             </div>
-
-            <div class="devices animated fadeInUp">
-                <div class="devices-img-container">
-                    <img src="/assets/img/devices.png">
-                </div>
-                <div class="devices-description">
-                    <h1> <%- docText.index_page.products_heading %> </h1>
-                    <p> <%- docText.index_page.products_text_upper %> </p>
-                    <br><br>
-                    <p> <%- docText.index_page.products_text_lower %> </p>
-                </div>
+            <div class="devices-description">
+                <h1> <%- docText.index_page.products_heading %> </h1>
+                <p> <%- docText.index_page.products_text_upper %> </p>
+                <br>
+                <p> <%- docText.index_page.products_text_lower %> </p>
             </div>
         </div>
     </div>
@@ -107,4 +113,5 @@
     <script src="/assets/js/particles.min.js"></script>
     <script src="/assets/js/particle.js"></script>
 </body>
+
 </html>

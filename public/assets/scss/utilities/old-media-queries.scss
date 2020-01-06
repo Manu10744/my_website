@@ -1,0 +1,95 @@
+/* OLD MEDIA QUERIES TO FALLBACK TO IF NEEDED */
+/* WILL BE DELETED SOON */
+
+
+@media (max-width: 480px) {
+    .code { display: none; }
+    .container { width: 90%; }
+    .jumbotron { margin: 150px 0;}
+    .jumbotron h1 { font-size: 45px; }
+    .jumbotron p { width: 85%; }
+    .devices { display: block; }
+    .contact-box { width: 90%; padding: 20px; }
+
+    .contact-box .contact-close-btn {
+         position: relative; 
+         top: 0;
+         left: 0;
+         margin-bottom: 10px;
+    }
+
+    .contact-box .contact-heading { font-size: 14px; }
+    .personal-information { width: 100%; padding: 0 30px; }
+    .personal-information h1 { font-size: 3em; }
+
+    .timeline { width: 100%; }
+    .timeline::after { left: 30px; }
+    .timeline .right { left: -2px; }
+
+    .timeline .tl-content-container { padding: 20px 10px 20px 30px; margin-left: 60px; width: 80%; }
+    .timeline .tl-content-container::before { 
+        left: 15px;
+        border: medium solid #222326;
+        border-width: 13px 15px 13px 0;
+        border-color: transparent #222326 transparent transparent;
+    }
+
+    .timeline .right::after { left: -40px; }
+    .timeline .left::after { left: -42px; }
+
+    .proglang-container { width: calc(100% - 10px); }
+
+    .container, .timeline { margin: 100px auto; }
+
+    /* disable snow particle due to poor performance */
+    #snow-particle { display: none; }
+}
+    
+@media (min-width: 481px) and (max-width: 800px) {
+    .code { display: none; }
+    .jumbotron h1 { font-size: 30px; }
+    .jumbotron p { width: 85%; }
+    .devices { display: block; }
+    .flash-msg-container { width: 95%; font-size: 0.8em; padding: 20px; }
+    .personal-information { width: 75%; }
+    .container { width: 85%; }
+
+    .timeline::after { left: 50px; }
+    .timeline .right { left: -2px; }
+
+    .contact-box { width: 80%; }
+    .timeline .tl-content-container { padding: 20px 40px; margin-left: 60px; width: 100%; }
+    .timeline .tl-content-container::before { 
+        left: 30px;
+        border: medium solid #222326;
+        border-width: 13px 15px 13px 0;
+        border-color: transparent #222326 transparent transparent;
+    }
+
+    .timeline .right::after { left: -20px; }
+    .timeline .left::after { left: -22px; }
+
+    .proglang-container { width: calc(50% - 10px);  }
+}
+    
+@media (min-width: 801px) and (max-width: 1024px) { 
+    .container { width: 85%;}
+    .jumbotron h1 { font-size: 30px; }
+    .jumbotron p { width: 85%; }
+    .devices { display: block; }
+    .personal-information { width: 75%; }
+
+    .contact-box { width: 80%; }
+
+    .proglang-container { width: calc(50% - 10px);  }
+}
+    
+@media (min-width: 1024px) and (max-width: 1920px) {
+    .container { width: 65%; }
+    .jumbotron h1 { font-size: 35px; }
+    .jumbotron p { width: 85%; }
+    .devices { display: block; }
+    .personal-information { width: 70%; }
+
+    .proglang-container { width: calc(25% - 10px);  }
+}
