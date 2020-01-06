@@ -1,14 +1,22 @@
-const Typewriter = function(element, wordsToPrint, condition) {
+const Typewriter = function(element, wordsToPrint) {
     this.element = element;
     this.wordsToPrint = wordsToPrint;
-    this.condition = condition;
     this.currValue = '';
     this.type();
 }
 
+const isInViewport = function isInViewport(element) {
+    elemTop = element.getBoundingClientRect().top;
+    elemDown = element.getBoundingClientRect().bottom;
+
+    isVisible = (elemTop >= 0) && (elemDown <= window.innerHeight);
+
+    if (isVisible) return true;
+}
+
 // Method for the typing effect
 Typewriter.prototype.type = function() {
-    if (this.condition == null || this.condition != null && this.condition()) {
+    if (isInViewport(this.element)) {
         // Add char to the element
         this.currValue = this.wordsToPrint.substring(0, this.currValue.length + 1);
         this.element.innerHTML = this.currValue;
@@ -30,18 +38,21 @@ function init() {
         element: document.querySelector(".personal-information h1"),
         content: document.querySelector(".personal-information h1").innerHTML
     }
+
+    const myWayTW = {
+        element: document.querySelector(".way-into-it h1"),
+        content: document.querySelector(".way-into-it h1").innerHTML
+    }
+    
     
     // Clear text of elements
     programmingTW.element.innerHTML = '';
     personalInfoTW.element.innerHTML = '';
-
-    const hasScrolledEnough = function() {
-        if (document.scrollingElement.scrollTop > 400) return true
-        else return false;
-    }
+    myWayTW.element.innerHTML = '';
 
     // Create Typewriters
-    new Typewriter(programmingTW.element, programmingTW.content, hasScrolledEnough); 
-    new Typewriter(personalInfoTW.element, personalInfoTW.content, null);
+    new Typewriter(programmingTW.element, programmingTW.content); 
+    new Typewriter(personalInfoTW.element, personalInfoTW.content);
+    new Typewriter(myWayTW.element, myWayTW.content);
 }
 
