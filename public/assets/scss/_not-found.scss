@@ -1,0 +1,19 @@
+//  SCSS File for /views/about.ejs   //
+//  IMPORTED into /public/scss/global.scss //
+
+@import 'utilities/variables.scss';
+
+
+/* 404 NOT FOUND PAGE */
+.page-not-found {
+    width: 100%;
+    margin: 150px auto;
+    text-align: center;
+    color: $darkWhite;
+
+    h1 {
+        font-size: 60px; 
+        font-family: Arial; 
+        margin-bottom: 20px;
+    }
+}

@@ -1,7 +1,7 @@
 var { styler, timeline, listen, easing } = window.popmotion;
 
 const openModalButton = document.querySelector('.contact-btn');
-const cancelModalButton = document.querySelector('.close');
+const cancelModalButton = document.querySelector('.contact-close-btn');
 
 const modalShade = styler(document.querySelector('.modal-shade'));
 const modalContainer = styler(document.querySelector('.modal-bg'));

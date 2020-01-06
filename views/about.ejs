@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/img/favicon.ico">
-    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/compiled.css" rel="stylesheet">
     <link href="/assets/css/animate.css" rel="stylesheet">
 </head>
 
@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <div class="personal-info-wrapper">
+        <div class="landing-content-wrapper">
             <div class="personal-information">
                 <h1 id="typewriter"> <%- docText.about_page.about_heading %> </h1>
                 <p> <%- docText.about_page.about_text %> </p>
@@ -39,23 +39,51 @@
         </div>
 
         <div class="timeline">
-            <div class="content-container right">
-                <div class="content">
+            <div class="tl-content-container right">
+                <div class="tl-content">
                     <h2> <%- docText.about_page.CV_2018_heading %> </h2>
                     <h4> <%- docText.about_page.CV_2018_desc %> </h4>
                     <p> <%- docText.about_page.CV_2018_location %> </p>
                 </div>
             </div>
-            <div class="content-container left">
-                <div class="content">
+            <div class="tl-content-container left">
+                <div class="tl-content">
                     <h2> <%- docText.about_page.CV_2017_heading %> </h2>
                     <h4> <%- docText.about_page.CV_2017_desc %> </h4>
                     <p> <%- docText.about_page.CV_2017_location %> </p>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="programming-languages info-wrapper">
+    <div class="personal">
+        <div class="personal-text-container">
+            <div class="personal-text">
+                <div class="way-into-it">
+                    <h1 id="typewriter"> <%- docText.about_page.personal_heading %> </h1>
+                    <p> <%- docText.about_page.personal_way_text %> </p>
+                </div>
+
+                <div>
+                    <p> <%- docText.about_page.personal_interests %> </p>
+                    <ul>
+                        <li>Data Science</li>
+                        <li>Natural Language Processing</li>
+                        <li>Machine Learning / AI</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <div class="personal-image">
+                <img src="/assets/img/me.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="info-wrapper programming-languages">
             <h1 id="typewriter"><%- docText.about_page.programming_info_heading %></h1>
 
             <div class="programming-languages">

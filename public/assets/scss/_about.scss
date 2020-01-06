@@ -1,0 +1,252 @@
+//  SCSS File for /views/about.ejs   //
+//  IMPORTED into /public/scss/global.scss //
+
+@import 'utilities/variables.scss';
+
+
+/* ABOUT PAGE */
+.personal-information {
+    width: 50%;
+    margin: 75px auto 130px auto;
+    text-align: center; 
+    color: $darkWhite;
+
+    p { line-height: 30px; }
+    h1 { font-size: 60px; }
+}
+
+.timeline-intro { text-align: center; }
+
+.timeline {
+    margin: 45px auto;
+    width: 90%;
+    height: 500px;
+    position: relative;
+
+    .left { left: 0; }
+    .right { left: 50%; margin-left: 10px; }
+    .right::after { left: -22px; }
+
+    .left::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: medium solid #222326;
+        border-width: 13px 15px 13px 15px;
+        border-color: transparent transparent transparent #222326;
+        top: 50%;
+        right: 10px;
+        z-index: 1;
+        transform: translateY(-50%);
+    }
+
+    .right::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: medium solid #222326;
+        border-width: 13px 15px 13px 0;
+        border-color: transparent #222326 transparent transparent;
+        left: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .tl-content-container {
+        position: relative;
+        width: 50%;
+        padding: 20px 40px;
+    }
+
+    .tl-content-container::after {
+        content: '';
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background: lightskyblue;
+        right: -21px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        border: 4px solid #222326;
+    }
+
+    .tl-content {
+        background: #222326;
+        padding: 20px;
+        border-radius: 5px;
+        color: #eee;
+
+        h4 { margin-bottom: 10px; }
+    }
+}
+
+.timeline::after {
+    content: '';
+    height: 500px;
+    width: 10px;
+    background: #222326;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    border-radius: 10px;
+}
+
+.personal {
+    background: $darkGray;
+    display: flex;
+    
+    .personal-text-container, .image-container {
+        padding: 6rem 3rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .personal-text-container { 
+        width: 60%; 
+
+        .personal-text {
+            text-align: center;
+            color: $darkWhite;
+            width: 50%;
+            margin: 0 auto;
+
+            p, ul { line-height: 1.5em; }
+            h1, .way-into-it { margin-bottom: 30px; }
+            ul { list-style-position: inside; }
+        }
+    }
+
+    .image-container { 
+        width: 40%;
+
+        .personal-image img { width: 100%; height: auto; max-height: 400px; max-width: 400px; border-radius: 50%; }
+    }
+}
+
+.info-wrapper h1 {
+    text-align: center;
+    width: auto;
+    margin-bottom: 30px;
+    word-wrap    : break-word;
+    overflow-wrap: break-word;
+}
+
+.proglang-container {
+    padding: 20px;
+    background: #f7f7f7;
+    width: calc(25% - 10px);
+    display: inline-block;
+    margin: 15px 5px;
+    -webkit-box-shadow: 0px -1px 17px 0px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px -1px 17px 0px rgba(0,0,0,0.29);
+    box-shadow: 0px -1px 17px 0px rgba(0,0,0,0.29);
+    position: relative;
+    transition: 0.4s all;
+
+    img {
+        height: 100px; 
+        width: 100px;
+    }
+
+    h3 {
+        position: absolute; 
+        top: 50%; left: 55%; 
+        transform: translateY(-50%); 
+        font-size: 1.3em; 
+        font-weight: lighter;
+    }
+}
+
+.proglang-container:hover { transform: translateY(-20px); }
+
+@media (max-width: 680px) {
+    .personal-information { width: 100%; padding: 0 30px; }
+    .personal-information h1 { font-size: 3em; }
+
+
+    .timeline { width: 100%; margin: 50px auto; }
+    .timeline::after { left: 30px; }
+    .timeline .right { left: -2px; }
+
+    .timeline .tl-content-container { padding: 20px 10px 20px 30px; margin-left: 60px; width: 80%; }
+    .timeline .tl-content-container::before { 
+        left: 15px;
+        border: medium solid #222326;
+        border-width: 13px 15px 13px 0;
+        border-color: transparent #222326 transparent transparent;
+    }
+
+    .timeline .right::after { left: -40px; }
+    .timeline .left::after { left: -42px; }
+
+    .proglang-container { width: calc(100% - 10px); }
+
+    .personal { display: block; padding: 6rem 1.5rem; }
+    .personal .personal-text-container .personal-text { width: 100%; }
+    .personal .personal-text-container { width: 100%; margin-bottom: 3rem; }
+    .personal .image-container { width: 100%; }
+    .personal-image { margin: auto; }
+
+    .personal .personal-text-container, .personal .image-container {
+        padding: 0;
+    }
+}
+
+@media (min-width: 681px) and (max-width: 800px) {
+    .personal-information { width: 75%; }
+
+    .timeline::after { left: 50px; }
+    .timeline .right { left: -2px; }
+
+    .timeline .tl-content-container { padding: 20px 40px; margin-left: 60px; width: 100%; }
+    .timeline .tl-content-container::before { 
+        left: 30px;
+        border: medium solid #222326;
+        border-width: 13px 15px 13px 0;
+        border-color: transparent #222326 transparent transparent;
+    }
+
+    .timeline .right::after { left: -20px; }
+    .timeline .left::after { left: -22px; }
+
+    .proglang-container { width: calc(50% - 10px);  }
+
+    .personal { display: block; padding: 6rem 3rem; }
+    .personal .personal-text-container .personal-text { width: 100%; margin-bottom: 3rem; }
+    .personal .personal-text-container { width: 70%; margin: auto; }
+    .personal .image-container { width: 100%; }
+    .personal-image { margin: auto; }
+
+    .personal .personal-text-container, .personal .image-container {
+        padding: 0;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) { 
+    .personal-information { width: 75%; }
+    .timeline { width: 100%; }
+
+    .proglang-container { width: calc(50% - 10px);  }
+
+    .personal .personal-text-container .personal-text {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .proglang-container { width: calc(25% - 10px); }
+
+    .personal .personal-text-container .personal-text {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .personal-information { width: 70%; }
+
+    .proglang-container { width: calc(25% - 10px);  }
+}

@@ -4,7 +4,8 @@
   "description": "This is my first own website.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon ./app.js",
+    "sass": "sass --watch ./public/assets/scss/global.scss ./public/assets/css/compiled.css"
   },
   "author": "Manuel Neumayer",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "nodemailer": "^6.3.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "sass": "^1.24.2"
   }
 }

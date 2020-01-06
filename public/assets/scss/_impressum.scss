@@ -1,0 +1,19 @@
+//  SCSS File for /views/about.ejs   //
+//  IMPORTED into /public/scss/global.scss //
+
+@import 'utilities/variables.scss';
+
+
+/* IMPRESSUM PAGE */
+.impressum-wrapper {
+    background: $darkWhite;
+    padding: 50px 50px;
+    margin: 50px 0;
+    -webkit-box-shadow: 0px 0px 18px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 18px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 18px -13px rgba(0,0,0,0.75);
+    
+    * { font-family: Arial; }
+
+    h4 { margin-bottom: 30px; }
+}
