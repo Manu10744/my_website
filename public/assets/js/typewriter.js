@@ -6,10 +6,10 @@ const Typewriter = function(element, wordsToPrint) {
 }
 
 const isInViewport = function isInViewport(element) {
-    elemTop = element.getBoundingClientRect().top;
-    elemDown = element.getBoundingClientRect().bottom;
+    let elemTop = element.getBoundingClientRect().top;
+    let elemDown = element.getBoundingClientRect().bottom;
 
-    isVisible = (elemTop >= 0) && (elemDown <= window.innerHeight);
+    let isVisible = (elemTop >= 0) && (elemDown <= window.innerHeight);
 
     if (isVisible) return true;
 }
