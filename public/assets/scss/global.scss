@@ -52,15 +52,16 @@ body { background-color: #eee; position: absolute; min-width: 100%;  }
 
 .select-language {
     width: 100%;
-    background-color: rgba(0,0,0,0.9);
+    background-color: $darkGray;
     color: $darkWhite;
     position: relative;
+    border-bottom: 1px solid #000;
 
     // For activating/deactivating the select language dropdown
     button {
         width: 100%;
         cursor: pointer;
-        background-color: rgba(0,0,0,0.9);
+        background-color: $darkGray;
         padding: 10px 0;
         color: $darkWhite;
         border: none;
@@ -97,7 +98,7 @@ body { background-color: #eee; position: absolute; min-width: 100%;  }
 
     .option a:hover {
         color: lightskyblue; 
-        background: rgba(0,0,0,0.9);
+        background: rgba(0,0,0,0.4);
     }
 }
 

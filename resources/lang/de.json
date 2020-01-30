@@ -28,7 +28,7 @@
     },
     "about_page": { 
         "doc_title": "Über mich - Web Development",
-        "about_heading": "Wer bin Ich?",
+        "about_heading": "Wer bin ich?",
         "about_text": "Ich heiße Manuel Neumayer und ich bin ein im Münchner Raum wohnhafter, angehender Softwareentwickler. Zur Zeit studiere ich Informatik und Computerlinguistik an der Ludwig-Maximilians-Universität München.",
         "CV_heading": "Wie sieht mein bisheriger Lebensweg aus?",
         "CV_2018_heading": "2018 - Heute",
@@ -38,7 +38,7 @@
         "CV_2017_desc": "Allgemeine Hochschulreife",
         "CV_2017_location": "Staatliche Fachoberschule Bad Tölz",
         "personal_heading": "Wie kam ich zur IT?",
-        "personal_way_text": "Wie viele andere wusste Ich nach meinem Abitur nicht, wie es jetzt weitergeht. Es gab einige Dinge, die Ich in Erwägung gezogen habe. Letztendlich habe Ich mich dann entschieden, Informatik und Computerlinguistik zu studieren. Zu diesem Zeitpunkt war Ich noch neu auf diesem Gebiet, weshalb Ich bereits vor meinem Studium begonnen habe, mir selbst Web Development beizubringen.",
+        "personal_way_text": "Wie viele andere wusste ich nach meinem Abitur nicht, wie es jetzt weitergeht. Es gab einige Dinge, die ich in Erwägung gezogen habe. Letztendlich habe ich mich dann entschieden, Informatik und Computerlinguistik zu studieren. Zu diesem Zeitpunkt war ich noch neu auf diesem Gebiet, weshalb ich bereits vor meinem Studium begonnen habe, mir selbst Web Development beizubringen.",
         "personal_interests": "Mit der Zeit lernte ich auch andere Themenbereiche der IT kennen. Heute interessieren mich insbesondere:",
         "programming_info_heading": "Programmiersprachen und andere Technologien"
     },

@@ -699,14 +699,15 @@ body {
 
 .select-language {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #222326;
   color: #F7F7F7;
   position: relative;
+  border-bottom: 1px solid #000;
 }
 .select-language button {
   width: 100%;
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #222326;
   padding: 10px 0;
   color: #F7F7F7;
   border: none;
@@ -737,7 +738,7 @@ body {
 }
 .select-language .option a:hover {
   color: lightskyblue;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .selection-indicator {
