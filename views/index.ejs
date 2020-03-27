@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/img/favicon.ico">
     <link href="/assets/css/compiled.css" rel="stylesheet">
-    <link href="/assets/css/animate.css" rel="stylesheet">
 </head>
 
 <body>
@@ -21,7 +20,7 @@
                 </ul>
             </div>
         </div>
-
+        
         <div class="landing-content-wrapper">
             <div class="landing-content">
                 <h1>Web Development</h1>
@@ -33,10 +32,11 @@
                 <a class="contact-btn"> <%- docText.index_page.contact %> </a>
             </div>
         </div>
+    
         <div class="code"></div>
     </header>
 
-    <div id="snow-particle"></div>
+    <!-- <div id="snow-particle"></div> -->
 
     <div class="container">
         <div class="modal-shade"></div>
@@ -83,11 +83,76 @@
         </div>
         <% } %>
 
-        <div class="jumbotron animated fadeInUp">
+        <div class="jumbotron">
             <h1> <%- docText.index_page.jumbo_heading %> </h1>
             <p> <%- docText.index_page.jumbo_text %> </p>
         </div>
+    </div>
 
+    <div class="projects">
+        <h1> <%- docText.index_page.projects_heading %> </h1>
+        <div class="grid">
+            <div class="column">
+                <div class="col-item">
+                    <img src="/assets/img/blog.jpg">
+                    <div class="col-item-desc">
+                        <h4> <%- docText.index_page.projects_blogs %> </h4>
+                    </div>
+                </div>
+
+                <div class="col-item">
+                    <img src="/assets/img/company.jpg">
+                    <div class="col-item-desc">
+                        <h4> <%- docText.index_page.projects_company %> </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="col-item">
+                    <img src="/assets/img/photography.jpg">
+                    <div class="col-item-desc">
+                        <h4> <%- docText.index_page.projects_photography %> </h4>
+                    </div>
+                </div>
+                <div class="col-item">
+                    <img src="/assets/img/portrait.jpg">
+                    <div class="col-item-desc">
+                        <h4> <%- docText.index_page.projects_portrait %> </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="col-item">
+                    <img src="/assets/img/informational.jpg">
+                    <div class="col-item-desc">
+                        <h4> <%- docText.index_page.projects_informational %> </h4>
+                    </div>
+                </div>
+                <div class="col-item">
+                    <img src="/assets/img/bots.jpg">
+                    <div class="col-item-desc">
+                        <h4> <%- docText.index_page.projects_bots %> </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="col-item">
+                    <img src="/assets/img/maintenance.jpg">
+                    <div class="col-item-desc">
+                        <h4> <%- docText.index_page.projects_maintenance %> </h4>
+                    </div>
+                </div>
+                <div class="col-item">
+                    <img src="/assets/img/idea.jpg">
+                    <div class="col-item-desc">
+                        <h4> <%- docText.index_page.projects_idea %> </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
         <div class="devices animated fadeInUp">
             <div class="devices-img-container">
                 <img src="/assets/img/devices.png">
@@ -100,6 +165,7 @@
             </div>
         </div>
     </div>
+
     <%- include partials/select-language.ejs %>
 
     <%- include partials/footer.ejs %>
@@ -112,6 +178,8 @@
     <!-- FOR SNOW PARTICLE -->
     <script src="/assets/js/particles.min.js"></script>
     <script src="/assets/js/particle.js"></script>
-</body>
 
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/assets/js/fading_index.js"></script>
+</body>
 </html>

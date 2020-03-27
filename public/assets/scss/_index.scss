@@ -141,7 +141,7 @@
 
 .jumbotron {
     text-align: center;
-    background: #f3f3f3;
+    background: #f7f7f7;
     border-radius: 5px;
     padding: 50px;
     margin: 250px 0;
@@ -150,6 +150,7 @@
     box-shadow: 0px 0px 18px -13px rgba(0,0,0,0.75);
     z-index: 0;
     position: relative;
+    background: rgba(255,255,255,0.7);
 
     h1 {
         font-size: 60px;
@@ -165,10 +166,70 @@
     }
 }
 
+.projects {
+    background: $darkGray;
+    background: linear-gradient(180deg,#262626,#171717 280px);
+    padding: 100px 0; 
+    color: #F7F7F7;
+    text-align: center;
+
+    h1 {
+        margin-bottom: 15px;
+        font-size: 45px;
+    }
+
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        margin: 0 auto;
+
+        .column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+
+            .col-item {
+                opacity: 0.5;
+                transition: 0.4s all ease;
+            }
+
+            .col-item:hover {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+
+            .col-item .col-item-desc {
+                background: $darkGray;
+                padding: 8px;
+                color: #F7F7F7;
+                text-align: center;
+                border-bottom: 1px solid #333;
+                border-left: 1px solid #333;
+                border-right: 1px solid #333;
+                word-wrap: break-word;
+
+                h4 { font-weight: lighter; }
+            }
+
+            img {
+                width: 100%;
+                margin-top: 8px;
+                vertical-align: middle;
+                cursor: pointer;
+                transition: 0.4s all ease;
+            }
+        }
+    }
+}
+
 .devices {
     width: 100%;
     margin: 250px auto;
     display: flex;
+    background: rgba(255,255,255,0.7);
+    padding: 50px 100px;
+    border-radius: 5px;
 
     .devices-img-container { display: flex; align-items: center; flex: 6; }
 
@@ -182,7 +243,7 @@
         h1 {
             font-weight: lighter;
             margin-bottom: 20px;
-            color: #444;
+            color: #000;
             font-weight: bold;
         }
 
@@ -205,6 +266,11 @@
     }
 
     .contact-box .contact-heading { font-size: 14px; }
+
+    .projects .grid {
+        width: 90%;
+    }
+    .projects .grid .column .col-item .col-item-desc h4 { font-size: 12px; }
 }
 
 @media (min-width: 681px) and (max-width: 800px) {
@@ -213,6 +279,11 @@
     .devices { display: block; }
     .flash-msg-container { width: 95%; font-size: 0.8em; padding: 20px; }
     .contact-box { width: 80%; }
+
+    .projects .grid {
+        width: 80%;
+    }
+    .projects .grid .column .col-item .col-item-desc h4 { font-size: 15px; }
 }
 
 @media (min-width: 801px) and (max-width: 1200px) { 
@@ -220,6 +291,10 @@
     .jumbotron p { width: 85%; }
     .devices { display: block; }
     .contact-box { width: 80%; }
+
+    .projects .grid {
+        width: 70%;
+    }
 }
 
 @media (min-width: 1200px) and (max-width: 1440px) {
