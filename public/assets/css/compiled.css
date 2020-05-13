@@ -515,7 +515,7 @@
 
 .proglang-container {
   padding: 20px;
-  background: #FFF;
+  background: rgba(255, 255, 255, 0.7);
   width: calc(25% - 10px);
   display: inline-block;
   margin: 15px 5px;
@@ -876,7 +876,7 @@ header .navbar {
   z-index: 3;
 }
 header .navbar-scrolled {
-  background-color: #fff;
+  background: #171717;
 }
 header .navlinks {
   display: flex;

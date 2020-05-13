@@ -146,7 +146,9 @@ header {
         z-index: 3;
     }
 
-    .navbar-scrolled { background-color: #fff; }
+    .navbar-scrolled {
+        background: #171717;
+    }
 
     .navlinks {
         display: flex;
