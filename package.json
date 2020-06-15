@@ -1,0 +1,23 @@
+{
+  "name": "my_website",
+  "version": "1.0.0",
+  "description": "My personal website, redesigned.",
+  "main": "app.js",
+  "scripts": {
+    "sass": "sass --watch ./public/assets/scss/global.scss ./public/assets/css/compiled.css",
+    "dev": "nodemon app.js"
+  },
+  "author": "Manuel Neumayer",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "fullpage.js": "^3.0.8",
+    "nodemailer": "^6.4.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "sass": "^1.26.7"
+  }
+}

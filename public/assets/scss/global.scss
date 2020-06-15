@@ -1,0 +1,369 @@
+/* Partials */
+@use '_index.scss';
+@use '_about.scss';
+
+@import 'utility/_variables.scss';
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;700&display=swap');
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, sans-serif;
+}
+
+body {
+    height: 100%;
+    min-width: 300px;
+}
+
+h1,h2,h3,h4,h5,p,a { color: $dark-white; }
+
+li { list-style: none; }
+a { text-decoration: none; }
+input, button, textarea {
+    outline: none;
+    border: none;
+}
+
+.blurred { filter: blur(8px);  }
+.colored { color: $sky-blue; }
+
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background: radial-gradient(163.6% 146.59% at 50% 50%, #393558 0%, #171526 39.58%, rgba(23, 21, 38, 0.8125) 99.99%, rgba(23, 21, 38, 0) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    background: rgba(0,0,0,1);
+
+    .splash-text {
+        position: relative;
+        font-weight: 300;
+        font-size: 2em;
+        color: $dark-white;
+      }
+      
+      .splash-text .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.3em;
+        padding-right: 0.05em;
+        padding-bottom: 0.15em;
+        line-height: 1em;
+      }
+      
+      .splash-text .line {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: 3px;
+        width: 100%;
+        background-color: $dark-white;
+        transform-origin: 0.5 0;
+      }
+      
+      .splash-text .letters {
+        display: inline-block;
+        opacity: 1;
+        color: $dark-white;
+      }
+      
+      .splash-text .heading {
+          font-size: 1em;
+          font-weight: bold;
+      }
+
+      .splash-text .subtitle {
+          display: block;
+          font-size: 0.5em;
+          text-align: center;
+      }
+}
+
+.page-wrapper {
+    position: relative;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    .active-nav-item a {
+        color: $sky-blue;
+        font-weight: bold;
+    }
+
+    .mobile-nav-active {
+        .first { 
+            transform: rotate(45deg);
+        }
+        .second { 
+            width: 25px!important;
+            transform: rotate(-45deg) translateX(5px) translateY(-5px);
+        }
+    }
+
+    .mobile-nav-toggler {
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        cursor: pointer;
+        z-index: 999;
+
+        .mobile-nav-line { 
+            height: 2px; 
+            background: $dark-white; 
+            margin: 6px 0;
+            transition: all 0.4s ease;
+        }
+
+        .first { width: 25px; }
+        .second { width: 15px; }
+    }
+
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.7);
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: none;
+
+        ul {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%);
+            width: 100%;
+            text-align: center;
+
+            li {
+                height: 100%;
+                padding: 10px 20px;
+                margin: 50px 0;
+                font-size: 1.375em;
+                transition: transform 0.4s ease;
+
+                a { transition: 0.4s color ease;  }
+                a:hover { color: $sky-blue; }
+            }
+        }
+    }
+
+    .logo {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    
+        h3 { width: 200px; text-align: center;}
+        p { font-size: 0.7em; width: 200px; text-align: center; }
+    }
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.seperator {
+    div { margin: 10px 0; background: $sunny-yellow; }
+    .line-1 {
+        height: 1px;
+        max-width: 45px;
+        width: 40%;
+    }
+
+    .line-2 {
+        height: 1px;
+        max-width: 80px;
+        width: 80%;
+    }
+}
+
+.seperator-big {
+    div { margin: 10px 0; background: $sky-blue; }
+    .line-1 {
+        height: 1px;
+        width: 80px;
+    }
+    .line-2 {
+        height: 1px; width: 140px;
+    }
+}
+
+.seperator-title {
+    max-width: 200px;
+    margin-left: 15px;
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+.language-selection {
+    width: 100%;
+    background: $black;
+    text-align: center;
+    padding-top: 20px;
+    position: relative;
+
+    button {
+        background: #111;
+        color: $dark-white;
+        cursor: pointer;
+        padding: 5px 10px;
+        margin: 0 auto;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+
+        // Language icon
+        svg { font-size: 2em; margin-right: 10px; }
+    }
+}
+
+footer {
+    width: 100%;
+    background: rgba(0,0,0,1);
+    padding: 20px 0;
+    position: relative;
+
+    .footer-seperator { 
+        width: 75%;
+        max-width: 750px;
+        margin: 0 auto 20px auto;
+        border-color: #202020;
+    }
+
+    .footer-socials {
+        margin-bottom: 10px;
+        text-align: center;
+        color: $dark-white;
+
+        h3 { margin-bottom: 5px; }
+        .social-icons {
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+
+            a { margin: 0 20px; }
+        }
+    }
+
+    .footer-information {
+        text-align: center;
+        p { font-size: 0.8em; }
+        a { font-size: 0.7em; }
+    }
+}
+
+/* ========================================================= */
+/*                      ANIMATIONS                           */
+/* ========================================================= */
+
+// Animation to slide the navigation links into the screen, when mobile navigation is active.
+@keyframes slideLinksIn {
+    from {
+        transform: translateX(-100%);
+    } to {
+        transform: translateX(0px);
+    }
+}
+
+// Animation to slide the navigation links out of the screen, when mobile navigation is active.
+@keyframes slideLinksOut {
+    from {
+        transform: translateX(0px);
+    } to {
+        transform: translate(-100%);
+    }
+}
+
+// Animation for the contact button
+@keyframes pulse {
+    70% {
+      box-shadow: 0 0 0 15px rgba(#01CCD9, 0);
+    }
+      100% {
+      box-shadow: 0 0 0 0 rgba(#01CCD9, 0);
+    }
+}
+
+// Animation for the contact button
+@keyframes pulse2 {
+    70% {
+        box-shadow: 0 0 0 30px rgba(#01CCD9, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(#01CCD9, 0);
+    }
+}
+
+
+/* ========================================================= */
+/*                      MEDIA QUERIES                        */
+/* ========================================================= */
+
+@media (min-width: 768px) {
+    .container {
+        width: 80%;
+    }
+
+    header {
+        .mobile-nav-toggler { display: none; }
+
+        .active-nav-item {
+            background-color: $alpha-sky-blue-25;
+            border-bottom: 3px solid $sky-blue;
+
+            a { color: $dark-white; }
+        }
+
+        .navigation {
+            position: relative;
+            display: block;
+    
+            ul {
+                position: relative;
+                left: 0;
+                top: 0;
+                transform: none;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                margin-left: 5%;
+
+                li { 
+                    font-size: 1em; 
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1080px) {
+    .container {
+        width: 70%;
+    }
+}

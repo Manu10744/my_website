@@ -1,0 +1,446 @@
+@import 'utility/_variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.welcome-wrapper {
+    width: 100%;
+    height: 100%;
+    min-height: 1000px;
+    background: url('/assets/img/welcome-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 200px;
+    position: relative;
+}
+
+.welcome-section {
+    display: flex;
+    position: relative;
+    max-width: 350px;
+
+    .heading-big {
+        h1 {
+            font-size: 6em;
+            color: $sky-blue;
+            text-shadow: 0px 4px 4px #0C0000;
+            display: inline-block;
+        }
+    }
+
+    .heading-small {
+        h2 {
+            font-size: 2.25em;
+            text-shadow: 0px 4px 4px #0C0000;
+            padding-top: 20px;
+            line-height: 0.8em;
+        }
+
+        h3 {
+            font-size: 3.25em;
+            text-shadow: 0px 4px 4px #0C0000;
+            line-height: 0.8em;
+        }
+    }
+}
+
+.contact-section {
+    max-width: 400px;
+    margin: 100px 0 0 30px;
+
+    p { 
+        font-size: 1.5em;
+        font-weight: 400;
+        margin-bottom: 20px; 
+    }
+}
+
+.props-wrapper {
+    width: 100%;
+    position: relative;
+    background-color: $black;
+    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+    padding: 50px 0 150px 0;
+
+    .props {
+        display: flex;
+        justify-content: center;
+        flex-flow: row;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+        
+        .prop {
+            margin: 20px;
+            flex-basis: 80%;
+
+            .icon-container {
+                height: 30px;
+                width: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 30px;
+                border: 2px solid #008756;
+                border-radius: 50%;
+                margin: 10px auto;
+
+                svg {
+                    display: flex;
+                    margin: 0 auto;
+                    height: 30px;
+                    width: 30px;
+                    
+                    path { fill: #F7F7F7; }
+                }    
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 1.6em;
+                margin-bottom: 5px;
+                max-width: 80%;
+                margin: 0 auto 10px auto;
+            }
+
+            p { 
+                text-align: center;
+                border-left: 6px solid $dark-green;
+                padding: 0 20px;
+                line-height: 1.5em;
+            }
+        }
+    }
+
+    .wave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .devices-img {
+        width: auto;
+        height: 150px;
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        z-index: 1;
+        transform: translateX(-50%);
+    }
+}
+
+.offers-wrapper {
+    width: 100%;
+    background: $dark-white;
+    padding: 50px 0 150px 0;
+
+    h1 { 
+        color: $black;
+        padding-top: 20px;
+        font-family: Lobster;
+    }
+
+    .offers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 50px 0;
+        padding: 0 4px;
+
+        .offer {
+            max-width: 400px;
+            flex: 100%;
+            margin: 10px;
+            border-radius: 5px;
+            position: relative;
+            border: 2px solid #ddd;
+
+            .content {
+                h3 { 
+                    color: $dark-white;
+                    text-align: center;
+                    background: #1c1c1c;
+                    padding: 10px 30px;
+                    color: #ccc;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 50px;
+                    font-size: 1em;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                }
+    
+                img {
+                    vertical-align: middle;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+.contact-section-wrapper {
+    width: 100%;
+    padding: 50px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $black;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23000000'/%3E%3Cstop offset='1' stop-color='%23000000'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+
+    .contact-info {
+        flex: 100%;
+        margin-bottom: 20px;
+
+        h1 {
+            text-align: center;
+            color: $dark-white;
+            font-size: 2.25em;
+            margin-bottom: 20px;
+        }
+
+        .email-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+
+            a { font-family: Arial, sans-serif; color: $dark-green; font-weight: bold; }
+
+            .icon-container {
+                margin: 10px;
+                border-radius: 50px;
+                border: 2px solid $dark-green;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                svg path { fill: $dark-white; }
+            }
+        }
+    }
+
+    .contact-formular {
+        flex: 100%;
+
+        input, label, textarea {
+            max-width: 500px;
+            width: 75%;
+        }
+
+        .input-container {
+            margin: 15px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            input { 
+                padding: 5px 0 5px 15px;
+                color: $dark-white;
+                background: transparent;
+                border-bottom: 1px solid #333;
+            }
+    
+            label {
+                color: $sky-blue;
+                text-align: left;
+                font-size: 0.8em;
+                padding: 0 0 5px 10px;
+            }
+        }
+
+        textarea {
+            border-radius: 5px;
+            padding: 10px;
+            height: 152px;
+            margin-top: 35px;
+            resize: none;
+            background: #111;
+            border: 1px solid #333;
+            color: $dark-white;
+        }
+
+        .contact-btn {
+            background: rgba(0, 240, 255, 0.6);
+            box-shadow: 0 0 0 0 rgba(0, 240, 255, 0.6);
+            animation: pulse 1.25s infinite cubic-bezier(0,0,0,0);
+            cursor: pointer;
+            padding: 5px 20px;
+            font-size: 1em;
+            display: block;
+            margin: 15px auto;
+            color: $dark-white;
+            font-weight: bold;
+        }
+    }
+}
+
+
+
+/* ========================================================= */
+/*                      MEDIA QUERIES                        */
+/* ========================================================= */
+
+@media (min-width: 480px) {
+    .welcome-section {
+        .heading-big h1 {
+            font-size: 7em;
+        }
+
+        .heading-small h2 {
+            font-size: 2.25em;
+            padding-top: 22px;
+        }
+
+        .heading-small h3 {
+            font-size: 4em;
+        }
+    }
+
+    .offers-wrapper {
+        h1 {
+            font-size: 2.5em;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .props-wrapper {
+        padding: 50px 0 250px 0;
+
+        .devices-img {
+            height: 250px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .welcome-section {
+        .heading-big h1 {
+            font-size: 8em;
+        }
+
+        .heading-small h2 {
+            font-size: 3.25em;
+        }
+
+        .heading-small h3 {
+            font-size: 4.25em;
+        }
+    }
+
+    .offers-wrapper {
+        .offers .offer {
+            flex: calc(50% - 30px);
+        }
+
+        h1 { font-size: 3em; }
+    }
+
+    .props-wrapper .props .prop {
+        flex-basis: 70%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .welcome-section {
+        .heading-big h1 {
+            font-size: 10em;
+        }
+
+        .heading-small h2 {
+            font-size: 3.5em;
+            padding-top: 32px;
+        }
+
+        .heading-small h3 {
+            font-size: 6em;
+        }
+    }
+
+    .props-wrapper {
+        padding: 50px 0 350px 0;
+
+        .devices-img { height: 350px; }
+        .props .prop { flex: calc(50% - 40px); }
+    }
+
+    .contact-section-wrapper {
+        .contact-info { 
+            h1 { font-size: 3em; }
+
+            flex: 50%; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-formular { 
+            flex: 50%; 
+            display: flex;
+
+            input,label { width: 100%; }
+
+            .inputs-wrapper {
+                margin: 0 20px;
+
+                input {
+                    width: 200px;
+                }
+            }
+
+            .message-input-wrapper {
+                margin: 0 20px;
+                width: 50%;
+                max-width: 500px;
+
+                textarea { width: 100%; }
+            }
+        }
+    }
+}
+
+@media (min-width: 1540px) {
+    .welcome-section {
+        .heading-big h1 {
+            font-size: 12em;
+        }
+
+        .heading-small h2 {
+            font-size: 4em;
+            padding-top: 37px;
+        }
+
+        .heading-small h3 {
+            font-size: 7.5em;
+        }
+    }
+
+    .props-wrapper {
+        padding: 50px 0 550px 0;
+        
+        .devices-img { height: 550px; }
+
+        .props {
+            .prop {
+                flex-basis: 25%;
+            }
+        }
+    }
+
+    .offers-wrapper {
+        .offers .offer {
+            flex: calc(25% - 30px); 
+
+            .content img {
+                min-height: 250px;;
+            }
+        }
+    }
+}

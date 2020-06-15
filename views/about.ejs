@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Manuel Neumayer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/assets/css/fontawesome.min.css">
+        <link href="/assets/css/brands.min.css" rel="stylesheet">
+        <link href="/assets/css/compiled.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="mobile-nav-toggler">
+                <div class="mobile-nav-line first"></div>
+                <div class="mobile-nav-line second"></div>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li class="active-nav-item"><a href="/about">Über mich</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Impressum</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <h3>Web Development</h3>
+                <p>By Manuel Neumayer</p>
+            </div>
+        </header>
+        
+        <%- include ('partials/splash-screen.ejs') %>
+        
+        <div class="page-wrapper">
+            <div class="about-wrapper">
+                <div class="container">
+                    <div class="hero-section">
+                        <div class="hero-heading">
+                            <h1>Über mich</h1>
+                        </div>
+                    </div>
+                    <div class="seperator">
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                    </div>
+                    <div class="seperator-title">
+                        <h1>Curriculum Vitae</h1>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item-container left">
+                            <div class="timeline-item">
+                                <h1>2018 - Heute</h1>
+                                <h2>Studium der Informatik und Computerlinguistik</h2>
+                                <h3>Ludwig-Maximilians-Universität München</h3>
+                            </div>
+                        </div>
+                        <div class="timeline-item-container left">
+                            <div class="timeline-item">
+                                <h1>2017</h1>
+                                <h2>Allgemeine Hochschulreife</h2>
+                                <h3>Staatliche Fachoberschule Bad Tölz</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seperator-big">
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                    </div>
+                    <div class="seperator-title">
+                        <h1>Programmiersprachen und andere Technologien</h1>
+                    </div>
+
+                    <div class="tech-stack">
+                        <div class="tech-item-container">
+                            <div class="tech-item">
+                                <span></span> <span></span> <span></span> 
+                                <span><div class="tech-item-image html5"></div></span>
+                            </div>
+                            <h1>HTML5</h1>
+                        </div>
+                        <div class="tech-item-container">
+                            <div class="tech-item">
+                                <span></span> <span></span> <span></span> 
+                                <span><div class="tech-item-image css"></div></span>
+                            </div>
+                            <h1>CSS3</h1>
+                        </div>
+                        <div class="tech-item-container">
+                            <div class="tech-item">
+                                <span></span> <span></span> <span></span> 
+                                <span><div class="tech-item-image js"></div></span>
+                            </div>
+                            <h1>JavaScript</h1>
+                        </div>
+                        <div class="tech-item-container">
+                            <div class="tech-item">
+                                <span></span> <span></span> <span></span> 
+                                <span><div class="tech-item-image java"></div></span>
+                            </div>
+                            <h1>Java</h1>
+                        </div>
+                        <div class="tech-item-container">
+                            <div class="tech-item">
+                                <span></span> <span></span> <span></span> 
+                                <span><div class="tech-item-image python"></div></span>
+                            </div>
+                            <h1>Python</h1>
+                        </div>
+                        <div class="tech-item-container">
+                            <div class="tech-item">
+                                <span></span> <span></span> <span></span>
+                                <span><div class="tech-item-image mongodb"></div></span>
+                            </div>
+                            <h1>MongoDB</h1>
+                        </div>
+                        <div class="tech-item-container">
+                            <div class="tech-item">
+                                <span></span> <span></span> <span></span>
+                                <span><div class="tech-item-image sql"></div></span>
+                            </div>
+                            <h1>MySQL</h1>
+                        </div>
+                        <div class="tech-item-container">
+                            <div class="tech-item">
+                                <span></span> <span></span> <span></span>
+                                <span><div class="tech-item-image git"></div></span>
+                            </div>
+                            <h1>GIT</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="language-selection">
+                <button>Sprache auswählen...</button>
+            </div>
+
+            <%- include ('partials/footer.ejs') %>
+        </div>
+
+
+        <script src="/assets/js/anime.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script defer src="/assets/js/fontawesome.min.js"></script>
+        <script defer src="/assets/js/brands.min.js"></script>
+        <script src="/assets/js/mobile-navigation.js"></script>
+        <script src="/assets/js/cookies.js"></script>
+        <script src="/assets/js/animations.js"></script>
+    </body>
+</html>
