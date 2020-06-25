@@ -1,5 +1,7 @@
 const transition = document.querySelector(".transition-container");
 
+import { fadeIn, fadeOut } from './mobile-navigation.js';
+
 // --- BarbaJS Configurations --- //
 barba.init({
     debug: true,
@@ -16,34 +18,44 @@ barba.init({
       }]
 })
 
-barba.hooks.after(() => {
+barba.hooks.after((data) => {
+    // Reinitialize Event Listeners
     const mobileNavToggler = document.querySelector(".mobile-nav-toggler");
     const pageWrapper = document.querySelector(".page-wrapper");
     const navigation = document.querySelector(".navigation");
     const navLinks = document.querySelectorAll(".navigation li");
 
+    console.log(mobileNavToggler);
+
     mobileNavToggler.addEventListener("click", () => {
         mobileNavToggler.classList.toggle("mobile-nav-active");
-    
+
         if (navigation.style.display == '' || navigation.style.display == 'none') {
             navigation.style.touchAction = 'none';
-            fadeIn(navigation, 2000);
-    
-    
+            fadeIn(navigation, 400);
+
             navLinks.forEach((link, index) => {
                 index == 0 ? link.style.animation = `slideLinksIn 0.5s` : link.style.animation = `slideLinksIn ${0.5 + (index / 5)}s`;
             })
-        } else { 
+        } else {
             navLinks.forEach((link, index) => {
                 index == 0 ? link.style.animation = `slideLinksOut 0.5s` : link.style.animation = `slideLinksOut ${0.5 + (index / 5)}s`;
             })
-            
-            fadeOut(navigation);
+
+            fadeOut(navigation, 400);
             navigation.style.touchAction = 'auto';
         }
-    
+
         pageWrapper.classList.toggle("blurred");
     });
+
+    const welcomeWrapper = document.querySelector(".welcome-wrapper");
+    window.addEventListener("scroll", () => {
+        wrapperHeight = welcomeWrapper.offsetHeight;
+        scrollHeight = window.scrollY;
+
+        welcomeWrapper.style.opacity = (scrollHeight == 0) ? 1 : 1 - ((scrollHeight / wrapperHeight) / 2);
+    })
 }) 
 
 // --- Custom Code --- //

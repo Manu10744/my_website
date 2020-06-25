@@ -56,7 +56,7 @@ if (cookie.indexOf('visited=', 0) == -1) {
 const welcomeWrapper = document.querySelector(".welcome-wrapper");
 const header = document.querySelector("header");
 
-window.addEventListener("scroll", throttle(updateOnScroll, 50));
+window.addEventListener("scroll", updateOnScroll);
 
 function updateOnScroll() {
   wrapperHeight = welcomeWrapper.offsetHeight;
@@ -65,15 +65,3 @@ function updateOnScroll() {
   welcomeWrapper.style.opacity = (scrollHeight == 0) ? 1 : 1 - ((scrollHeight / wrapperHeight) / 2);
 }
 
-function throttle(callback, limit) {
-  let tick = false;
-  return function() {
-    if (!tick) {
-      callback.call();
-      tick = true;
-      setTimeout(() => {
-        tick = false;
-      }, limit)
-    }
-  }
-}
