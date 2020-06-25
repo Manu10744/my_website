@@ -1,6 +1,8 @@
 const transition = document.querySelector(".transition-container");
 
+// --- BarbaJS Configurations --- //
 barba.init({
+    debug: true,
     preventRunning: true,
     transitions: [{
         sync: true,
@@ -11,13 +13,40 @@ barba.init({
             await delay(1300);
             done();
         },
-
-        async enter(data) {
-            enterAnimation();
-        }
       }]
 })
 
+barba.hooks.after(() => {
+    const mobileNavToggler = document.querySelector(".mobile-nav-toggler");
+    const pageWrapper = document.querySelector(".page-wrapper");
+    const navigation = document.querySelector(".navigation");
+    const navLinks = document.querySelectorAll(".navigation li");
+
+    mobileNavToggler.addEventListener("click", () => {
+        mobileNavToggler.classList.toggle("mobile-nav-active");
+    
+        if (navigation.style.display == '' || navigation.style.display == 'none') {
+            navigation.style.touchAction = 'none';
+            fadeIn(navigation, 2000);
+    
+    
+            navLinks.forEach((link, index) => {
+                index == 0 ? link.style.animation = `slideLinksIn 0.5s` : link.style.animation = `slideLinksIn ${0.5 + (index / 5)}s`;
+            })
+        } else { 
+            navLinks.forEach((link, index) => {
+                index == 0 ? link.style.animation = `slideLinksOut 0.5s` : link.style.animation = `slideLinksOut ${0.5 + (index / 5)}s`;
+            })
+            
+            fadeOut(navigation);
+            navigation.style.touchAction = 'auto';
+        }
+    
+        pageWrapper.classList.toggle("blurred");
+    });
+}) 
+
+// --- Custom Code --- //
 function delay(n) {
     n = n || 2000;
     return new Promise((done) => {
@@ -25,10 +54,6 @@ function delay(n) {
             done();
         }, n)
     })
-}
-
-function enterAnimation() {
-    
 }
 
 function leaveAnimation() {
