@@ -1,12 +1,14 @@
-const transition = document.querySelector(".transition-container");
-
 import { fadeIn, fadeOut } from './mobile-navigation.js';
+import { typewriterList, Typewriter } from './typewriter.js';
+
+const transition = document.querySelector(".transition-container");
 
 // --- BarbaJS Configurations --- //
 barba.init({
     debug: true,
     preventRunning: true,
     transitions: [{
+        name: 'default-transition',
         sync: true,
         async leave(data) {
             const done = this.async();
@@ -56,7 +58,18 @@ barba.hooks.after((data) => {
 
         welcomeWrapper.style.opacity = (scrollHeight == 0) ? 1 : 1 - ((scrollHeight / wrapperHeight) / 2);
     })
+
+    // Reinitialize Typewriters
+    typewriterList.forEach((el, idx) => { typewriterList[idx] = null; })
+    typewriterList.splice(0, typewriterList.length);
+    document.querySelectorAll('.typewriter').forEach((twElement) => {
+        let typewriter = new Typewriter(twElement, 35);
+        typewriterList.push(typewriter);
+
+        console.log(typewriterList);
+    })
 }) 
+
 
 // --- Custom Code --- //
 function delay(n) {
@@ -102,4 +115,8 @@ function leaveAnimation() {
         duration: 100,
         delay: anime.stagger(75)
     }, '-=600')
+}
+
+export function barbaIsRunning() {
+    return barba.transitions.isRunning;
 }
