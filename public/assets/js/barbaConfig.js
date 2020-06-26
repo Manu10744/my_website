@@ -12,11 +12,16 @@ barba.init({
         name: 'default-transition',
         sync: true,
         async leave(data) {
+            // Dont show the new container until transition is at 50%
+            data.next.container.style.display = 'none';
             const done = this.async();
             leaveAnimation();
 
             await delay(1300);
             done();
+            
+            // Page transition is 50% and ready to switch containers, so show next container
+            data.next.container.style.display = 'block';
         },
     }]
 })
