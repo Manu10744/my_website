@@ -612,17 +612,6 @@ body {
   display: none;
   background: #000;
 }
-.transition-container .tile-section {
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-.transition-container .tile-section .half {
-  height: 50%;
-  flex-basis: 50%;
-  background: #000;
-  opacity: 0;
-}
 
 h1, h2, h3, h4, h5, p, a {
   color: #F7F7F7;
@@ -856,7 +845,6 @@ header .logo p {
 .language-selection {
   width: 100%;
   background: #000;
-  text-align: center;
   padding-top: 20px;
   position: relative;
 }
@@ -967,6 +955,91 @@ header .logo p {
   margin: 15px auto;
   color: #F7F7F7;
   font-weight: bold;
+}
+
+.language-modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.language-modal-container .modal {
+  width: 25%;
+  width: 300px;
+  background: #F7F7F7;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+.language-modal-container .modal .close-modal-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.25em;
+  cursor: pointer;
+}
+.language-modal-container .modal h1 {
+  font-family: "Lobster";
+  color: black;
+  text-align: left;
+  font-size: 1.25em;
+}
+.language-modal-container .modal .options-container {
+  margin: 30px 0 15px 0;
+}
+.language-modal-container .modal .options-container .show-options-btn, .language-modal-container .modal .options-container .language-option {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.language-modal-container .modal .options-container .show-options-btn {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  position: relative;
+  background: #eee;
+}
+.language-modal-container .modal .options-container .show-options-btn svg {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+.language-modal-container .modal .options-container .language-option {
+  transition: opacity 0.4s ease;
+  opacity: 0;
+  border-bottom: 1px solid #e1dede;
+  background: #ccc;
+  display: none;
+}
+.language-modal-container .modal .options-container .show-options-btn::after {
+  position: absolute;
+  content: "";
+  top: 17px;
+  right: 20px;
+  height: 5px;
+  width: 5px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  transform: rotate(45deg);
+}
+.language-modal-container .modal .confirm-btn {
+  color: #F7F7F7;
+  background: #000;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.75em;
+  display: block;
+  width: 100px;
+  text-align: center;
 }
 
 footer {
