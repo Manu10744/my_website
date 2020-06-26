@@ -7,7 +7,8 @@ const transition = document.querySelector(".transition-container");
 barba.init({
     debug: true,
     preventRunning: true,
-    transitions: [{
+    transitions: [
+        {
         name: 'default-transition',
         sync: true,
         async leave(data) {
@@ -17,7 +18,7 @@ barba.init({
             await delay(1300);
             done();
         },
-      }]
+    }]
 })
 
 barba.hooks.after((data) => {
@@ -26,8 +27,6 @@ barba.hooks.after((data) => {
     const pageWrapper = document.querySelector(".page-wrapper");
     const navigation = document.querySelector(".navigation");
     const navLinks = document.querySelectorAll(".navigation li");
-
-    console.log(mobileNavToggler);
 
     mobileNavToggler.addEventListener("click", () => {
         mobileNavToggler.classList.toggle("mobile-nav-active");
@@ -65,8 +64,6 @@ barba.hooks.after((data) => {
     document.querySelectorAll('.typewriter').forEach((twElement) => {
         let typewriter = new Typewriter(twElement, 35);
         typewriterList.push(typewriter);
-
-        console.log(typewriterList);
     })
 }) 
 

@@ -27,7 +27,12 @@ Typewriter.prototype.type = function() {
     this.el.innerHTML = this.currValue;
   }
 
-  setTimeout(() => { this.type(); }, 40);
+  let timeout = setTimeout(() => { this.type(); }, 40);
+  
+  // End Timeout as soon as typewriter is finished typing
+  if (this.el.innerText == this.wordsToPrint) {
+    clearTimeout(timeout);
+  }
 }
 
 
