@@ -210,11 +210,11 @@ header {
 
     .logo {
         position: absolute;
-        top: 15px;
-        right: 15px;
+        top: 23px;
+        right: 20px;
     
-        h3 { width: 200px; text-align: center;}
-        p { font-size: 0.7em; width: 200px; text-align: center; }
+        h3 {  text-align: center; font-size: 0.75em; }
+        p { font-size: 0.5em; text-align: center; }
     }
 }
 
@@ -387,7 +387,7 @@ header {
     height: 100%;
     width: 100%;
     z-index: 1;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.75);
     display: none;
 
     .modal {
@@ -439,6 +439,11 @@ header {
                 border-bottom: 1px solid #e1dede; 
                 background: #ccc;  
                 display: none;
+                transition: background-color 0.4s ease;
+            }
+
+            .language-option:hover {
+                background: #ddd;
             }
 
             .show-options-btn::after {
@@ -624,10 +629,20 @@ footer {
             a { color: $dark-white; }
         }
 
+        .logo {
+            position: absolute;
+            top: 15px;
+            right: 5%;
+        
+            h3 { width: 200px; text-align: center; font-size: 1.25em; }
+            p { font-size: 0.7em; width: 200px; text-align: center; }
+        }
+
         .navigation {
             position: relative;
             display: block;
     
+
             ul {
                 position: relative;
                 left: 0;

@@ -7,7 +7,7 @@
 .welcome-wrapper {
   width: 100%;
   height: 100%;
-  min-height: 1000px;
+  min-height: 100vh;
   background: url("/assets/img/welcome-bg-min.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -184,6 +184,10 @@
   }
 }
 @media (min-width: 768px) {
+  .welcome-wrapper {
+    padding-top: 250px;
+  }
+
   .welcome-section .heading-big h1 {
     font-size: 8em;
   }
@@ -313,7 +317,7 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  padding: 10px;
+  padding: 5px;
   display: flex;
   align-items: center;
   box-shadow: 4px 4px 250px rgba(0, 0, 0, 0.5);
@@ -793,16 +797,15 @@ header .navigation ul li a:hover {
 }
 header .logo {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 23px;
+  right: 20px;
 }
 header .logo h3 {
-  width: 200px;
   text-align: center;
+  font-size: 0.75em;
 }
 header .logo p {
-  font-size: 0.7em;
-  width: 200px;
+  font-size: 0.5em;
   text-align: center;
 }
 
@@ -969,7 +972,7 @@ header .logo p {
   height: 100%;
   width: 100%;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.75);
   display: none;
 }
 .language-modal-container .modal {
@@ -1019,6 +1022,10 @@ header .logo p {
   border-bottom: 1px solid #e1dede;
   background: #ccc;
   display: none;
+  transition: background-color 0.4s ease;
+}
+.language-modal-container .modal .options-container .language-option:hover {
+  background: #ddd;
 }
 .language-modal-container .modal .options-container .show-options-btn::after {
   position: absolute;
@@ -1188,6 +1195,21 @@ footer .footer-information a {
   }
   header .active-nav-item a {
     color: #F7F7F7;
+  }
+  header .logo {
+    position: absolute;
+    top: 15px;
+    right: 5%;
+  }
+  header .logo h3 {
+    width: 200px;
+    text-align: center;
+    font-size: 1.25em;
+  }
+  header .logo p {
+    font-size: 0.7em;
+    width: 200px;
+    text-align: center;
   }
   header .navigation {
     position: relative;
