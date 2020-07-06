@@ -31,7 +31,7 @@
 
         <%- include ('partials/splash-screen.ejs') %>
 
-        
+
         <div class="page-wrapper">
             <div class="welcome-wrapper">
                 <div class="container">
@@ -52,21 +52,118 @@
                         <h1 class="typewriter">Computer Science Student</h1>
                     </div>
                     <div class="contact-section">
-                        <p>Ich heiße <span class="colored">Manuel Neumayer</span> und bin ein im Münchner Raum wohnhafter,
+                        <p>Ich heiße <span class="colored">Manuel Neumayer</span> und bin ein im Münchner Raum
+                            wohnhafter,
                             angehender Softwareentwickler.</p>
                     </div>
+                </div>
+
+                <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
+                    <path d="M-0.27,135.69 C149.99,150.00 291.48,73.52 501.97,135.69 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: #f7f7f7;"></path>
+                </svg>
+
+                <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
+                    <path d="M0.28,131.73 C149.99,150.00 351.30,28.13 500.27,134.70 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: #f7f7f7; fill-opacity: 0.3;"></path>
+                </svg>
+
+                <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
+                    <path d="M0.28,131.73 C149.99,150.00 354.12,40.95 501.97,147.53 L501.97,153.45 L0.00,150.00 Z"
+                        style="stroke: none; fill: #f7f7f7; fill-opacity: 0.5"></path>
+                </svg>
+            </div>
+
+            <div class="biography-wrapper">
+                <h1 class="opacity-header">Welcome</h1>
+                <div class="container biography-container">
+                    <div class="biography-image-container">
+                        <img src="/assets/img/dev-workflow.jpeg">
+                    </div>
+
+                    <div class="biography-content-container">
+                        <h1>Biography</h1>
+                        <hr class="bio-underline">
+                        <div class="bio-text">
+                            <p>Schon früh hat mich die Entwicklung von Webanwendungen und Software fasziniert, weshalb
+                                ich bereits vor dem Informatikstudium anfing, mir das Programmieren selbst beizubringen.
+                            </p>
+                            <br>
+                            <p>Von Anfang an lag für mich dabei stets der Fokus auf den Aufbau eines breitgefächerten
+                                Skillsets und
+                                technischem Know-How.</p>
+                        </div>
+                        <a class="bio-read-more-btn" href="/about">More about me</a>
+                    </div>
+                </div>
+
+                <hr class="biography-seperator">
+            </div>
+
+            <div class="offers-wrapper">
+                <h1 class="offers-intro typewriter">What I do.</h1>
+                <div class="offers">
+                    <div class="offer-item">
+                        <span class="frame upper-frame"></span>
+                        <span class="frame bottom-frame"></span>
+                        <h1>Blogs</h1>
+                        <img src="/assets/img/blog-min.jpg">
+                    </div>
+
+                    <div class="offer-item">
+                        <span class="frame upper-frame"></span>
+                        <span class="frame bottom-frame"></span>
+                        <h1>Business Representations</h1>
+                        <img src="/assets/img/company-min.jpg">
+                    </div>
+
+                    <div class="offer-item">
+                        <span class="frame upper-frame"></span>
+                        <span class="frame bottom-frame"></span>
+                        <h1>Maintenance of Applications</h1>
+                        <img src="/assets/img/maintenance-min.jpg">
+                    </div>
+
+                    <div class="offer-item">
+                        <span class="frame upper-frame"></span>
+                        <span class="frame bottom-frame"></span>
+                        <h1>E-Commerce</h1>
+                        <img src="/assets/img/maintenance-min.jpg">
+                    </div>
+
+                    <div class="offer-item">
+                        <span class="frame upper-frame"></span>
+                        <span class="frame bottom-frame"></span>
+                        <h1>Any other Freelancing work!</h1>
+                        <img src="/assets/img/idea-min.jpg">
+                    </div>
+
+                    <!-- <div class="offer-item">
+                        <span class="frame upper-frame"></span>
+                        <span class="frame bottom-frame"></span>
+                        <h1></h1>
+                        <img src="/assets/img/devices.jpg">
+                    </div> -->
                 </div>
             </div>
 
             <div class="props-wrapper">
                 <div class="container">
+                    <div class="services-intro">
+                        <h1 class="services-headline typewriter">My Services</h1>
+                        <div class="seperator-big">
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                        </div>
+                    </div>
                     <div class="props">
                         <div class="prop">
                             <div class="icon-container">
                                 <i class="fas fa-gem"></i>
                             </div>
                             <h1>Neueste Technologien</h1>
-                            <p>Jegliche von mir erstellten Websiten oder Applikationen sind standardmäßig mit modernen Technologien entwickelt, wobei auf wartbaren Code großen Wert gelegt wird.</p>
+                            <p>Jegliche von mir erstellten Produkte sind standardmäßig mit modernen
+                                Technologien entwickelt, wobei auf wartbaren Code großen Wert gelegt wird.</p>
                         </div>
 
                         <div class="prop">
@@ -74,7 +171,9 @@
                                 <i class="fas fa-tty"></i>
                             </div>
                             <h1>Flexibel kommunikativ</h1>
-                            <p>Wenn Sie nicht aus der Nähe kommen oder schlichtweg die Zeit für zeitintensive Treffen vor Ort fehlt, entstehen daraus keine Probleme. Über E-Mail und Telefon bin ich jederzeit erreichbar.</p>
+                            <p>Wenn Sie nicht aus der Nähe kommen oder schlichtweg die Zeit für zeitintensive Treffen
+                                vor Ort fehlt, entstehen daraus keine Probleme. Über E-Mail und Telefon bin ich
+                                jederzeit erreichbar.</p>
                         </div>
 
                         <div class="prop">
@@ -82,58 +181,9 @@
                                 <i class="fas fa-ruler-combined"></i>
                             </div>
                             <h1>Responsives Design</h1>
-                            <p>Websites erfordern in Zeiten des modernen Webs eine korrekte Darstellung auf allen Geräten unter Beachtung der verschiedenen Bildschirmauflösungen. Daher zeichnet sich jedes meiner Werke durch ein responsives Design aus.</p>
-                        </div>
-                    </div>
-
-                    <img class="devices-img" src="/assets/img/devices-min.png">
-
-                    <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
-                        <path d="M-0.27,135.69 C149.99,150.00 291.48,73.52 501.97,135.69 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #f7f7f7;"></path>
-                    </svg>
-
-                    <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
-                        <path d="M0.28,131.73 C149.99,150.00 351.30,28.13 500.27,134.70 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #f7f7f7; fill-opacity: 0.3;"></path>
-                    </svg>
-
-                    <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
-                        <path d="M0.28,131.73 C149.99,150.00 354.12,40.95 501.97,147.53 L501.97,153.45 L0.00,150.00 Z" style="stroke: none; fill: #f7f7f7; fill-opacity: 0.5"></path>
-                    </svg>
-                </div>
-            </div>
-
-            <div class="offers-wrapper">
-                <div class="container">
-                    <h1 class="typewriter">What I do</h1>
-                    <div class="seperator-big">
-                        <div class="line-1"></div>
-                        <div class="line-2"></div>
-                    </div>
-
-                    <div class="offers">
-                        <div class="offer">
-                            <div class="content">
-                                <img src="/assets/img/blog-min.jpg">
-                                <h3>Blogs</h3>
-                            </div>
-                        </div>
-                        <div class="offer">
-                            <div class="content">
-                                <img src="/assets/img/company-min.jpg">
-                                <h3>Representing your Company</h3>
-                            </div>
-                        </div>
-                        <div class="offer">
-                            <div class="content">
-                                <img src="/assets/img/maintenance-min.jpg">
-                                <h3>Maintenance of existing Applications</h3>
-                            </div>
-                        </div>
-                        <div class="offer">
-                            <div class="content">
-                                <img src="/assets/img/idea-min.jpg">
-                                <h3>& any other Freelance work!</h3>
-                            </div>
+                            <p>Websites erfordern in Zeiten des modernen Webs eine korrekte Darstellung auf allen
+                                Geräten unter Beachtung der verschiedenen Bildschirmauflösungen. Daher zeichnet sich
+                                jedes meiner Produkte durch ein responsives Design aus.</p>
                         </div>
                     </div>
                 </div>
@@ -168,14 +218,15 @@
                             </div>
                         </div>
                         <div class="message-input-wrapper">
-                            <textarea rows="1" cols="30" name="content" placeholder="Was kann ich für Sie tun?" required></textarea>
+                            <textarea rows="1" cols="30" name="content" placeholder="Was kann ich für Sie tun?"
+                                required></textarea>
                             <button class="contact-btn" type="submit">Send</button>
                         </div>
                     </form>
                 </div>
             </div>
-            
-            
+
+
             <div class="language-selection">
                 <button><i class="fas fa-language"></i>Sprache auswählen...</button>
 
@@ -197,7 +248,7 @@
             </div>
         </div>
     </main>
-    
+
     <div class="transition-container"></div>
     <%- include ('partials/footer.ejs') %>
 

@@ -1,5 +1,4 @@
 @import 'utility/_variables.scss';
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .welcome-wrapper {
     width: 100%;
@@ -8,8 +7,9 @@
     background: url('/assets/img/welcome-bg-min.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 200px;
+    padding: 125px 0;
     position: relative;
+    background-attachment: fixed;
 }
 
 .welcome-section {
@@ -32,12 +32,211 @@
             text-shadow: 0px 4px 4px #0C0000;
             padding-top: 20px;
             line-height: 0.8em;
+            font-weight: 400;
         }
 
         h3 {
             font-size: 3.25em;
             text-shadow: 0px 4px 4px #0C0000;
             line-height: 0.8em;
+        }
+    }
+}
+
+.biography-wrapper {
+    padding: 100px 0;
+    background: $dark-white;
+    text-align: center;
+    background: url('/assets/img/blob.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .opacity-header { 
+        color: rgba(211,211,211,0.25);
+        font-size: 3.5em;
+        font-family: Lobster;
+        padding-left: 60px;
+        margin-bottom: 20px;
+    }
+
+    .biography-image-container {
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 20px;
+
+        img { 
+            height: 300px; 
+            width: 200px; 
+            border-radius: 5px; 
+        }
+    }
+
+    .biography-image-container::before {
+        content: '';
+        height: 250px;
+        width: 25px;
+        background: #2B2B2B;
+        position: absolute;
+        left: -25px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .biography-content-container {
+        h1 { color: $black; font-family: Lobster; margin-bottom: 10px; }
+
+        .bio-underline {
+            width: 200px;
+            border: 1px solid gray;
+            position: relative;
+            margin: 0 auto;
+            overflow: visible;
+            margin-bottom: 20px;
+        }
+
+        .bio-underline::after {
+            content: '';
+            width: 50%;
+            height: 6px;
+            background: black;
+            display: block;
+            position: absolute;
+            top: -3px;
+            left: -3px;
+        }
+
+        .bio-text {
+            margin-bottom: 30px;
+
+            p { 
+                color: $black; 
+                max-width: 400px; 
+                margin: 0 auto; 
+            }
+        } 
+
+        .bio-read-more-btn {
+            background: $black;
+            color: $dark-white;
+            font-family: Lobster;
+            padding: 10px 20px;
+            border-radius: 5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .bio-read-more-btn::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.75);
+            border-radius: 5px;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            z-index: -1;
+        }
+    }
+
+    .biography-seperator {
+        width: 75%;
+        max-width: 600px;
+        margin: 150px auto 75px auto;
+        border: 1px solid gray;
+        overflow: visible;
+        position: relative;
+    }
+
+    .biography-seperator::after {
+        content: '';
+        height: 6px;
+        width: 50%;
+        margin: 0 auto;
+        background: $black;
+        display: block;
+        position: absolute;
+        top: -3px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.offers-wrapper {
+    .offers-intro {
+        font-family: Lobster;
+        font-size: 3em;
+        text-align: center;
+        color: $black;
+    }
+
+    .offers {
+        display: flex; 
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 25px 0 200px 0;
+    
+        .offer-item {
+            // flex: 0 1 calc(20% - 20px);
+            flex: 0 1 calc(100% - 20px);
+            margin: 10px;
+            display: flex;
+            position: relative;
+            border: 2px solid #ccc;
+    
+            h1 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                color: $dark-white;
+                font-family: Lobster;
+                z-index: 1;
+                transform: translateX(-50%) translateY(-50%);
+                text-align: center;
+                text-shadow: 0px 4px 20px #000000;
+            }
+    
+            .frame {
+                width: 40px;
+                height: 40px;
+                display: block;
+                position: absolute;
+                z-index: 1;
+            }
+    
+            .upper-frame {
+                border-top: 3px solid #ccc;
+                border-left: 3px solid #ccc;
+                top: 20px;
+                left: 20px;
+            }
+    
+            .bottom-frame {
+                border-bottom: 3px solid #ccc;
+                border-right: 3px solid #ccc;
+                bottom: 20px;
+                right: 20px;
+            }
+    
+    
+            img {
+                width: 100%;
+                height: auto;
+                vertical-align: middle;
+            }
+        }
+    
+        .offer-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,0.5);
+            width: 100%;
+            height: 100%;
         }
     }
 }
@@ -53,12 +252,32 @@
     }
 }
 
+
 .props-wrapper {
     width: 100%;
+    min-height: 100vh;
     position: relative;
-    background-color: $black;
-    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
-    padding: 50px 0 150px 0;
+    background: $dark-white;
+    background-image: url('/assets/img/filler.svg');
+    background-position-x: right;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 150px;
+
+    .services-intro {
+        padding-left: 5%;
+        margin-bottom: 50px;
+
+        .services-headline {
+            font-family: Lobster;
+            color: $black;
+            font-size: 3em;
+        }
+    }
 
     .props {
         display: flex;
@@ -70,7 +289,12 @@
         
         .prop {
             margin: 20px;
-            flex-basis: 80%;
+            flex-basis: 100%;
+            max-width: 400px;
+            background: #202020;
+            border-radius: 10px;
+            padding: 50px 20px;
+            position: relative;
 
             .icon-container {
                 height: 30px;
@@ -79,7 +303,7 @@
                 justify-content: center;
                 align-items: center;
                 padding: 30px;
-                border: 2px solid #008756;
+                border: 2px solid $sky-blue;
                 border-radius: 50%;
                 margin: 10px auto;
 
@@ -103,75 +327,32 @@
 
             p { 
                 text-align: center;
-                border-left: 6px solid $dark-green;
                 padding: 0 20px;
-                line-height: 1.5em;
+                line-height: 1.25em;
             }
         }
-    }
 
-    
+        .prop::before, .prop::after {
+            height: 40px;
+            width: 40px;
+            display: block;
+            position: absolute;
+        }
 
-    .devices-img {
-        width: auto;
-        height: 150px;
-        position: absolute;
-        bottom: -50px;
-        left: 50%;
-        z-index: 1;
-        transform: translateX(-50%);
-    }
-}
+        .prop::before {
+            content: '';
+            border-top: 2px solid $sky-blue;
+            border-left: 2px solid $sky-blue;
+            top: 20px;
+            left: 20px;
+        }
 
-.offers-wrapper {
-    width: 100%;
-    background: $dark-white;
-    padding: 50px 0 150px 0;
-
-    h1 { 
-        color: $black;
-        padding-top: 20px;
-        font-family: Lobster;
-    }
-
-    .offers {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 50px 0;
-        padding: 0 4px;
-
-        .offer {
-            max-width: 400px;
-            flex: 100%;
-            margin: 10px;
-            border-radius: 5px;
-            position: relative;
-            border: 2px solid #ddd;
-
-            .content {
-                h3 { 
-                    color: $dark-white;
-                    text-align: center;
-                    background: #1c1c1c;
-                    padding: 10px 30px;
-                    color: #ccc;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 50px;
-                    font-size: 1em;
-                    position: absolute;
-                    bottom: 0;
-                    width: 100%;
-                }
-    
-                img {
-                    vertical-align: middle;
-                    max-width: 100%;
-                    height: auto;
-                }
-            }
+        .prop::after {
+            content: '';
+            border-bottom: 2px solid $sky-blue;
+            border-right: 2px solid $sky-blue;
+            bottom: 20px;
+            right: 20px;
         }
     }
 }
@@ -197,22 +378,6 @@
             font-size: 4em;
         }
     }
-
-    .offers-wrapper {
-        h1 {
-            font-size: 2.5em;
-        }
-    }
-}
-
-@media (min-width: 600px) {
-    .props-wrapper {
-        padding: 50px 0 250px 0;
-
-        .devices-img {
-            height: 250px;
-        }
-    }
 }
 
 @media (min-width: 768px) {
@@ -231,16 +396,79 @@
         }
     }
 
-    .offers-wrapper {
-        .offers .offer {
-            flex: calc(50% - 30px);
-        }
+    .biography-wrapper {
+        .opacity-header { font-size: 5.5em; }
+        .biography-container {
+            display: flex;
+            justify-content: center;
+    
+            .biography-content-container {
+                padding: 30px;
+                margin-left: 50px;
 
-        h1 { font-size: 3em; }
+                h1 { font-size: 2.5em; }
+            }
+    
+            .biography-image-container img {
+                height: 400px;
+                width: 275px;
+            }
+
+            .biography-image-container::before {
+                height: 325px;
+            }
+        }
+    }
+
+    .offers-wrapper {
+        .offers-intro { font-size: 4em; }
+        .offers .offer-item {
+            flex: 0 1 calc(50% - 20px);
+        }
     }
 
     .props-wrapper .props .prop {
         flex-basis: 70%;
+    }
+}
+
+@media (min-width: 1080px) {
+    .props-wrapper {
+        .services-intro {
+            .services-headline {
+                font-size: 4em;
+            }
+        }
+    }
+
+    .biography-wrapper {
+        .opacity-header { font-size: 6.5em; }
+
+        .biography-container {    
+            align-items: center;
+
+            .biography-image-container img {
+                height: 500px;
+                width: 325px;
+            }
+
+            .biography-image-container::before {
+                height: 425px;
+            }
+
+            .biography-content-container {
+                h1 { font-size: 3.5em; }
+
+                .bio-text p { font-size: 1.1em; }
+            }
+        }
+    }
+
+    .offers-wrapper {
+        .offers-intro { font-size: 4.5em; }
+        .offers .offer-item {
+            flex: 0 1 calc(33.3% - 20px);
+        }
     }
 }
 
@@ -261,10 +489,7 @@
     }
 
     .props-wrapper {
-        padding: 50px 0 350px 0;
-
-        .devices-img { height: 350px; }
-        .props .prop { flex: calc(50% - 40px); }
+        .props .prop { flex: calc(33.3% - 50px); }
     }
 
     .contact-section-wrapper {
@@ -323,10 +548,27 @@
         }
     }
 
-    .props-wrapper {
-        padding: 50px 0 550px 0;
+    .biography-wrapper {
+        .opacity-header { font-size: 7.5em; }
 
-        .devices-img { height: 550px; }
+        .biography-container {    
+            .biography-image-container img {
+                height: 600px;
+                width: 375px;
+            }
+
+            .biography-image-container::before {
+                height: 525px;
+            }
+        }
+    }
+
+    .props-wrapper {
+        .services-intro {
+            .services-headline {
+                font-size: 5em;
+            }
+        }
 
         .props {
             .prop {
@@ -336,12 +578,11 @@
     }
 
     .offers-wrapper {
-        .offers .offer {
-            flex: calc(25% - 30px); 
+        .offers-intro { font-size: 5em; }
+        .offers .offer-item {
+            flex: 0 1 calc(20% - 20px);
 
-            .content img {
-                min-height: 250px;;
-            }
+            h1 { font-size: 1.8em; }
         }
     }
 }

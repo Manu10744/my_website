@@ -55,14 +55,6 @@ barba.hooks.after((data) => {
         pageWrapper.classList.toggle("blurred");
     });
 
-    const welcomeWrapper = document.querySelector(".welcome-wrapper");
-    window.addEventListener("scroll", () => {
-        wrapperHeight = welcomeWrapper.offsetHeight;
-        scrollHeight = window.scrollY;
-
-        welcomeWrapper.style.opacity = (scrollHeight == 0) ? 1 : 1 - ((scrollHeight / wrapperHeight) / 2);
-    })
-
     // Reinitialize Typewriters
     typewriterList.forEach((el, idx) => { typewriterList[idx] = null; })
     typewriterList.splice(0, typewriterList.length);

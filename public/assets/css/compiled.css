@@ -1,9 +1,9 @@
-/* GLOBAL SCSS VARIALBES */
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 /* Partials */
 /* GLOBAL SCSS VARIALBES */
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+/* GLOBAL SCSS VARIALBES */
 .welcome-wrapper {
   width: 100%;
   height: 100%;
@@ -11,8 +11,9 @@
   background: url("/assets/img/welcome-bg-min.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 200px;
+  padding: 125px 0;
   position: relative;
+  background-attachment: fixed;
 }
 
 .welcome-section {
@@ -31,11 +32,187 @@
   text-shadow: 0px 4px 4px #0C0000;
   padding-top: 20px;
   line-height: 0.8em;
+  font-weight: 400;
 }
 .welcome-section .heading-small h3 {
   font-size: 3.25em;
   text-shadow: 0px 4px 4px #0C0000;
   line-height: 0.8em;
+}
+
+.biography-wrapper {
+  padding: 100px 0;
+  background: #F7F7F7;
+  text-align: center;
+  background: url("/assets/img/blob.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.biography-wrapper .opacity-header {
+  color: rgba(211, 211, 211, 0.25);
+  font-size: 3.5em;
+  font-family: Lobster;
+  padding-left: 60px;
+  margin-bottom: 20px;
+}
+.biography-wrapper .biography-image-container {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.biography-wrapper .biography-image-container img {
+  height: 300px;
+  width: 200px;
+  border-radius: 5px;
+}
+.biography-wrapper .biography-image-container::before {
+  content: "";
+  height: 250px;
+  width: 25px;
+  background: #2B2B2B;
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+.biography-wrapper .biography-content-container h1 {
+  color: #000;
+  font-family: Lobster;
+  margin-bottom: 10px;
+}
+.biography-wrapper .biography-content-container .bio-underline {
+  width: 200px;
+  border: 1px solid gray;
+  position: relative;
+  margin: 0 auto;
+  overflow: visible;
+  margin-bottom: 20px;
+}
+.biography-wrapper .biography-content-container .bio-underline::after {
+  content: "";
+  width: 50%;
+  height: 6px;
+  background: black;
+  display: block;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+}
+.biography-wrapper .biography-content-container .bio-text {
+  margin-bottom: 30px;
+}
+.biography-wrapper .biography-content-container .bio-text p {
+  color: #000;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.biography-wrapper .biography-content-container .bio-read-more-btn {
+  background: #000;
+  color: #F7F7F7;
+  font-family: Lobster;
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+.biography-wrapper .biography-content-container .bio-read-more-btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: -1;
+}
+.biography-wrapper .biography-seperator {
+  width: 75%;
+  max-width: 600px;
+  margin: 150px auto 75px auto;
+  border: 1px solid gray;
+  overflow: visible;
+  position: relative;
+}
+.biography-wrapper .biography-seperator::after {
+  content: "";
+  height: 6px;
+  width: 50%;
+  margin: 0 auto;
+  background: #000;
+  display: block;
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.offers-wrapper .offers-intro {
+  font-family: Lobster;
+  font-size: 3em;
+  text-align: center;
+  color: #000;
+}
+.offers-wrapper .offers {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 25px 0 200px 0;
+}
+.offers-wrapper .offers .offer-item {
+  flex: 0 1 calc(100% - 20px);
+  margin: 10px;
+  display: flex;
+  position: relative;
+  border: 2px solid #ccc;
+}
+.offers-wrapper .offers .offer-item h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #F7F7F7;
+  font-family: Lobster;
+  z-index: 1;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  text-shadow: 0px 4px 20px #000000;
+}
+.offers-wrapper .offers .offer-item .frame {
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+.offers-wrapper .offers .offer-item .upper-frame {
+  border-top: 3px solid #ccc;
+  border-left: 3px solid #ccc;
+  top: 20px;
+  left: 20px;
+}
+.offers-wrapper .offers .offer-item .bottom-frame {
+  border-bottom: 3px solid #ccc;
+  border-right: 3px solid #ccc;
+  bottom: 20px;
+  right: 20px;
+}
+.offers-wrapper .offers .offer-item img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.offers-wrapper .offers .offer-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
 }
 
 .contact-section {
@@ -50,10 +227,27 @@
 
 .props-wrapper {
   width: 100%;
+  min-height: 100vh;
   position: relative;
-  background-color: #000;
-  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
-  padding: 50px 0 150px 0;
+  background: #F7F7F7;
+  background-image: url("/assets/img/filler.svg");
+  background-position-x: right;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+.props-wrapper .services-intro {
+  padding-left: 5%;
+  margin-bottom: 50px;
+}
+.props-wrapper .services-intro .services-headline {
+  font-family: Lobster;
+  color: #000;
+  font-size: 3em;
 }
 .props-wrapper .props {
   display: flex;
@@ -65,7 +259,12 @@
 }
 .props-wrapper .props .prop {
   margin: 20px;
-  flex-basis: 80%;
+  flex-basis: 100%;
+  max-width: 400px;
+  background: #202020;
+  border-radius: 10px;
+  padding: 50px 20px;
+  position: relative;
 }
 .props-wrapper .props .prop .icon-container {
   height: 30px;
@@ -74,7 +273,7 @@
   justify-content: center;
   align-items: center;
   padding: 30px;
-  border: 2px solid #008756;
+  border: 2px solid #01CCD9;
   border-radius: 50%;
   margin: 10px auto;
 }
@@ -96,64 +295,28 @@
 }
 .props-wrapper .props .prop p {
   text-align: center;
-  border-left: 6px solid #008756;
   padding: 0 20px;
-  line-height: 1.5em;
+  line-height: 1.25em;
 }
-.props-wrapper .devices-img {
-  width: auto;
-  height: 150px;
+.props-wrapper .props .prop::before, .props-wrapper .props .prop::after {
+  height: 40px;
+  width: 40px;
+  display: block;
   position: absolute;
-  bottom: -50px;
-  left: 50%;
-  z-index: 1;
-  transform: translateX(-50%);
 }
-
-.offers-wrapper {
-  width: 100%;
-  background: #F7F7F7;
-  padding: 50px 0 150px 0;
+.props-wrapper .props .prop::before {
+  content: "";
+  border-top: 2px solid #01CCD9;
+  border-left: 2px solid #01CCD9;
+  top: 20px;
+  left: 20px;
 }
-.offers-wrapper h1 {
-  color: #000;
-  padding-top: 20px;
-  font-family: Lobster;
-}
-.offers-wrapper .offers {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 50px 0;
-  padding: 0 4px;
-}
-.offers-wrapper .offers .offer {
-  max-width: 400px;
-  flex: 100%;
-  margin: 10px;
-  border-radius: 5px;
-  position: relative;
-  border: 2px solid #ddd;
-}
-.offers-wrapper .offers .offer .content h3 {
-  color: #F7F7F7;
-  text-align: center;
-  background: #1c1c1c;
-  padding: 10px 30px;
-  color: #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  font-size: 1em;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-.offers-wrapper .offers .offer .content img {
-  vertical-align: middle;
-  max-width: 100%;
-  height: auto;
+.props-wrapper .props .prop::after {
+  content: "";
+  border-bottom: 2px solid #01CCD9;
+  border-right: 2px solid #01CCD9;
+  bottom: 20px;
+  right: 20px;
 }
 
 /* ========================================================= */
@@ -169,18 +332,6 @@
   }
   .welcome-section .heading-small h3 {
     font-size: 4em;
-  }
-
-  .offers-wrapper h1 {
-    font-size: 2.5em;
-  }
-}
-@media (min-width: 600px) {
-  .props-wrapper {
-    padding: 50px 0 250px 0;
-  }
-  .props-wrapper .devices-img {
-    height: 250px;
   }
 }
 @media (min-width: 768px) {
@@ -198,15 +349,69 @@
     font-size: 4.25em;
   }
 
-  .offers-wrapper .offers .offer {
-    flex: calc(50% - 30px);
+  .biography-wrapper .opacity-header {
+    font-size: 5.5em;
   }
-  .offers-wrapper h1 {
-    font-size: 3em;
+  .biography-wrapper .biography-container {
+    display: flex;
+    justify-content: center;
+  }
+  .biography-wrapper .biography-container .biography-content-container {
+    padding: 30px;
+    margin-left: 50px;
+  }
+  .biography-wrapper .biography-container .biography-content-container h1 {
+    font-size: 2.5em;
+  }
+  .biography-wrapper .biography-container .biography-image-container img {
+    height: 400px;
+    width: 275px;
+  }
+  .biography-wrapper .biography-container .biography-image-container::before {
+    height: 325px;
+  }
+
+  .offers-wrapper .offers-intro {
+    font-size: 4em;
+  }
+  .offers-wrapper .offers .offer-item {
+    flex: 0 1 calc(50% - 20px);
   }
 
   .props-wrapper .props .prop {
     flex-basis: 70%;
+  }
+}
+@media (min-width: 1080px) {
+  .props-wrapper .services-intro .services-headline {
+    font-size: 4em;
+  }
+
+  .biography-wrapper .opacity-header {
+    font-size: 6.5em;
+  }
+  .biography-wrapper .biography-container {
+    align-items: center;
+  }
+  .biography-wrapper .biography-container .biography-image-container img {
+    height: 500px;
+    width: 325px;
+  }
+  .biography-wrapper .biography-container .biography-image-container::before {
+    height: 425px;
+  }
+  .biography-wrapper .biography-container .biography-content-container h1 {
+    font-size: 3.5em;
+  }
+  .biography-wrapper .biography-container .biography-content-container .bio-text p {
+    font-size: 1.1em;
+  }
+
+  .offers-wrapper .offers-intro {
+    font-size: 4.5em;
+  }
+  .offers-wrapper .offers .offer-item {
+    flex: 0 1 calc(33.3% - 20px);
   }
 }
 @media (min-width: 1200px) {
@@ -221,14 +426,8 @@
     font-size: 6em;
   }
 
-  .props-wrapper {
-    padding: 50px 0 350px 0;
-  }
-  .props-wrapper .devices-img {
-    height: 350px;
-  }
   .props-wrapper .props .prop {
-    flex: calc(50% - 40px);
+    flex: calc(33.3% - 50px);
   }
 
   .contact-section-wrapper .contact-info {
@@ -278,21 +477,32 @@
     font-size: 7.5em;
   }
 
-  .props-wrapper {
-    padding: 50px 0 550px 0;
+  .biography-wrapper .opacity-header {
+    font-size: 7.5em;
   }
-  .props-wrapper .devices-img {
-    height: 550px;
+  .biography-wrapper .biography-container .biography-image-container img {
+    height: 600px;
+    width: 375px;
+  }
+  .biography-wrapper .biography-container .biography-image-container::before {
+    height: 525px;
+  }
+
+  .props-wrapper .services-intro .services-headline {
+    font-size: 5em;
   }
   .props-wrapper .props .prop {
     flex-basis: 25%;
   }
 
-  .offers-wrapper .offers .offer {
-    flex: calc(25% - 30px);
+  .offers-wrapper .offers-intro {
+    font-size: 5em;
   }
-  .offers-wrapper .offers .offer .content img {
-    min-height: 250px;
+  .offers-wrapper .offers .offer-item {
+    flex: 0 1 calc(20% - 20px);
+  }
+  .offers-wrapper .offers .offer-item h1 {
+    font-size: 1.8em;
   }
 }
 /* GLOBAL SCSS VARIALBES */
@@ -601,6 +811,7 @@
 body {
   height: 100%;
   min-width: 300px;
+  background: #F7F7F7;
 }
 
 .transition-container {

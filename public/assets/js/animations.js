@@ -11,19 +11,6 @@ if (cookie.indexOf('visited=', 0) == -1) {
   welcomeScreenAnimation();
 }
 
-
-const welcomeWrapper = document.querySelector(".welcome-wrapper");
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", updateOnScroll);
-
-function updateOnScroll() {
-  wrapperHeight = welcomeWrapper.offsetHeight;
-  scrollHeight = window.scrollY;
-
-  welcomeWrapper.style.opacity = (scrollHeight == 0) ? 1 : 1 - ((scrollHeight / wrapperHeight) / 2);
-}
-
 function welcomeScreenAnimation() {
   anime.timeline({ loop: false })
   .add({
