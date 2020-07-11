@@ -202,7 +202,7 @@
 }
 .offers-wrapper .offers .offer-item img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .offers-wrapper .offers .offer-item::after {
   content: "";
