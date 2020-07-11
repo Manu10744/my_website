@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%- language %>">
 
 <head>
     <title>Manuel Neumayer</title>
@@ -17,10 +17,10 @@
             </div>
             <div class="navigation">
                 <ul>
-                    <li class="active-nav-item"><a href="/">Home</a></li>
-                    <li><a href="/about">Über mich</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Impressum</a></li>
+                    <li class="active-nav-item"><a href="/<%- language %>"> <%- docText.common.home %> </a></li>
+                    <li><a href="/<%- language %>/about"> <%- docText.common.about %> </a></li>
+                    <li><a href="#"> <%- docText.common.portfolio %> </a></li>
+                    <li><a href="#"> <%- docText.common.impressum %> </a></li>
                 </ul>
             </div>
             <div class="logo">
@@ -37,11 +37,11 @@
                 <div class="container">
                     <div class="welcome-section">
                         <div class="heading-big">
-                            <h1>Hi,</h1>
+                            <h1> <%- docText.index_page.welcome_heading_big %> </h1>
                         </div>
                         <div class="heading-small">
-                            <h2>I am</h2>
-                            <h3>Manu.</h3>
+                            <h2> <%- docText.index_page.welcome_heading_big_upper %> </h2>
+                            <h3> <%- docText.index_page.welcome_heading_big_lower %> </h3>
                         </div>
                     </div>
                     <div class="seperator">
@@ -49,12 +49,13 @@
                         <div class="line-2"></div>
                     </div>
                     <div class="seperator-title">
-                        <h1 class="typewriter">Computer Science Student</h1>
+                        <h1 class="typewriter"> <%- docText.index_page.welcome_heading_subtitle %> </h1>
                     </div>
                     <div class="contact-section">
-                        <p>Ich heiße <span class="colored">Manuel Neumayer</span> und bin ein im Münchner Raum
-                            wohnhafter,
-                            angehender Softwareentwickler.</p>
+                        <p> <%- docText.index_page.welcome_text_left %> 
+                            <span class="colored"> <%- docText.index_page.welcome_text_highlighted %> </span>
+                            <%- docText.index_page.welcome_text_right %>
+                        </p>
                     </div>
                 </div>
 
@@ -75,25 +76,21 @@
             </div>
 
             <div class="biography-wrapper">
-                <h1 class="opacity-header">Welcome</h1>
+                <h1 class="opacity-header"> <%- docText.index_page.biography_welcome %> </h1>
                 <div class="container biography-container">
                     <div class="biography-image-container">
                         <img src="/assets/img/dev-workflow.jpeg">
                     </div>
 
                     <div class="biography-content-container">
-                        <h1>Biography</h1>
+                        <h1> <%- docText.index_page.biography_headline %> </h1>
                         <hr class="bio-underline">
                         <div class="bio-text">
-                            <p>Schon früh hat mich die Entwicklung von Webanwendungen und Software fasziniert, weshalb
-                                ich bereits vor dem Informatikstudium anfing, mir das Programmieren selbst beizubringen.
-                            </p>
+                            <p> <%- docText.index_page.biography_text_upper %> </p>
                             <br>
-                            <p>Von Anfang an lag für mich dabei stets der Fokus auf den Aufbau eines breitgefächerten
-                                Skillsets und
-                                technischem Know-How.</p>
+                            <p> <%- docText.index_page.biography_text_lower %> </p>
                         </div>
-                        <a class="bio-read-more-btn" href="/about">More about me</a>
+                        <a class="bio-read-more-btn" href="/<%- language %>/about"> <%- docText.index_page.biography_more_button %> </a>
                     </div>
                 </div>
 
@@ -101,41 +98,41 @@
             </div>
 
             <div class="offers-wrapper">
-                <h1 class="offers-intro typewriter">What I do.</h1>
+                <h1 class="offers-intro typewriter"> <%- docText.index_page.offers_headline %> </h1>
                 <div class="offers">
                     <div class="offer-item">
                         <span class="frame upper-frame"></span>
                         <span class="frame bottom-frame"></span>
-                        <h1>Blogs</h1>
+                        <h1> <%- docText.index_page.offers_blogs %> </h1>
                         <img src="/assets/img/blog-min.jpg">
                     </div>
 
                     <div class="offer-item">
                         <span class="frame upper-frame"></span>
                         <span class="frame bottom-frame"></span>
-                        <h1>Business Representations</h1>
+                        <h1> <%- docText.index_page.offers_business %> </h1>
                         <img src="/assets/img/company-min.jpg">
                     </div>
 
                     <div class="offer-item">
                         <span class="frame upper-frame"></span>
                         <span class="frame bottom-frame"></span>
-                        <h1>Maintenance of Applications</h1>
+                        <h1> <%- docText.index_page.offers_maintenance %> </h1>
                         <img src="/assets/img/maintenance-min.jpg">
                     </div>
 
                     <div class="offer-item">
                         <span class="frame upper-frame"></span>
                         <span class="frame bottom-frame"></span>
-                        <h1>E-Commerce</h1>
-                        <img src="/assets/img/maintenance-min.jpg">
+                        <h1> <%- docText.index_page.offers_ecommerce %> </h1>
+                        <img src="/assets/img/ecommerce.jpg">
                     </div>
 
                     <div class="offer-item">
                         <span class="frame upper-frame"></span>
                         <span class="frame bottom-frame"></span>
-                        <h1>Any other Freelancing work!</h1>
-                        <img src="/assets/img/idea-min.jpg">
+                        <h1> <%- docText.index_page.offers_other %> </h1>
+                        <img src="/assets/img/freelance.jpg">
                     </div>
 
                     <!-- <div class="offer-item">
@@ -150,7 +147,7 @@
             <div class="props-wrapper">
                 <div class="container">
                     <div class="services-intro">
-                        <h1 class="services-headline typewriter">My Services</h1>
+                        <h1 class="services-headline typewriter"> <%- docText.index_page.services_headline %> </h1>
                         <div class="seperator-big">
                             <div class="line-1"></div>
                             <div class="line-2"></div>
@@ -161,29 +158,24 @@
                             <div class="icon-container">
                                 <i class="fas fa-gem"></i>
                             </div>
-                            <h1>Neueste Technologien</h1>
-                            <p>Jegliche von mir erstellten Produkte sind standardmäßig mit modernen
-                                Technologien entwickelt, wobei auf wartbaren Code großen Wert gelegt wird.</p>
+                            <h1> <%- docText.index_page.services_item_one_headline %> </h1>
+                            <p> <%- docText.index_page.services_item_one_text %> </p>
                         </div>
 
                         <div class="prop">
                             <div class="icon-container">
                                 <i class="fas fa-tty"></i>
                             </div>
-                            <h1>Flexibel kommunikativ</h1>
-                            <p>Wenn Sie nicht aus der Nähe kommen oder schlichtweg die Zeit für zeitintensive Treffen
-                                vor Ort fehlt, entstehen daraus keine Probleme. Über E-Mail und Telefon bin ich
-                                jederzeit erreichbar.</p>
+                            <h1> <%- docText.index_page.services_item_two_headline %> </h1>
+                            <p> <%- docText.index_page.services_item_two_text %> </p>
                         </div>
 
                         <div class="prop">
                             <div class="icon-container">
                                 <i class="fas fa-ruler-combined"></i>
                             </div>
-                            <h1>Responsives Design</h1>
-                            <p>Websites erfordern in Zeiten des modernen Webs eine korrekte Darstellung auf allen
-                                Geräten unter Beachtung der verschiedenen Bildschirmauflösungen. Daher zeichnet sich
-                                jedes meiner Produkte durch ein responsives Design aus.</p>
+                            <h1> <%- docText.index_page.services_item_three_headline %> </h1>
+                            <p> <%- docText.index_page.services_item_three_text %> </p>
                         </div>
                     </div>
                 </div>
@@ -191,13 +183,13 @@
 
             <div class="contact-section-wrapper">
                 <div class="contact-info">
-                    <h1 class="typewriter">Let's get in touch?</h1>
-                    <p>Entweder über folgendes Formular oder an:</p>
+                    <h1 class="typewriter"> <%- docText.common.contact_headline %> </h1>
+                    <p> <%- docText.common.contact_text %> </p>
                     <div class="email-container">
                         <div class="icon-container">
                             <i class="fas fa-envelope-open-text"></i>
                         </div>
-                        <a href="mailto:089manu6@gmail.com">089manu6@gmail.com</a>
+                        <a href="mailto:089manu6@gmail.com"> <%- docText.common.contact_email %> </a>
                     </div>
                 </div>
 
@@ -205,22 +197,22 @@
                     <form action="/contact" method="POST">
                         <div class="inputs-wrapper">
                             <div class="input-container">
-                                <label for="name">Ihr Name</label>
-                                <input type="text" name="name" placeholder="Max Mustermann" required>
+                                <label for="name"> <%- docText.common.contact_form_label_name %> </label>
+                                <input type="text" name="name" placeholder="<%- docText.common.contact_form_placeholder_name %>" required>
                             </div>
                             <div class="input-container">
-                                <label for="email">Ihre E-Mail</label>
-                                <input type="text" name="email" placeholder="max.m@gmail.com" required>
+                                <label for="email"> <%- docText.common.contact_form_label_email %> </label>
+                                <input type="text" name="email" placeholder="<%- docText.common.contact_form_placeholder_email %>" required>
                             </div>
                             <div class="input-container">
-                                <label for="topic">Betreff</label>
-                                <input type="text" name="topic" placeholder="Ihr Anliegen" required>
+                                <label for="topic"> <%- docText.common.contact_form_label_topic %> </label>
+                                <input type="text" name="topic" placeholder="<%- docText.common.contact_form_placeholder_topic %>" required>
                             </div>
                         </div>
                         <div class="message-input-wrapper">
-                            <textarea rows="1" cols="30" name="content" placeholder="Was kann ich für Sie tun?"
+                            <textarea rows="1" cols="30" name="content" placeholder="<%- docText.common.contact_form_placeholder_textarea %>"
                                 required></textarea>
-                            <button class="contact-btn" type="submit">Send</button>
+                            <button class="contact-btn" type="submit"> <%- docText.common.contact_form_submit_button %> </button>
                         </div>
                     </form>
                 </div>
@@ -228,21 +220,21 @@
 
 
             <div class="language-selection">
-                <button><i class="fas fa-language"></i>Sprache auswählen...</button>
+                <button><i class="fas fa-language"></i> <%- docText.common.select_lang_text %> </button>
 
                 <div class="language-modal-container">
                     <div class="modal">
                         <div class="close-modal-btn">X</div>
-                        <h1>Sprachauswahl</h1>
+                        <h1> <%- docText.common.select_lang_headline %> </h1>
 
                         <div class="options-container">
                             <div class="show-options-btn">
-                                <i class="fas fa-language"></i>Bitte auswählen...
+                                <i class="fas fa-language"></i> <%- docText.common.select_lang_subtitle %>
                             </div>
                             <div class="language-option">Deutsch</div>
                             <div class="language-option">English</div>
                         </div>
-                        <a class="confirm-btn" href="#">Bestätigen</a>
+                        <a class="confirm-btn" href="#"> <%- docText.common.select_lang_confirm_btn %> </a>
                     </div>
                 </div>
             </div>
@@ -259,7 +251,7 @@
     <script defer src="/assets/js/fontawesome.min.js"></script>
     <script defer src="/assets/js/all.min.js"></script>
 
-    <script src="/assets/js/select-language.js"></script>
+    <script type="module" src="/assets/js/select-language.js"></script>
     <script src="/assets/js/cookies.js"></script>
     <script type="module" src="/assets/js/mobile-navigation.js"></script>
     <script src="/assets/js/animations.js"></script>

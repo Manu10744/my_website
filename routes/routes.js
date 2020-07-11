@@ -2,16 +2,29 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const secrets = require("../config/secrets.json");
+const fs = require("fs");
 
 const router = express.Router();
 
 router.use(express.static('public'));
 router.use(bodyParser.urlencoded({ extended: true }))
 
-router.get("/", (req, res) => res.render("index.ejs"));
+router.get("/", (req, res) => { res.redirect("/de"); });
 
-router.get("/about", (req, res) => {
-    res.render("about.ejs");
+router.get("/:lang", (req, res) => {
+    // Redirect to english page if language is neither 'de' nor 'en'
+    const selectedLang = (req.params.lang == 'de' || req.params.lang == 'en') ? req.params.lang : res.redirect("/en");
+    const docText = JSON.parse(fs.readFileSync('./resources/' + selectedLang + '.json').toString());
+
+    res.render("index.ejs", { docText: docText, language: selectedLang })
+});
+
+router.get("/:lang/about", (req, res) => {
+    // Redirect to english page if language is neither 'de' nor 'en'
+    const selectedLang = (req.params.lang == 'de' || req.params.lang == 'en') ? req.params.lang : res.redirect("/en");
+    const docText = JSON.parse(fs.readFileSync('./resources/' + selectedLang + '.json').toString());
+
+    res.render("about.ejs", { docText: docText, language: selectedLang });
 })
 
 router.post("/contact", (req, res) => {

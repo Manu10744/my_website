@@ -5,7 +5,7 @@ const languageOptions = document.querySelectorAll(".language-option");
 const closeModalBtn = document.querySelector(".close-modal-btn");
 const confirmLanguageBtn = document.querySelector(".confirm-btn");
 
-const languageMap = new Map();
+export const languageMap = new Map();
 languageMap.set("Deutsch", "de");
 languageMap.set("English", "en");
 
@@ -73,27 +73,29 @@ languageOptions.forEach((option) => {
 
 confirmLanguageBtn.addEventListener("click", () => { 
   let selectedLanguage = showOptionsBtn.innerText;
-  //TODO: Redirect to route with selected language
+  let languagePrefix = languageMap.get(selectedLanguage)
+
+  location.href = '/' + languagePrefix;
 });
 
-function showLanguageOptions() {
+export function showLanguageOptions() {
   anime({
     targets: '.language-option',
     opacity: [0, 1],
     easing: 'easeInQuad',
     duration: 200,
     delay: anime.stagger(100),
-    begin: () => { languageOptions.forEach((option) => { option.style.display = 'block'; })}
+    begin: () => { document.querySelectorAll(".language-option").forEach((option) => { option.style.display = 'block'; })}
   })
 }
 
-function hideLanguageOptions() {
+export function hideLanguageOptions() {
   anime({
     targets: '.language-option',
     opacity: [1, 0],
     easing: 'easeInQuad',
     duration: 200,
     delay: anime.stagger(100),
-    complete: () => { languageOptions.forEach((option) => { option.style.display = ''; })}
+    complete: () => { document.querySelectorAll(".language-option").forEach((option) => { option.style.display = ''; })}
   })
 }

@@ -1,226 +1,235 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Manuel Neumayer</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="/assets/css/compiled.css" rel="stylesheet">
-    </head>
 
-    <body data-barba="wrapper">
-        <main data-barba="container" data-barba-namespace="about">
-            <header>
-                <div class="mobile-nav-toggler">
-                    <div class="mobile-nav-line first"></div>
-                    <div class="mobile-nav-line second"></div>
-                </div>
-                <div class="navigation">
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li class="active-nav-item"><a href="/about">Über mich</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Impressum</a></li>
-                    </ul>
-                </div>
-                <div class="logo">
-                    <h3>Web Development</h3>
-                    <p>By Manuel Neumayer</p>
-                </div>
-            </header>
-            
-            <%- include ('partials/splash-screen.ejs') %>
-            
-            <div class="page-wrapper">
-                <div class="about-wrapper">
-                    <div class="timeline-img-container">
-                        <div class="personal-img-container">
-                            <img src="/assets/img/me-min.jpg">
-                        </div>
-            
-                        <!-- Only for mobile devices -->
-                        <div class="scroll-down-indicator">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
+<head>
+    <title>Manuel Neumayer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/assets/css/compiled.css" rel="stylesheet">
+</head>
+
+<body data-barba="wrapper">
+    <main data-barba="container" data-barba-namespace="about">
+        <header>
+            <div class="mobile-nav-toggler">
+                <div class="mobile-nav-line first"></div>
+                <div class="mobile-nav-line second"></div>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="/<%- language %>"> <%- docText.common.home %> </a></li>
+                    <li class="active-nav-item"><a href="/<%- language %>/about"> <%- docText.common.about %> </a></li>
+                    <li><a href="#"> <%- docText.common.portfolio %> </a></li>
+                    <li><a href="#"> <%- docText.common.impressum %> </a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <h3><span class="letters">Web Development</span></h3>
+                <p><span class="letters">By Manuel Neumayer</span></p>
+            </div>
+        </header>
+
+        <%- include ('partials/splash-screen.ejs') %>
+
+        <div class="page-wrapper">
+            <div class="about-wrapper">
+                <div class="timeline-img-container">
+                    <div class="personal-img-container">
+                        <img src="/assets/img/me-min.jpg">
                     </div>
-            
-                    <div class="timeline-container">
-                        <div class="container">
-                            <h1 class="typewriter">Curriculum Vitae</h1>
-                            <div class="seperator-big">
-                                <div class="line-1"></div>
-                                <div class="line-2"></div>
-                            </div>
-            
-                            <div class="timeline">
-                                <div class="timeline-item">
-                                    <span class="timestamp">2018 - Today</span>
-                                    <div class="item-icon">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
-                                    <h2>Studium der Informatik und Computerlinguistik</h2>
-                                    <p>Ludwig-Maximilans-Universität, München</p>
-                                </div>
-            
-                                <div class="timeline-item">
-                                    <span class="timestamp">2017</span>
-                                    <div class="item-icon">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
-                                    <h2>Allgemeine Hochschulreife</h2>
-                                    <p>Staatliche Fachoberschule, Bad Tölz</p>
-                                </div>
-            
-                                <div class="timeline-item">
-                                    <span class="timestamp">2014</span>
-                                    <div class="item-icon">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
-                                    <h2>Mittlere Reife</h2>
-                                    <p>Realschule, Geretsried</p>
-                                </div>
-                            </div>
-                        </div>
+
+                    <!-- Only for mobile devices -->
+                    <div class="scroll-down-indicator">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-            
-                    <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
-                        <path d="M-0.27,135.69 C149.99,150.00 291.48,73.52 501.97,135.69 L500.00,150.00 L0.00,150.00 Z"
-                            style="stroke: none; fill: #f7f7f7;"></path>
-                    </svg>
-            
-                    <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
-                        <path d="M0.28,131.73 C149.99,150.00 351.30,28.13 500.27,134.70 L500.00,150.00 L0.00,150.00 Z"
-                            style="stroke: none; fill: #f7f7f7; fill-opacity: 0.3;"></path>
-                    </svg>
-            
-                    <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
-                        <path d="M0.28,131.73 C149.99,150.00 354.12,40.95 501.97,147.53 L501.97,153.45 L0.00,150.00 Z"
-                            style="stroke: none; fill: #f7f7f7; fill-opacity: 0.5"></path>
-                    </svg>
                 </div>
-            
-                <div class="techstack-wrapper">
-                    <div class="container tech-intro">
-                        <h1 class="typewriter">Programmiersprachen &amp; andere Technologien</h1>
-            
+
+                <div class="timeline-container">
+                    <div class="container">
+                        <h1 class="typewriter"> <%- docText.about_page.timeline_headline %> </h1>
                         <div class="seperator-big">
                             <div class="line-1"></div>
                             <div class="line-2"></div>
                         </div>
-                    </div>
-            
-                    <div class="wave-container">
-                        <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
-                            <path d="M-0.27,135.69 C149.99,150.00 291.48,73.52 501.97,135.69 L500.00,150.00 L0.00,150.00 Z"
-                                style="stroke: none; fill: #EEE;"></path>
-                        </svg>
-                    </div>
-            
-                    <div class="techstack-container">
-                        <div class="techstack-item">
-                            <div class="techstack-img html5"></div>
-                        </div>
-                        <div class="techstack-item">
-                            <div class="techstack-img css3"></div>
-                        </div>
-                        <div class="techstack-item">
-                            <div class="techstack-img js"></div>
-                        </div>
-                        <div class="techstack-item">
-                            <div class="techstack-img java"></div>
-                        </div>
-                        <div class="techstack-item">
-                            <div class="techstack-img python"></div>
-                        </div>
-                        <div class="techstack-item">
-                            <div class="techstack-img mongodb"></div>
-                        </div>
-                        <div class="techstack-item">
-                            <div class="techstack-img sql"></div>
-                        </div>
-                        <div class="techstack-item">
-                            <div class="techstack-img git"></div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="contact-section-wrapper">
-                    <div class="contact-info">
-                        <h1 class="typewriter">Let's get in touch?</h1>
-                        <p>Entweder über folgendes Formular oder an:</p>
-                        <div class="email-container">
-                            <div class="icon-container">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <a href="mailto:089manu6@gmail.com">089manu6@gmail.com</a>
-                        </div>
-                    </div>
-            
-                    <div class="contact-formular">
-                        <form action="/contact" method="POST">
-                            <div class="inputs-wrapper">
-                                <div class="input-container">
-                                    <label for="name">Ihr Name</label>
-                                    <input type="text" name="name" placeholder="Max Mustermann" required>
-                                </div>
-                                <div class="input-container">
-                                    <label for="email">Ihre E-Mail</label>
-                                    <input type="text" name="email" placeholder="max.m@gmail.com" required>
-                                </div>
-                                <div class="input-container">
-                                    <label for="topic">Betreff</label>
-                                    <input type="text" name="topic" placeholder="Ihr Anliegen" required>
-                                </div>
-                            </div>
-                            <div class="message-input-wrapper">
-                                <textarea rows="1" cols="30" name="content" placeholder="Was kann ich für Sie tun?"
-                                    required></textarea>
-                                <button class="contact-btn" type="submit">Send</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            
-                <div class="language-selection">
-                    <button><i class="fas fa-language"></i>Sprache auswählen...</button>
 
-                    <div class="language-modal-container">
-                        <div class="modal">
-                            <div class="close-modal-btn">X</div>
-                            <h1>Sprachauswahl</h1>
-    
-                            <div class="options-container">
-                                <div class="show-options-btn">
-                                    <i class="fas fa-language"></i>Bitte auswählen...
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="timestamp"> <%- docText.about_page.timeline_item_first_timestamp %> </span>
+                                <div class="item-icon">
+                                    <i class="fas fa-graduation-cap"></i>
                                 </div>
-                                <div class="language-option">Deutsch</div>
-                                <div class="language-option">English</div>
+                                <h2> <%- docText.about_page.timeline_item_first_headline %> </h2>
+                                <p> <%- docText.about_page.timeline_item_first_location %> </p>
                             </div>
-                            <a class="confirm-btn" href="#">Bestätigen</a>
+
+                            <div class="timeline-item">
+                                <span class="timestamp"> <%- docText.about_page.timeline_item_second_timestamp %>
+                                </span>
+                                <div class="item-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h2> <%- docText.about_page.timeline_item_second_headline %> </h2>
+                                <p> <%- docText.about_page.timeline_item_second_location %> </p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span class="timestamp"> <%- docText.about_page.timeline_item_third_timestamp %> </span>
+                                <div class="item-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h2> <%- docText.about_page.timeline_item_third_headline %> </h2>
+                                <p> <%- docText.about_page.timeline_item_third_location %> </p>
+                            </div>
                         </div>
+                    </div>
+                </div>
+
+                <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
+                    <path d="M-0.27,135.69 C149.99,150.00 291.48,73.52 501.97,135.69 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: #f7f7f7;"></path>
+                </svg>
+
+                <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
+                    <path d="M0.28,131.73 C149.99,150.00 351.30,28.13 500.27,134.70 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: #f7f7f7; fill-opacity: 0.3;"></path>
+                </svg>
+
+                <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
+                    <path d="M0.28,131.73 C149.99,150.00 354.12,40.95 501.97,147.53 L501.97,153.45 L0.00,150.00 Z"
+                        style="stroke: none; fill: #f7f7f7; fill-opacity: 0.5"></path>
+                </svg>
+            </div>
+
+            <div class="techstack-wrapper">
+                <div class="container tech-intro">
+                    <h1 class="typewriter"> <%- docText.about_page.technologies_headline %> </h1>
+
+                    <div class="seperator-big">
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                    </div>
+                </div>
+
+                <div class="wave-container">
+                    <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
+                        <path d="M-0.27,135.69 C149.99,150.00 291.48,73.52 501.97,135.69 L500.00,150.00 L0.00,150.00 Z"
+                            style="stroke: none; fill: #EEE;"></path>
+                    </svg>
+                </div>
+
+                <div class="techstack-container">
+                    <div class="techstack-item">
+                        <div class="techstack-img html5"></div>
+                    </div>
+                    <div class="techstack-item">
+                        <div class="techstack-img css3"></div>
+                    </div>
+                    <div class="techstack-item">
+                        <div class="techstack-img js"></div>
+                    </div>
+                    <div class="techstack-item">
+                        <div class="techstack-img java"></div>
+                    </div>
+                    <div class="techstack-item">
+                        <div class="techstack-img python"></div>
+                    </div>
+                    <div class="techstack-item">
+                        <div class="techstack-img mongodb"></div>
+                    </div>
+                    <div class="techstack-item">
+                        <div class="techstack-img sql"></div>
+                    </div>
+                    <div class="techstack-item">
+                        <div class="techstack-img git"></div>
                     </div>
                 </div>
             </div>
-        </main>
 
-        <div class="transition-container"></div>
-        <%- include ('partials/footer.ejs') %>
+            <div class="contact-section-wrapper">
+                <div class="contact-info">
+                    <h1 class="typewriter"> <%- docText.common.contact_headline %> </h1>
+                    <p> <%- docText.common.contact_text %> </p>
+                    <div class="email-container">
+                        <div class="icon-container">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <a href="mailto:089manu6@gmail.com"> <%- docText.common.contact_email %> </a>
+                    </div>
+                </div>
+
+                <div class="contact-formular">
+                    <form action="/contact" method="POST">
+                        <div class="inputs-wrapper">
+                            <div class="input-container">
+                                <label for="name"> <%- docText.common.contact_form_label_name %> </label>
+                                <input type="text" name="name"
+                                    placeholder="<%- docText.common.contact_form_placeholder_name %>" required>
+                            </div>
+                            <div class="input-container">
+                                <label for="email"> <%- docText.common.contact_form_label_email %> </label>
+                                <input type="text" name="email"
+                                    placeholder="<%- docText.common.contact_form_placeholder_email %>" required>
+                            </div>
+                            <div class="input-container">
+                                <label for="topic"> <%- docText.common.contact_form_label_topic %> </label>
+                                <input type="text" name="topic"
+                                    placeholder="<%- docText.common.contact_form_placeholder_topic %>" required>
+                            </div>
+                        </div>
+                        <div class="message-input-wrapper">
+                            <textarea rows="1" cols="30" name="content"
+                                placeholder="<%- docText.common.contact_form_placeholder_textarea %>"
+                                required></textarea>
+                            <button class="contact-btn" type="submit"> <%- docText.common.contact_form_submit_button %>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="language-selection">
+                <button><i class="fas fa-language"></i> <%- docText.common.select_lang_text %> </button>
+
+                <div class="language-modal-container">
+                    <div class="modal">
+                        <div class="close-modal-btn">X</div>
+                        <h1> <%- docText.common.select_lang_headline %> </h1>
+
+                        <div class="options-container">
+                            <div class="show-options-btn">
+                                <i class="fas fa-language"></i> <%- docText.common.select_lang_subtitle %>
+                            </div>
+                            <div class="language-option">Deutsch</div>
+                            <div class="language-option">English</div>
+                        </div>
+                        <a class="confirm-btn" href="#"> <%- docText.common.select_lang_confirm_btn %> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="transition-container"></div>
+    <%- include ('partials/footer.ejs') %>
 
 
 
-        <!-- BarbaJS -->
-        <script src="https://unpkg.com/@barba/core"></script>
-        <script src="/assets/js/anime.min.js"></script>
-        <!-- FontAwesome -->
-        <script defer src="/assets/js/fontawesome.min.js"></script>
-        <script defer src="/assets/js/all.min.js"></script>
+    <!-- BarbaJS -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="/assets/js/anime.min.js"></script>
+    <!-- FontAwesome -->
+    <script defer src="/assets/js/fontawesome.min.js"></script>
+    <script defer src="/assets/js/all.min.js"></script>
 
-        <script src="/assets/js/select-language.js"></script>
-        <script type="module" src="/assets/js/mobile-navigation.js"></script>
-        <script src="/assets/js/cookies.js"></script>
-        <script src="/assets/js/animations.js"></script>
-        <script type="module" src="/assets/js/typewriter.js"></script>
-        <script type="module" src="/assets/js/barbaConfig.js"></script>
-    </body>
+    <script type="module" src="/assets/js/select-language.js"></script>
+    <script type="module" src="/assets/js/mobile-navigation.js"></script>
+    <script src="/assets/js/cookies.js"></script>
+    <script src="/assets/js/animations.js"></script>
+    <script type="module" src="/assets/js/typewriter.js"></script>
+    <script type="module" src="/assets/js/barbaConfig.js"></script>
+</body>
+
 </html>
