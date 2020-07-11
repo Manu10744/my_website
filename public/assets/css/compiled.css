@@ -203,7 +203,6 @@
 .offers-wrapper .offers .offer-item img {
   width: 100%;
   height: auto;
-  max-height: 300px;
 }
 .offers-wrapper .offers .offer-item::after {
   content: "";
