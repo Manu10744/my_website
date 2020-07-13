@@ -1,6 +1,7 @@
 import { fadeIn, fadeOut } from './mobile-navigation.js';
 import { typewriterList, Typewriter } from './typewriter.js';
 import { languageMap, showLanguageOptions, hideLanguageOptions } from './select-language.js';
+import { observer } from './animations.js';
 
 const transition = document.querySelector(".transition-container");
 
@@ -31,6 +32,7 @@ barba.hooks.after((data) => {
     reinitNavigationListeners();
     reinitLanguageSelectionListeners();
     reinitTypewriters();
+    reinitIntersectionObserver();
 })
 
 
@@ -192,4 +194,11 @@ function reinitTypewriters() {
         let typewriter = new Typewriter(twElement, 35);
         typewriterList.push(typewriter);
     });
+}
+
+function reinitIntersectionObserver() {
+    const revealables = document.querySelectorAll(".revealable");
+    for (const element of revealables) {
+        observer.observe(element);
+    }
 }

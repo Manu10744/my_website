@@ -180,12 +180,12 @@
         margin: 25px 0 200px 0;
     
         .offer-item {
-            // flex: 0 1 calc(20% - 20px);
             flex: 0 1 calc(100% - 20px);
             margin: 10px;
             display: flex;
             position: relative;
             border: 2px solid #ccc;
+            overflow: hidden;
     
             h1 {
                 position: absolute;
@@ -225,6 +225,8 @@
             img {
                 width: 100%;
                 height: 100%;
+	            -webkit-transition: .3s ease-in-out;
+	            transition: .3s ease-in-out;
             }
         }
     
@@ -236,6 +238,11 @@
             background: rgba(0,0,0,0.5);
             width: 100%;
             height: 100%;
+        }
+
+        .offer-item:hover > img {
+            -webkit-transform: scale(1.3);
+	        transform: scale(1.3);
         }
     }
 }
@@ -294,6 +301,9 @@
             border-radius: 10px;
             padding: 50px 20px;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
             .icon-container {
                 height: 30px;
@@ -365,16 +375,16 @@
 @media (min-width: 480px) {
     .welcome-section {
         .heading-big h1 {
-            font-size: 7em;
+            font-size: 8em;
         }
 
         .heading-small h2 {
-            font-size: 2.25em;
+            font-size: 3em;
             padding-top: 22px;
         }
 
         .heading-small h3 {
-            font-size: 4em;
+            font-size: 5em;
         }
     }
 }
@@ -383,15 +393,16 @@
     .welcome-wrapper { padding-top: 250px; }
     .welcome-section {
         .heading-big h1 {
-            font-size: 8em;
+            font-size: 10em;
         }
 
         .heading-small h2 {
             font-size: 3.25em;
+            padding-top: 30px;
         }
 
         .heading-small h3 {
-            font-size: 4.25em;
+            font-size: 6.5em;
         }
     }
 
@@ -432,6 +443,21 @@
 }
 
 @media (min-width: 1080px) {
+    .welcome-section {
+        .heading-big h1 {
+            font-size: 12em;
+        }
+
+        .heading-small h2 {
+            font-size: 3.5em;
+            padding-top: 37px;
+        }
+
+        .heading-small h3 {
+            font-size: 7.5em;
+        }
+    }
+
     .props-wrapper {
         .services-intro {
             .services-headline {
@@ -472,21 +498,6 @@
 }
 
 @media (min-width: 1200px) {
-    .welcome-section {
-        .heading-big h1 {
-            font-size: 10em;
-        }
-
-        .heading-small h2 {
-            font-size: 3.5em;
-            padding-top: 32px;
-        }
-
-        .heading-small h3 {
-            font-size: 6em;
-        }
-    }
-
     .props-wrapper {
         .props .prop { flex: calc(33.3% - 50px); }
     }
@@ -534,16 +545,16 @@
 @media (min-width: 1540px) {
     .welcome-section {
         .heading-big h1 {
-            font-size: 12em;
+            font-size: 13em;
         }
 
         .heading-small h2 {
-            font-size: 4em;
-            padding-top: 37px;
+            font-size: 4.5em;
+            padding-top: 42px;
         }
 
         .heading-small h3 {
-            font-size: 7.5em;
+            font-size: 8em;
         }
     }
 

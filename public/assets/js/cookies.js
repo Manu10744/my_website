@@ -1,5 +1,5 @@
 // Reset cookies, only for dev purposes
-//document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+// document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
 
 let cookie = document.cookie;
 if (cookie.indexOf('visited=', 0) == -1) {

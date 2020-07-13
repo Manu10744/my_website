@@ -35,7 +35,7 @@
         <div class="page-wrapper">
             <div class="welcome-wrapper">
                 <div class="container">
-                    <div class="welcome-section">
+                    <div data-reveal-type="fadeUp" class="welcome-section revealable">
                         <div class="heading-big">
                             <h1> <%- docText.index_page.welcome_heading_big %> </h1>
                         </div>
@@ -44,14 +44,14 @@
                             <h3> <%- docText.index_page.welcome_heading_big_lower %> </h3>
                         </div>
                     </div>
-                    <div class="seperator">
+                    <div data-reveal-type="fadeUp" class="seperator revealable">
                         <div class="line-1"></div>
                         <div class="line-2"></div>
                     </div>
-                    <div class="seperator-title">
+                    <div data-reveal-type="fadeUp" class="seperator-title revealable">
                         <h1 class="typewriter"> <%- docText.index_page.welcome_heading_subtitle %> </h1>
                     </div>
-                    <div class="contact-section">
+                    <div data-reveal-type="fadeUp" class="contact-section revealable">
                         <p> <%- docText.index_page.welcome_text_left %> 
                             <span class="colored"> <%- docText.index_page.welcome_text_highlighted %> </span>
                             <%- docText.index_page.welcome_text_right %>
@@ -76,13 +76,13 @@
             </div>
 
             <div class="biography-wrapper">
-                <h1 class="opacity-header"> <%- docText.index_page.biography_welcome %> </h1>
+                <h1 data-reveal-type="fadeUp" class="opacity-header revealable"> <%- docText.index_page.biography_welcome %> </h1>
                 <div class="container biography-container">
-                    <div class="biography-image-container">
+                    <div data-reveal-type="fadeFromLeft" class="biography-image-container revealable">
                         <img src="/assets/img/dev-workflow.jpeg">
                     </div>
 
-                    <div class="biography-content-container">
+                    <div data-reveal-type="fadeFromRight" class="biography-content-container revealable">
                         <h1> <%- docText.index_page.biography_headline %> </h1>
                         <hr class="bio-underline">
                         <div class="bio-text">
@@ -98,37 +98,37 @@
             </div>
 
             <div class="offers-wrapper">
-                <h1 class="offers-intro typewriter"> <%- docText.index_page.offers_headline %> </h1>
+                <h1 data-reveal-type="fade" class="offers-intro typewriter revealable"> <%- docText.index_page.offers_headline %> </h1>
                 <div class="offers">
-                    <div class="offer-item">
+                    <div data-reveal-type="fadeUp" class="offer-item revealable">
                         <span class="frame upper-frame"></span>
                         <span class="frame bottom-frame"></span>
                         <h1> <%- docText.index_page.offers_blogs %> </h1>
                         <img src="/assets/img/blog-min.jpg">
                     </div>
 
-                    <div class="offer-item">
+                    <div data-reveal-type="fadeUp" class="offer-item revealable">
                         <span class="frame upper-frame"></span>
                         <span class="frame bottom-frame"></span>
                         <h1> <%- docText.index_page.offers_business %> </h1>
                         <img src="/assets/img/company-min.jpg">
                     </div>
 
-                    <div class="offer-item">
+                    <div data-reveal-type="fadeUp" class="offer-item revealable">
                         <span class="frame upper-frame"></span>
                         <span class="frame bottom-frame"></span>
                         <h1> <%- docText.index_page.offers_maintenance %> </h1>
                         <img src="/assets/img/maintenance-min.jpg">
                     </div>
 
-                    <div class="offer-item">
+                    <div data-reveal-type="fadeUp" class="offer-item revealable">
                         <span class="frame upper-frame"></span>
                         <span class="frame bottom-frame"></span>
                         <h1> <%- docText.index_page.offers_ecommerce %> </h1>
                         <img src="/assets/img/ecommerce.jpg">
                     </div>
 
-                    <div class="offer-item">
+                    <div data-reveal-type="fadeUp" class="offer-item revealable">
                         <span class="frame upper-frame"></span>
                         <span class="frame bottom-frame"></span>
                         <h1> <%- docText.index_page.offers_other %> </h1>
@@ -147,14 +147,14 @@
             <div class="props-wrapper">
                 <div class="container">
                     <div class="services-intro">
-                        <h1 class="services-headline typewriter"> <%- docText.index_page.services_headline %> </h1>
-                        <div class="seperator-big">
+                        <h1 data-reveal-type="fade" class="services-headline typewriter revealable"> <%- docText.index_page.services_headline %> </h1>
+                        <div class="seperator-big revealable">
                             <div class="line-1"></div>
                             <div class="line-2"></div>
                         </div>
                     </div>
                     <div class="props">
-                        <div class="prop">
+                        <div data-reveal-type="fadeUp" class="prop revealable">
                             <div class="icon-container">
                                 <i class="fas fa-gem"></i>
                             </div>
@@ -162,7 +162,7 @@
                             <p> <%- docText.index_page.services_item_one_text %> </p>
                         </div>
 
-                        <div class="prop">
+                        <div data-reveal-type="fadeUp" class="prop revealable">
                             <div class="icon-container">
                                 <i class="fas fa-tty"></i>
                             </div>
@@ -170,7 +170,7 @@
                             <p> <%- docText.index_page.services_item_two_text %> </p>
                         </div>
 
-                        <div class="prop">
+                        <div data-reveal-type="fadeUp" class="prop revealable">
                             <div class="icon-container">
                                 <i class="fas fa-ruler-combined"></i>
                             </div>
@@ -254,7 +254,7 @@
     <script type="module" src="/assets/js/select-language.js"></script>
     <script src="/assets/js/cookies.js"></script>
     <script type="module" src="/assets/js/mobile-navigation.js"></script>
-    <script src="/assets/js/animations.js"></script>
+    <script type="module" src="/assets/js/animations.js"></script>
     <script type="module" src="/assets/js/typewriter.js"></script>
     <script type="module" src="/assets/js/barbaConfig.js"></script>
 </body>

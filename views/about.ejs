@@ -48,13 +48,13 @@
 
                 <div class="timeline-container">
                     <div class="container">
-                        <h1 class="typewriter"> <%- docText.about_page.timeline_headline %> </h1>
-                        <div class="seperator-big">
+                        <h1 data-reveal-type="fade" class="typewriter revealable"> <%- docText.about_page.timeline_headline %> </h1>
+                        <div class="seperator-big revealable">
                             <div class="line-1"></div>
                             <div class="line-2"></div>
                         </div>
 
-                        <div class="timeline">
+                        <div data-reveal-type="fadeUp" class="timeline revealable">
                             <div class="timeline-item">
                                 <span class="timestamp"> <%- docText.about_page.timeline_item_first_timestamp %> </span>
                                 <div class="item-icon">
@@ -104,9 +104,9 @@
 
             <div class="techstack-wrapper">
                 <div class="container tech-intro">
-                    <h1 class="typewriter"> <%- docText.about_page.technologies_headline %> </h1>
+                    <h1 data-reveal-type="fade" class="typewriter revealable"> <%- docText.about_page.technologies_headline %> </h1>
 
-                    <div class="seperator-big">
+                    <div data-reveal-type="fade" class="seperator-big revealable">
                         <div class="line-1"></div>
                         <div class="line-2"></div>
                     </div>
@@ -121,28 +121,28 @@
 
                 <div class="techstack-container">
                     <div class="techstack-item">
-                        <div class="techstack-img html5"></div>
+                        <div data-reveal-type="fadeAndZoomIn" class="techstack-img html5 revealable"></div>
                     </div>
                     <div class="techstack-item">
-                        <div class="techstack-img css3"></div>
+                        <div data-reveal-type="fadeAndZoomIn" class="techstack-img css3 revealable"></div>
                     </div>
                     <div class="techstack-item">
-                        <div class="techstack-img js"></div>
+                        <div data-reveal-type="fadeAndZoomIn" class="techstack-img js revealable"></div>
                     </div>
                     <div class="techstack-item">
-                        <div class="techstack-img java"></div>
+                        <div data-reveal-type="fadeAndZoomIn" class="techstack-img java revealable"></div>
                     </div>
                     <div class="techstack-item">
-                        <div class="techstack-img python"></div>
+                        <div data-reveal-type="fadeAndZoomIn" class="techstack-img python revealable"></div>
                     </div>
                     <div class="techstack-item">
-                        <div class="techstack-img mongodb"></div>
+                        <div data-reveal-type="fadeAndZoomIn" class="techstack-img mongodb revealable"></div>
                     </div>
                     <div class="techstack-item">
-                        <div class="techstack-img sql"></div>
+                        <div data-reveal-type="fadeAndZoomIn" class="techstack-img sql revealable"></div>
                     </div>
                     <div class="techstack-item">
-                        <div class="techstack-img git"></div>
+                        <div data-reveal-type="fadeAndZoomIn" class="techstack-img git revealable"></div>
                     </div>
                 </div>
             </div>
@@ -227,7 +227,7 @@
     <script type="module" src="/assets/js/select-language.js"></script>
     <script type="module" src="/assets/js/mobile-navigation.js"></script>
     <script src="/assets/js/cookies.js"></script>
-    <script src="/assets/js/animations.js"></script>
+    <script type="module" src="/assets/js/animations.js"></script>
     <script type="module" src="/assets/js/typewriter.js"></script>
     <script type="module" src="/assets/js/barbaConfig.js"></script>
 </body>

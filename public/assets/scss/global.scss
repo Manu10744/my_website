@@ -48,6 +48,7 @@ input, button, textarea {
 
 .blurred { filter: blur(8px);  }
 .colored { color: $sky-blue; }
+.revealable { opacity: 0; }
 
 .wave {
     position: absolute;
