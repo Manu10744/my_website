@@ -7,7 +7,7 @@ const subtitle = document.querySelector('.subtitle');
 heading.innerHTML = heading.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 subtitle.innerHTML = subtitle.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-if (cookie.indexOf('visited=', 0) == -1) {
+if (document.cookie.indexOf('visited=', 0) == 0) {
 	welcomeScreenAnimation();
 }
 

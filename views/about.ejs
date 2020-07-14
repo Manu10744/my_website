@@ -55,7 +55,7 @@
                         </div>
 
                         <div data-reveal-type="fadeUp" class="timeline revealable">
-                            <div class="timeline-item">
+                            <div data-reveal-type="fadeUp" class="timeline-item revealable">
                                 <span class="timestamp"> <%- docText.about_page.timeline_item_first_timestamp %> </span>
                                 <div class="item-icon">
                                     <i class="fas fa-graduation-cap"></i>
@@ -64,7 +64,7 @@
                                 <p> <%- docText.about_page.timeline_item_first_location %> </p>
                             </div>
 
-                            <div class="timeline-item">
+                            <div data-reveal-type="fadeUp" class="timeline-item revealable">
                                 <span class="timestamp"> <%- docText.about_page.timeline_item_second_timestamp %>
                                 </span>
                                 <div class="item-icon">
@@ -74,7 +74,7 @@
                                 <p> <%- docText.about_page.timeline_item_second_location %> </p>
                             </div>
 
-                            <div class="timeline-item">
+                            <div data-reveal-type="fadeUp" class="timeline-item revealable">
                                 <span class="timestamp"> <%- docText.about_page.timeline_item_third_timestamp %> </span>
                                 <div class="item-icon">
                                     <i class="fas fa-graduation-cap"></i>
@@ -217,7 +217,7 @@
 
     <script>
         // Check for Browser Support of the IntersectionObserver API and use a polyfill in case it's not supported
-        if (!('IntersectionObserver' in window) && !('isIntersecting' in window.IntersectionObserverEntry.prototype)) {
+        if (!('IntersectionObserver' in window)) {
             const polyFill = document.createElement("script");
             polyFill.src = "https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver";
             document.body.appendChild(polyFill);

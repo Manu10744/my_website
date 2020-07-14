@@ -372,6 +372,14 @@
 /*                      MEDIA QUERIES                        */
 /* ========================================================= */
 
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */ 
+    // iOS doesnt support background-attachment:fixed with background-size:cover combined, so fallback to scroll
+    .welcome-wrapper {
+        background-attachment: scroll;
+    }
+  }
+
 @media (min-width: 480px) {
     .welcome-section {
         .heading-big h1 {
