@@ -244,6 +244,15 @@
     <div class="transition-container"></div>
     <%- include ('partials/footer.ejs') %>
 
+    <script>
+        // Check for Browser Support of the IntersectionObserver API and use a polyfill in case it's not supported
+        if (!('IntersectionObserver' in window) && !('isIntersecting' in window.IntersectionObserverEntry.prototype)) {
+            const polyFill = document.createElement("script");
+            polyFill.src = "https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver";
+            document.body.appendChild(polyFill);
+        }
+    </script>
+    
     <!-- BarbaJS -->
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="/assets/js/anime.min.js"></script>
