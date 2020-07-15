@@ -14,7 +14,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Raleway, sans-serif;
+    font-family: $normalFont, sans-serif;
 }
 
 body {
@@ -417,7 +417,7 @@ header {
 
         .close-modal-btn:hover { background: #ddd; }
         h1 { 
-            font-family: 'Lobster'; 
+            font-family: $headingFont; 
             color: black; 
             text-align: left;
             font-size: 1.25em;
@@ -476,10 +476,13 @@ header {
             display: block;
             width: 100px;
             text-align: center;
+            margin-left: 0;
             transition: all .4s ease;
+            display: none;
         }
 
-        .confirm-btn:hover { background-color: $dark-white; color: green; font-weight: bold; }
+
+        .confirm-btn:hover { background-color: $dark-white; color: $dark-green; font-weight: bold; }
     }
 }
 

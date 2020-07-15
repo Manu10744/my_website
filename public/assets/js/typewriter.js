@@ -23,8 +23,10 @@ export const Typewriter = function(el, speed) {
  */
 Typewriter.prototype.type = function() {
   if (isInViewport(this.el) && !barbaIsRunning()) {
-    this.currValue = this.wordsToPrint.substring(0, this.currValue.length + 1);
-    this.el.innerHTML = this.currValue;
+    if (!this.el.classList.contains("revealable") || this.el.classList.contains("revealable") && this.el.style.opacity > 0) {
+      this.currValue = this.wordsToPrint.substring(0, this.currValue.length + 1);
+      this.el.innerHTML = this.currValue;
+    }
   }
 
   let timeout = setTimeout(() => { this.type(); }, 40);

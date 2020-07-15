@@ -68,6 +68,7 @@ languageOptions.forEach((option) => {
     showOptionsBtn.innerText = language;
 
     hideLanguageOptions();
+    showConfirmButton(); 
   })
 })
 
@@ -97,5 +98,15 @@ export function hideLanguageOptions() {
     duration: 200,
     delay: anime.stagger(100),
     complete: () => { document.querySelectorAll(".language-option").forEach((option) => { option.style.display = ''; })}
+  })
+}
+
+export function showConfirmButton() {
+  anime({
+    targets: '.confirm-btn',
+    opacity: [0, 1],
+    easing: 'easeInQuad',
+    duration: 200,
+    begin: () => { document.querySelector(".confirm-btn").style.display = 'block'; }
   })
 }

@@ -1231,7 +1231,7 @@ header .logo p {
   background: #ddd;
 }
 .language-modal-container .modal h1 {
-  font-family: "Lobster";
+  font-family: Lobster;
   color: black;
   text-align: left;
   font-size: 1.25em;
@@ -1285,11 +1285,13 @@ header .logo p {
   display: block;
   width: 100px;
   text-align: center;
+  margin-left: 0;
   transition: all 0.4s ease;
+  display: none;
 }
 .language-modal-container .modal .confirm-btn:hover {
   background-color: #F7F7F7;
-  color: green;
+  color: #008756;
   font-weight: bold;
 }
 

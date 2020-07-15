@@ -1,6 +1,6 @@
 import { fadeIn, fadeOut } from './mobile-navigation.js';
 import { typewriterList, Typewriter } from './typewriter.js';
-import { languageMap, showLanguageOptions, hideLanguageOptions } from './select-language.js';
+import { languageMap, showLanguageOptions, hideLanguageOptions, showConfirmButton } from './select-language.js';
 import { observer } from './animations.js';
 
 const transition = document.querySelector(".transition-container");
@@ -175,6 +175,7 @@ function reinitLanguageSelectionListeners() {
             showOptionsBtn.innerText = language;
 
             hideLanguageOptions();
+            showConfirmButton();
         })
     })
 

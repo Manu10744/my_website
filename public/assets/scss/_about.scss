@@ -117,7 +117,7 @@
         padding-bottom: 100px;
         min-height: 300px;
 
-        h1 { color: $black; font-family: Lobster; font-size: 2em; }
+        h1 { color: $black; font-family: $headingFont; font-size: 2em; }
     }
 
     .wave-container { position: relative; }
