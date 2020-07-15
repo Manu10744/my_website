@@ -178,68 +178,14 @@
                 </div>
             </div>
 
-            <div class="contact-section-wrapper">
-                <div class="contact-info">
-                    <h1 class="typewriter"> <%- docText.common.contact_headline %> </h1>
-                    <p> <%- docText.common.contact_text %> </p>
-                    <div class="email-container">
-                        <div class="icon-container">
-                            <i class="fas fa-envelope-open-text"></i>
-                        </div>
-                        <a href="mailto:089manu6@gmail.com"> <%- docText.common.contact_email %> </a>
-                    </div>
-                    
-                </div>
+            <%- include ('partials/contactSection.ejs') %>
 
-                <div class="contact-formular">
-                    <form action="/contact" method="POST">
-                        <div class="inputs-wrapper">
-                            <div class="input-container">
-                                <label for="name"> <%- docText.common.contact_form_label_name %> </label>
-                                <input type="text" name="name" placeholder="<%- docText.common.contact_form_placeholder_name %>" required>
-                            </div>
-                            <div class="input-container">
-                                <label for="email"> <%- docText.common.contact_form_label_email %> </label>
-                                <input type="text" name="email" placeholder="<%- docText.common.contact_form_placeholder_email %>" required>
-                            </div>
-                            <div class="input-container">
-                                <label for="topic"> <%- docText.common.contact_form_label_topic %> </label>
-                                <input type="text" name="topic" placeholder="<%- docText.common.contact_form_placeholder_topic %>" required>
-                            </div>
-                        </div>
-                        <div class="message-input-wrapper">
-                            <textarea rows="1" cols="30" name="content" placeholder="<%- docText.common.contact_form_placeholder_textarea %>"
-                                required></textarea>
-                            <button class="contact-btn" type="submit"> <%- docText.common.contact_form_submit_button %> </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-
-            <div class="language-selection">
-                <button><i class="fas fa-language"></i> <%- docText.common.select_lang_text %> </button>
-
-                <div class="language-modal-container">
-                    <div class="modal">
-                        <div class="close-modal-btn">X</div>
-                        <h1> <%- docText.common.select_lang_headline %> </h1>
-
-                        <div class="options-container">
-                            <div class="show-options-btn">
-                                <i class="fas fa-language"></i> <%- docText.common.select_lang_subtitle %>
-                            </div>
-                            <div class="language-option">Deutsch</div>
-                            <div class="language-option">English</div>
-                        </div>
-                        <a class="confirm-btn" href="#"> <%- docText.common.select_lang_confirm_btn %> </a>
-                    </div>
-                </div>
-            </div>
+            <%- include ('partials/languageSelection.ejs') %>
         </div>
     </main>
 
     <div class="transition-container"></div>
+    
     <%- include ('partials/footer.ejs') %>
 
     <script>
