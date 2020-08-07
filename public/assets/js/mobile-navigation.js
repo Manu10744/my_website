@@ -1,66 +1,71 @@
 const mobileNavToggler = document.querySelector(".mobile-nav-toggler");
-const pageWrapper = document.querySelector(".page-wrapper");
 const navigation = document.querySelector(".navigation");
-const navLinks = document.querySelectorAll(".navigation li");
 
 mobileNavToggler.addEventListener("click", activateMobileNavigation)
 
 function activateMobileNavigation() {
-    mobileNavToggler.classList.toggle("mobile-nav-active");
+    // Only activate mobile navigation when no other elements are being animated
+    if (anime.running.length == 0) {
+        mobileNavToggler.classList.toggle("mobile-nav-active");
 
-    if (navigation.style.display == '' || navigation.style.display == 'none') {
-        navigation.style.touchAction = 'none';
-        fadeIn(navigation, 400);
-
-
-        navLinks.forEach((link, index) => {
-            index == 0 ? link.style.animation = `slideLinksIn 0.5s` : link.style.animation = `slideLinksIn ${0.5 + (index / 5)}s`;
-        })
-    } else { 
-        navLinks.forEach((link, index) => {
-            index == 0 ? link.style.animation = `slideLinksOut 0.5s` : link.style.animation = `slideLinksOut ${0.5 + (index / 5)}s`;
-        })
-        
-        fadeOut(navigation, 400);
-        navigation.style.touchAction = 'auto';
-    }
-
-    pageWrapper.classList.toggle("blurred");
-}
-
-/**
- * Fades an element in by using its opacity.
- * @param {*} element The element to fade in
- * @param {*} duration The desired duration
- */
-export function fadeIn(element, duration) {
-   let opacity = 0;
-   element.style.opacity = opacity;
-   element.style.display = "block";
-
-   let timer = setInterval(() => {
-       if (opacity >= 1.0) {
-           clearInterval(timer);
-       }
-
-       element.style.opacity = opacity;
-       opacity = opacity + 0.1;
-   }, duration / 10);
-}
-
-/**
- * Fades an element out by using its opacity.
- * @param {*} element The element to fade out
- * @param {*} duration The desired duration
- */
-export function fadeOut(element, duration) {
-    element.style.opacity = 1;
-
-    (function fade() {
-        if ((element.style.opacity -= .1) < 0) {
-            element.style.display = "none";
-        } else {
-            setTimeout(fade, duration / 10);
+        if (navigation.style.display == '' || navigation.style.display == 'none') {
+            navigation.style.touchAction = 'none';            
+            fadeNavigationIn();
+        } else { 
+            fadeNavigationOut();
+            navigation.style.touchAction = 'auto';
         }
-    })();
+    }
+}
+
+export function fadeNavigationIn() {
+    anime.timeline({ easing: 'easeInQuad' })
+        .add({
+            targets: '.navigation',
+            opacity: [0, 1],
+            duration: 800,
+            begin: () => { 
+                document.querySelector(".navigation").style.display = 'block'; 
+                document.querySelector(".page-wrapper").classList.add("blurred");
+            }
+        })
+        .add({
+            targets: '.navigation ul li',
+            translateX: ['-100%', '0%'],
+            delay: anime.stagger(100)
+        }, '-=1400')
+        .add({
+            targets: '.navigation-personal-info-wrapper',
+            easing: 'easeOutQuad',
+            opacity: [0, 1],
+            translateY: ['50px', '0px']
+        })
+        .add({
+            targets: '.navigation-social-container',
+            translateY: ['50px', '0px'],
+            easing: 'easeOutQuad',
+            opacity: [0, 1],
+            delay: anime.stagger(150)
+        }, '-=1000')
+}
+
+export function fadeNavigationOut() {
+    anime.timeline({ easing: 'easeOutQuad' })
+        .add({
+            targets: '.navigation ul li',
+            translateX: ['0%', '-100%'],
+            delay: anime.stagger(100)
+        }, '-=800')
+        .add({
+            targets: '.navigation-personal-info-wrapper',
+            opacity: [1, 0],
+        })
+        .add({
+            targets: '.navigation',
+            opacity: [1, 0],
+            begin: () => { document.querySelector(".page-wrapper").classList.remove("blurred"); },
+            complete: () => { 
+                document.querySelector(".navigation").style.display = ''; 
+            }
+        })
 }

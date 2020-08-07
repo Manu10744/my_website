@@ -1,4 +1,4 @@
-import { fadeIn, fadeOut } from './mobile-navigation.js';
+import { fadeNavigationIn, fadeNavigationOut } from './mobile-navigation.js';
 import { typewriterList, Typewriter } from './typewriter.js';
 import { languageMap, showLanguageOptions, hideLanguageOptions, showConfirmButton } from './select-language.js';
 import { observer } from './animations.js';
@@ -20,6 +20,7 @@ barba.init({
                 leaveAnimation();
 
                 await delay(1300);
+                window.scrollTo(0, 0);
                 done();
 
                 // Page transition is 50% and ready to switch containers, so show next container
@@ -33,6 +34,7 @@ barba.hooks.after((data) => {
     reinitLanguageSelectionListeners();
     reinitTypewriters();
     reinitIntersectionObserver();
+    reinitSliders();
 })
 
 
@@ -92,30 +94,20 @@ export function barbaIsRunning() {
 
 function reinitNavigationListeners() {
     const mobileNavToggler = document.querySelector(".mobile-nav-toggler");
-    const pageWrapper = document.querySelector(".page-wrapper");
     const navigation = document.querySelector(".navigation");
-    const navLinks = document.querySelectorAll(".navigation li");
 
     mobileNavToggler.addEventListener("click", () => {
-        mobileNavToggler.classList.toggle("mobile-nav-active");
-
-        if (navigation.style.display == '' || navigation.style.display == 'none') {
-            navigation.style.touchAction = 'none';
-            fadeIn(navigation, 400);
-
-            navLinks.forEach((link, index) => {
-                index == 0 ? link.style.animation = `slideLinksIn 0.5s` : link.style.animation = `slideLinksIn ${0.5 + (index / 5)}s`;
-            })
-        } else {
-            navLinks.forEach((link, index) => {
-                index == 0 ? link.style.animation = `slideLinksOut 0.5s` : link.style.animation = `slideLinksOut ${0.5 + (index / 5)}s`;
-            })
-
-            fadeOut(navigation, 400);
-            navigation.style.touchAction = 'auto';
+        if (anime.running.length == 0) {
+            mobileNavToggler.classList.toggle("mobile-nav-active");
+    
+            if (navigation.style.display == '' || navigation.style.display == 'none') {
+                navigation.style.touchAction = 'none';            
+                fadeNavigationIn();
+            } else { 
+                fadeNavigationOut();
+                navigation.style.touchAction = 'auto';
+            }
         }
-
-        pageWrapper.classList.toggle("blurred");
     });
 }
 
@@ -202,4 +194,28 @@ function reinitIntersectionObserver() {
     for (const element of revealables) {
         observer.observe(element);
     }
+}
+
+function reinitSliders() {
+    new Glider(document.querySelector(".glider"), {
+        slidesToShow: 'auto',
+        itemWidth: 400,
+        // dots: '#dots',
+        draggable: true,
+        exactWidth: true,
+        arrows: {
+            prev: '.glider-prev',
+            next: '.glider-next',
+        }, 
+        responsive: [
+            {
+                // screens greater than >= 1024px
+                breakpoint: 1079,
+                settings: {
+                    itemWidth: 1000,
+                    dragVelocity: 1.75
+                }
+            }
+        ]
+    })
 }
