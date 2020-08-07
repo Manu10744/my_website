@@ -48,7 +48,7 @@ input, button, textarea {
 
 .blurred { filter: blur(8px);  }
 .colored { color: $sky-blue; }
-.revealable { opacity: 0; }
+.revealable { opacity: 0; will-change: transform; }
 
 .wave {
     position: absolute;
@@ -147,11 +147,6 @@ header {
     top: 0;
     z-index: 2;
 
-    .active-nav-item a {
-        color: $sky-blue;
-        font-weight: bold;
-    }
-
     .mobile-nav-active {
         .first { 
             transform: rotate(45deg);
@@ -191,22 +186,88 @@ header {
         display: none;
 
         ul {
-            position: absolute;
-            top: 25%;
-            left: 50%;
-            transform: translate(-50%);
+            margin-top: 120px;
             width: 100%;
             text-align: center;
+
+            .active-nav-item a {
+                color: $dark-white;
+                font-weight: bold;
+            }
 
             li {
                 height: 100%;
                 padding: 10px 20px;
-                margin: 50px 0;
+                margin: 20px 0;
                 font-size: 1.375em;
                 transition: transform 0.4s ease;
+                font-weight: bold;
+                list-style: square;
 
-                a { transition: 0.4s color ease;  }
+                a { transition: 0.4s color ease; color: #999; position: relative; }
                 a:hover { color: $sky-blue; }
+
+                a::after {
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background: $dark-white;
+                    top: 50%;
+                    left: -15px;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        
+        .navigation-personal-info-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 50px;
+
+            .seperator-line {
+                width: 75%;
+                position: relative;
+                border-color: $light-gray;
+                margin-bottom: 20px;
+                overflow: visible;
+                border-radius: 1px;
+            }
+
+
+            .personal-info {
+                text-align: center;
+                flex-basis: 60%;
+                margin: 0 10px;
+
+                p { 
+                    font-family: Arial, sans-serif; 
+                    margin-bottom: 5px; 
+                    color: $light-gray;
+                }
+            }
+            
+            .navigation-socials {
+                display: flex;
+
+                .navigation-social-container {
+                    text-align: center;
+                    margin: 10px;
+    
+                    svg { 
+                        color: $dark-white; 
+                        font-size: 1.5em; 
+                        margin-bottom: 5px;
+                    }
+
+                    p { 
+                        color: $light-gray;
+                        font-size: 0.8em;
+                    }
+                }
             }
         }
     }
@@ -591,24 +652,6 @@ footer {
     }
 }
 
-// Animation to slide the navigation links into the screen, when mobile navigation is active.
-@keyframes slideLinksIn {
-    from {
-        transform: translateX(-100%);
-    } to {
-        transform: translateX(0px);
-    }
-}
-
-// Animation to slide the navigation links out of the screen, when mobile navigation is active.
-@keyframes slideLinksOut {
-    from {
-        transform: translateX(0px);
-    } to {
-        transform: translate(-100%);
-    }
-}
-
 // Animation for the contact button
 @keyframes pulse {
     70% {
@@ -642,13 +685,6 @@ footer {
     header {
         .mobile-nav-toggler { display: none; }
 
-        .active-nav-item {
-            background-color: $alpha-sky-blue-25;
-            border-bottom: 3px solid $sky-blue;
-
-            a { color: $dark-white; }
-        }
-
         .logo {
             position: absolute;
             top: 15px;
@@ -672,13 +708,25 @@ footer {
                 align-items: center;
                 height: 100%;
                 margin-left: 5%;
+                margin-top: 0;
 
+                .active-nav-item {
+                    background-color: $alpha-sky-blue-25;
+                    border-bottom: 3px solid $sky-blue;
+        
+                    a { color: $dark-white; }
+                }
+                
                 li { 
                     font-size: 1em; 
                     display: flex;
                     align-items: center;
+
+                    a::after { display: none; }
                 }
             }
+
+            .navigation-personal-info-wrapper { display: none; }
         }
     }
 }

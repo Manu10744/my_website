@@ -5,6 +5,7 @@
     <title>Manuel Neumayer</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/assets/css/glider.min.css" rel="stylesheet">
     <link href="/assets/css/compiled.css" rel="stylesheet">
 </head>
 
@@ -22,6 +23,8 @@
                     <li><a href="#"> <%- docText.common.portfolio %> </a></li>
                     <li><a href="#"> <%- docText.common.impressum %> </a></li>
                 </ul>
+                
+                <%- include ('partials/mobileNavInfo.ejs') %>
             </div>
             <div class="logo">
                 <h3><span class="letters">Web Development</span></h3>
@@ -72,73 +75,116 @@
                 </svg>
             </div>
 
-            <div class="biography-wrapper">
-                <h1 data-reveal-type="fadeUp" class="opacity-header revealable"> <%- docText.index_page.biography_welcome %> </h1>
-                <div class="container biography-container">
-                    <div data-reveal-type="fadeFromLeft" class="biography-image-container revealable">
-                        <img src="/assets/img/dev-workflow.jpeg">
-                    </div>
+            <div class="intro-section">
+                <h1 data-reveal-type="fadeUp" class="welcome-heading revealable">Welcome</h1>
 
-                    <div data-reveal-type="fadeFromRight" class="biography-content-container revealable">
-                        <h1> <%- docText.index_page.biography_headline %> </h1>
-                        <hr class="bio-underline">
-                        <div class="bio-text">
-                            <p> <%- docText.index_page.biography_text_upper %> </p>
-                            <br>
-                            <p> <%- docText.index_page.biography_text_lower %> </p>
+                <div data-reveal-type="fade" class="intro-image-container revealable"></div>
+                <div data-reveal-type="fade" class="intro-content-container revealable">
+                    <div class="intro-content">
+                        <div class="intro-heading">
+                            <h1>Web Development.</h1>
+                            <h1>Individuell.</h1>
                         </div>
-                        <a class="bio-read-more-btn" href="/<%- language %>/about"> <%- docText.index_page.biography_more_button %> </a>
+    
+                        <div class="intro-text">
+                            <p>Ich bin Ihr Ansprechpartner zu allem, was das Web angeht. Egal ob Development, Design oder Hosting - ich berate Sie gerne!</p>
+                        </div>
+
+                        <div class="decorator-small decorator-top-top-left"></div>
+                        <div class="decorator-small decorator-top-top-right"></div>
+                        <div class="decorator-small decorator-top-bottom-left"></div>
+                        <div class="decorator-small decorator-top-bottom-right"></div>
+
+                        <div class="decorator-big decorator-bottom-top-left"></div>
+                        <div class="decorator-big decorator-bottom-top-right"></div>
+                        <div class="decorator-big decorator-bottom-bottom-left"></div>
+                        <div class="decorator-big decorator-bottom-bottom-right"></div>
                     </div>
                 </div>
-
-                <hr class="biography-seperator">
             </div>
 
-            <div class="offers-wrapper">
+            <div class="offers-slider">
                 <h1 data-reveal-type="fade" class="offers-intro typewriter revealable"> <%- docText.index_page.offers_headline %> </h1>
-                <div class="offers">
-                    <div data-reveal-type="fadeUp" class="offer-item revealable">
-                        <span class="frame upper-frame"></span>
-                        <span class="frame bottom-frame"></span>
-                        <h1> <%- docText.index_page.offers_blogs %> </h1>
-                        <img src="/assets/img/blog-min.jpg">
+                <div class="glider glider-contain">
+                    <div data-reveal-type="fadeUp" class="slider-item revealable">
+                        <div class="slide-image-container"></div>
+                        <div class="slide-content-container">
+                            <div class="category-info">
+                                <p> <%- docText.index_page.offers_card_title %> </p>
+                                <span class="info-line"></span>
+                            </div>
+                            <div class="offer-index">/ 1</div>
+                            <div class="offer-description">
+                                <h1> <%- docText.index_page.offers_blogs %> </h1>
+                                <p> <%- docText.index_page.offers_blogs_desc %> </p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div data-reveal-type="fadeUp" class="offer-item revealable">
-                        <span class="frame upper-frame"></span>
-                        <span class="frame bottom-frame"></span>
-                        <h1> <%- docText.index_page.offers_business %> </h1>
-                        <img src="/assets/img/company-min.jpg">
+                    <div data-reveal-type="fadeUp" class="slider-item revealable">
+                        <div class="slide-image-container"></div>
+                        <div class="slide-content-container">
+                            <div class="category-info">
+                                <p> <%- docText.index_page.offers_card_title %> </p>
+                                <span class="info-line"></span>
+                            </div>
+                            <div class="offer-index">/ 2</div>
+                            <div class="offer-description">
+                                <h1> <%- docText.index_page.offers_business %> </h1>
+                                <p> <%- docText.index_page.offers_business_desc %> </p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div data-reveal-type="fadeUp" class="offer-item revealable">
-                        <span class="frame upper-frame"></span>
-                        <span class="frame bottom-frame"></span>
-                        <h1> <%- docText.index_page.offers_maintenance %> </h1>
-                        <img src="/assets/img/maintenance-min.jpg">
+                    <div data-reveal-type="fadeUp" class="slider-item revealable">
+                        <div class="slide-image-container"></div>
+                        <div class="slide-content-container">
+                            <div class="category-info">
+                                <p> <%- docText.index_page.offers_card_title %> </p>
+                                <span class="info-line"></span>
+                            </div>
+                            <div class="offer-index">/ 3</div>
+                            <div class="offer-description">
+                                <h1> <%- docText.index_page.offers_maintenance %> </h1>
+                                <p> <%- docText.index_page.offers_maintenance_desc %> </p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div data-reveal-type="fadeUp" class="offer-item revealable">
-                        <span class="frame upper-frame"></span>
-                        <span class="frame bottom-frame"></span>
-                        <h1> <%- docText.index_page.offers_ecommerce %> </h1>
-                        <img src="/assets/img/ecommerce.jpg">
+                    <div data-reveal-type="fadeUp" class="test-item slider-item revealable">
+                        <div class="slide-image-container"></div>
+                        <div class="slide-content-container">
+                            <div class="category-info">
+                                <p> <%- docText.index_page.offers_card_title %> </p>
+                                <span class="info-line"></span>
+                            </div>
+                            <div class="offer-index">/ 4</div>
+                            <div class="offer-description">
+                                <h1> <%- docText.index_page.offers_ecommerce %> </h1>
+                                <p> <%- docText.index_page.offers_ecommerce_desc %> </p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div data-reveal-type="fadeUp" class="offer-item revealable">
-                        <span class="frame upper-frame"></span>
-                        <span class="frame bottom-frame"></span>
-                        <h1> <%- docText.index_page.offers_other %> </h1>
-                        <img src="/assets/img/freelance.jpg">
+                    <div data-reveal-type="fadeUp" class="test-item slider-item revealable">
+                        <div class="slide-image-container"></div>
+                        <div class="slide-content-container">
+                            <div class="category-info">
+                                <p> <%- docText.index_page.offers_card_title %> </p>
+                                <span class="info-line"></span>
+                            </div>
+                            <div class="offer-index">/ 5</div>
+                            <div class="offer-description">
+                                <h1> <%- docText.index_page.offers_other %> </h1>
+                                <p> <%- docText.index_page.offers_other_desc %> </p>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- <div class="offer-item">
-                        <span class="frame upper-frame"></span>
-                        <span class="frame bottom-frame"></span>
-                        <h1></h1>
-                        <img src="/assets/img/devices.jpg">
-                    </div> -->
                 </div>
+
+                <button aria-label="Previous" class="glider-prev">«</button>
+                <button aria-label="Next" class="glider-next">»</button>
+                <div id="dots" role="tablist" class="dots"></div>
             </div>
 
             <div class="props-wrapper">
@@ -197,6 +243,8 @@
         }
     </script>
 
+
+    <script src="/assets/js/glider.min.js"></script>
     <!-- BarbaJS -->
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="/assets/js/anime.min.js"></script>
@@ -204,6 +252,7 @@
     <script defer src="/assets/js/fontawesome.min.js"></script>
     <script defer src="/assets/js/all.min.js"></script>
 
+    <script src="/assets/js/slider.js"></script>
     <script type="module" src="/assets/js/select-language.js"></script>
     <script type="module" src="/assets/js/mobile-navigation.js"></script>
     <script type="module" src="/assets/js/animations.js"></script>

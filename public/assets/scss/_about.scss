@@ -72,12 +72,13 @@
                 }
 
                 .timestamp {
-                    color: $black;
                     font-weight: bold;
-                    background: $sky-blue;
                     border-radius: 10px;
-                    padding: 5px 10px;
+                    padding: 3px 10px;
                     font-size: 0.75em;
+                    border: 2px solid #01CCD9;
+                    background: transparent;
+                    color: $dark-white;
                 }
             }
 
