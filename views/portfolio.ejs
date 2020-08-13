@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="<%- language %>">
+
+<head>
+    <title>Manuel Neumayer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/assets/css/glider.min.css" rel="stylesheet">
+    <link href="/assets/css/compiled.css" rel="stylesheet">
+</head>
+
+<body data-barba="wrapper">
+    <main data-barba="container" data-barba-namespace="home">
+        <header>
+            <div class="mobile-nav-toggler">
+                <div class="mobile-nav-line first"></div>
+                <div class="mobile-nav-line second"></div>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="/<%- language %>"> <%- docText.common.home %> </a></li>
+                    <li><a href="/<%- language %>/about"> <%- docText.common.about %> </a></li>
+                    <li class="active-nav-item"><a href="/<%- language %>/portfolio"> <%- docText.common.portfolio %> </a></li>
+                    <li><a href="#"> <%- docText.common.impressum %> </a></li>
+                </ul>
+                
+                <%- include ('partials/mobileNavInfo.ejs') %>
+            </div>
+            <div class="logo">
+                <h3><span class="letters">Web Development</span></h3>
+                <p><span class="letters">By Manuel Neumayer</span></p>
+            </div>
+        </header>
+
+        <div class="page-wrapper">
+            <div class="under-construction">
+                <h1><i class="fas fa-wrench"></i>Under Construction</h1>
+            </div>
+
+            <%- include ('partials/contactSection.ejs') %>
+
+            <%- include ('partials/languageSelection.ejs') %>
+        </div>
+    </main>
+
+    <div class="transition-container"></div>
+    
+    <%- include ('partials/footer.ejs') %>
+
+    <script>
+        // Check for Browser Support of the IntersectionObserver API and use a polyfill in case it's not supported
+        if (!('IntersectionObserver' in window)) {
+            const polyFill = document.createElement("script");
+            polyFill.src = "https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver";
+            document.body.appendChild(polyFill);
+        }
+    </script>
+
+    <!-- BarbaJS -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="/assets/js/anime.min.js"></script>
+    <!-- FontAwesome -->
+    <script defer src="/assets/js/fontawesome.min.js"></script>
+    <script defer src="/assets/js/all.min.js"></script>
+
+    <script type="module" src="/assets/js/select-language.js"></script>
+    <script type="module" src="/assets/js/mobile-navigation.js"></script>
+    <script type="module" src="/assets/js/animations.js"></script>
+    <script type="module" src="/assets/js/typewriter.js"></script>
+    <script type="module" src="/assets/js/barbaConfig.js"></script>
+</body>
+
+</html>

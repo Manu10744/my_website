@@ -1,0 +1,12 @@
+@import 'utility/_variables.scss';
+
+.under-construction {
+    min-height: 100vh;
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 { color: white; font-size: 1em; }
+    svg { margin-right: 20px; }
+}

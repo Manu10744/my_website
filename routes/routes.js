@@ -27,6 +27,13 @@ router.get("/:lang/about", (req, res) => {
     res.render("about.ejs", { docText: docText, language: selectedLang });
 })
 
+router.get("/:lang/portfolio", (req, res) => {
+    // Redirect to english page if language is neither 'de' nor 'en'
+    const selectedLang = (req.params.lang == 'de' || req.params.lang == 'en') ? req.params.lang : res.redirect("/en");
+    const docText = JSON.parse(fs.readFileSync('./resources/' + selectedLang + '.json').toString());
+    res.render("portfolio.ejs", { docText: docText , language: selectedLang });
+})
+
 router.post("/contact", (req, res) => {
     async function main() {
         let transporter = nodemailer.createTransport({

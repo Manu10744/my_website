@@ -43,7 +43,7 @@
 }
 
 .intro-section {
-    margin: 100px 0 300px 0;
+    margin: 100px 0 250px 0;
     position: relative;
 
     .welcome-heading {
@@ -512,8 +512,6 @@
     }
 
     .intro-section {
-        margin: 500px 0;
-
         .welcome-heading { font-size: 7em; }
         .intro-image-container {
             height: 500px;
@@ -634,13 +632,24 @@
     .intro-section {
         .welcome-heading { font-size: 8.5em; }
 
-        .intro-content-container .intro-content {
-            .intro-heading { border-left: 60px solid $dark-gray; }
-            .intro-text { 
-                width: 50%; 
-    
-                p { font-size: 1.25em; }
+        .intro-content-container {
+            .intro-content {
+                .intro-heading { border-left: 60px solid $dark-gray; }
+                .intro-text { 
+                    width: 50%; 
+        
+                    p { font-size: 1.25em; }
+                }
             }
+        }
+
+        .intro-content-container::before {
+            height: 125px;
+            top: -66px;
+        }
+
+        .intro-content-container::after {
+            height: 250px;
         }
     }
 
@@ -701,9 +710,6 @@
     }
 
     .intro-section {
-        margin-bottom: 800px;
-        margin-top: 400px;
-
         .welcome-heading { font-size: 10em; margin-bottom: 100px; }
         .intro-image-container {
             height: 800px;
