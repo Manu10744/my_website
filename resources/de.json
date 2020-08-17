@@ -28,12 +28,9 @@
         "welcome_text_left": "Ich heiße",
         "welcome_text_highlighted": "Manuel Neumayer",
         "welcome_text_right": "und bin ein im Münchner Raum ansässiger, angehender Softwareentwickler.",
-        "biography_welcome": "Welcome",
-        "biography_headline": "Kurz zu mir.",
-        "biography_text_upper": "Schon früh hat mich die Entwicklung von Webanwendungen und Software fasziniert, weshalb ich bereits vor dem Informatikstudium anfing, mir das Programmieren selbst beizubringen.",
-        "biography_text_lower": "Von Anfang an lag für mich dabei stets der Fokus auf den Aufbau eines breitgefächerten Skillsets und technischem Know-How.",
-        "biography_more_button": "Mehr über mich",
-        "offers_headline": "Was biete ich an?",
+        "intro_background_headline": "Willkommen",
+        "offers_background_headline": "Angebot",
+        "offers_headline": "Was ich für Sie tun kann.",
         "offers_card_title": "Angebot",
         "offers_blogs": "Blogs",
         "offers_blogs_desc": "Blogs sind im digitalen Zeitalter der richtige Weg, Menschen zu erreichen und Informationen, Bilder und andere Resourcen miteinander zu teilen.",
@@ -51,7 +48,11 @@
         "services_item_two_headline": "Flexibel kommunikativ",
         "services_item_two_text": "Wenn Sie nicht aus der Nähe kommen oder schlichtweg die Zeit für zeitintensive Treffen vor Ort fehlt, entstehen daraus keine Probleme. Über E-Mail und Telefon bin ich jederzeit erreichbar.",
         "services_item_three_headline": "Responsives Design",
-        "services_item_three_text": "Websites erfordern in Zeiten des modernen Webs eine korrekte Darstellung auf allen Geräten unter Beachtung der verschiedenen Bildschirmauflösungen. Daher zeichnet sich jedes meiner Produkte durch ein responsives Design aus."
+        "services_item_three_text": "Websites erfordern in Zeiten des modernen Webs eine korrekte Darstellung auf allen Geräten unter Beachtung der verschiedenen Bildschirmauflösungen. Daher zeichnet sich jedes meiner Produkte durch ein responsives Design aus.",
+        "services_item_four_headline": "Mobile-First Development",
+        "services_item_four_text": "Smartphones stellen einen beträchtlichen Anteil der internetfähigen Geräte, weswegen besonders hierbei eine optimale Nutzererfahrung auf Webseiten wichtig ist - aus diesem Grund setze ich auf Mobile-First Entwicklung.",
+        "services_item_five_headline": "Easy-to-use & Schnell",
+        "services_item_five_text": "Den meisten Nutzern sind sowohl geringe Ladezeiten als auch eine einfache Benutzung sehr wichtig - diese Eigenschaften habe ich stets im Blick."
     },
     "about_page": {
         "timeline_headline": "Lebenslauf",

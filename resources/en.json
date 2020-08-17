@@ -28,12 +28,9 @@
         "welcome_text_left": "My name is",
         "welcome_text_highlighted": "Manuel Neumayer",
         "welcome_text_right": "and I am an ongoing Software Developer living near Munich, Germany.",
-        "biography_welcome": "Welcome",
-        "biography_headline": "About Me.",
-        "biography_text_upper": "Early on I discovered my interest in Web Applications and Software Development, which is why I started teaching myself programming already before my studies.",
-        "biography_text_lower": "Already from the beginning I focused on developing a broad skillset and technical Know-How.",
-        "biography_more_button": "More about me",
-        "offers_headline": "What I do.",
+        "intro_background_headline": "Welcome",
+        "offers_background_headline": "Offers",
+        "offers_headline": "What I can do for you.",
         "offers_card_title": "Offers",
         "offers_blogs": "Blogs",
         "offers_blogs_desc": "Today in times of digitalization, blogs are the proper way to reach out to other people in order to share knowledge, images or other resources.",
@@ -51,7 +48,11 @@
         "services_item_two_headline": "Flexible Communication",
         "services_item_two_text": "If you're living abroad or there's any other reason local meetings are impossible, remote communication is sufficient and guaranteed.",
         "services_item_three_headline": "Responsive Design",
-        "services_item_three_text": "Websites have to be developed responsively nowadays as there are millions of devices with different aspect ratios and resolutions, which is why any of my products are equipped with a responsive design."
+        "services_item_three_text": "Websites have to be developed responsively nowadays as there are millions of devices with different aspect ratios and resolutions, which is why any of my products are equipped with a responsive design.",
+        "services_item_four_headline": "Mobile-First Development",
+        "services_item_four_text": "The amount of people browsing the internet using smartphones is enormous, which is why a positive user experience is especially important in this case - that's why I focus on mobile-first development.",
+        "services_item_five_headline": "Easy-to-use & Fast",
+        "services_item_five_text": "Most of the users value short loading time as well as an easy usability - These things are always taken into account by me."
     },
     "about_page": {
         "timeline_headline": "Curriculum Vitae",

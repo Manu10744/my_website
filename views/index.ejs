@@ -76,18 +76,20 @@
             </div>
 
             <div class="intro-section">
-                <h1 data-reveal-type="fadeUp" class="welcome-heading revealable">Welcome</h1>
+                <h1 data-reveal-type="fadeUp" class="welcome-heading revealable"> <%- docText.index_page.intro_background_headline %> </h1>
 
-                <div data-reveal-type="fade" class="intro-image-container revealable"></div>
+                <div data-reveal-type="fade" class="intro-image-container revealable">
+                    <div class="bg-points intro-image-points-decorator"></div>
+                </div>
                 <div data-reveal-type="fade" class="intro-content-container revealable">
                     <div class="intro-content">
                         <div class="intro-heading">
                             <h1>Web Development.</h1>
-                            <h1>Individuell.</h1>
+                            <h1><strong>Individuell.</strong><h1>
                         </div>
     
                         <div class="intro-text">
-                            <p>Ich bin Ihr Ansprechpartner zu allem, was das Web angeht. Egal ob Development, Design oder Hosting - ich berate Sie gerne!</p>
+                            <p>Ich bin Ihr Ansprechpartner für alles, was das Web angeht. Egal ob Development, Design oder Hosting - ich berate Sie gerne!</p>
                         </div>
 
                         <div class="decorator-small decorator-top-top-left"></div>
@@ -99,11 +101,15 @@
                         <div class="decorator-big decorator-bottom-top-right"></div>
                         <div class="decorator-big decorator-bottom-bottom-left"></div>
                         <div class="decorator-big decorator-bottom-bottom-right"></div>
+
+                        <div class="bg-points intro-content-points-decorator"></div>
                     </div>
                 </div>
             </div>
 
             <div class="offers-slider">
+                <div class="decorator-line"></div>
+                <h1 class="offers-heading"> <%- docText.index_page.offers_background_headline %> </h1>
                 <h1 data-reveal-type="fade" class="offers-intro typewriter revealable"> <%- docText.index_page.offers_headline %> </h1>
                 <div class="glider glider-contain">
                     <div data-reveal-type="fadeUp" class="slider-item revealable">
@@ -160,7 +166,7 @@
                             </div>
                             <div class="offer-index">/ 4</div>
                             <div class="offer-description">
-                                <h1> <%- docText.index_page.offers_ecommerce %> </h1>
+                                <h1 style="color: black;"> <%- docText.index_page.offers_ecommerce %> </h1>
                                 <p> <%- docText.index_page.offers_ecommerce_desc %> </p>
                             </div>
                         </div>
@@ -188,40 +194,73 @@
             </div>
 
             <div class="props-wrapper">
-                <div class="container">
-                    <div class="services-intro">
-                        <h1 data-reveal-type="fade" class="services-headline typewriter revealable"> <%- docText.index_page.services_headline %> </h1>
-                        <div data-reveal-type="fade" class="seperator-big revealable">
-                            <div class="line-1"></div>
-                            <div class="line-2"></div>
-                        </div>
+                <div data-reveal-type="fade" class="props-image-container revealable"></div>
+                <div class="props-content-container">
+                    <div class="services-headline-container">
+                        <hr>
+                        <h1 class="services-headline typewriter"><%- docText.index_page.services_headline %></h1>
+                        <hr>
                     </div>
+
                     <div class="props">
-                        <div data-reveal-type="fadeUp" class="prop revealable">
+                        <div data-reveal-type="fade" class="prop-item revealable">
                             <div class="icon-container">
                                 <i class="fas fa-gem"></i>
+                                <span class="decorator-top-left"></span>
+                                <span class="decorator-bottom-right"></span>
                             </div>
-                            <h1> <%- docText.index_page.services_item_one_headline %> </h1>
+                            <h3> <%- docText.index_page.services_item_one_headline %> </h3>
                             <p> <%- docText.index_page.services_item_one_text %> </p>
+                            <span class="seperator"></span>
                         </div>
 
-                        <div data-reveal-type="fadeUp" class="prop revealable">
+                        <div data-reveal-type="fade" class="prop-item revealable">
                             <div class="icon-container">
                                 <i class="fas fa-tty"></i>
+                                <span class="decorator-top-left"></span>
+                                <span class="decorator-bottom-right"></span>
                             </div>
-                            <h1> <%- docText.index_page.services_item_two_headline %> </h1>
+                            <h3> <%- docText.index_page.services_item_two_headline %> </h3>
                             <p> <%- docText.index_page.services_item_two_text %> </p>
+                            <span class="seperator"></span>
                         </div>
 
-                        <div data-reveal-type="fadeUp" class="prop revealable">
+                        <div data-reveal-type="fade" class="prop-item revealable">
                             <div class="icon-container">
                                 <i class="fas fa-ruler-combined"></i>
+                                <span class="decorator-top-left"></span>
+                                <span class="decorator-bottom-right"></span>
                             </div>
-                            <h1> <%- docText.index_page.services_item_three_headline %> </h1>
+                            <h3> <%- docText.index_page.services_item_three_headline %> </h3>
                             <p> <%- docText.index_page.services_item_three_text %> </p>
+                            <span class="seperator"></span>
+                        </div>
+
+                        <div data-reveal-type="fade" class="prop-item revealable">
+                            <div class="icon-container">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span class="decorator-top-left"></span>
+                                <span class="decorator-bottom-right"></span>
+                            </div>
+                            <h3>  <%- docText.index_page.services_item_four_headline %> </h3>
+                            <p> <%- docText.index_page.services_item_four_text %> </p>
+                            <span class="seperator"></span>
+                        </div>
+
+                        <div data-reveal-type="fade" class="prop-item revealable">
+                            <div class="icon-container">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span class="decorator-top-left"></span>
+                                <span class="decorator-bottom-right"></span>
+                            </div>
+                            <h3> <%- docText.index_page.services_item_five_headline %> </h3>
+                            <p> <%- docText.index_page.services_item_five_text %> </p>
+                            <span class="seperator"></span>
                         </div>
                     </div>
                 </div>
+
+                <div class="bg-points props-points-decorator"></div>
             </div>
 
             <%- include ('partials/contactSection.ejs') %>
