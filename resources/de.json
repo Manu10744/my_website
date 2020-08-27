@@ -55,7 +55,9 @@
         "services_item_five_text": "Den meisten Nutzern sind sowohl geringe Ladezeiten als auch eine einfache Benutzung sehr wichtig - diese Eigenschaften habe ich stets im Blick."
     },
     "about_page": {
-        "timeline_headline": "Lebenslauf",
+        "prev_heading": "ÜBER MICH",
+        "cv_headline": "Lebenslauf",
+        "timeline_headline": "Timeline",
         "timeline_item_first_timestamp": "2018 - Heute",
         "timeline_item_first_headline": "Studium der Informatik und Computerlinguistik",
         "timeline_item_first_location": "Ludwig-Maximilians-Universität, München",
@@ -65,6 +67,16 @@
         "timeline_item_third_timestamp": "2014",
         "timeline_item_third_headline": "Mittlere Reife",
         "timeline_item_third_location": "Realschule, Geretsried",
+        "personal_headline": "Persönliche Informationen",
+        "personal_name_key": "Name:",
+        "personal_name_value": "Manuel Neumayer",
+        "personal_age_key": "Alter:",
+        "personal_age_value": 22,
+        "personal_lang_key": "Sprachen:",
+        "personal_lang_value": "Deutsch / Muttersprache, Englisch / Fließend",
+        "personal_email_key": "E-Mail:",
+        "personal_email_value": "kontakt@manuelneumayer.com",
+        "technologies_prev_headline": "IT-Skills",
         "technologies_headline": "Programmiersprachen &amp; andere Technologien"
     }
 }

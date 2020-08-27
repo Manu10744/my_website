@@ -5,6 +5,7 @@
     <title>Manuel Neumayer</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/assets/css/glide.core.min.css" rel="stylesheet">
     <link href="/assets/css/compiled.css" rel="stylesheet">
 </head>
 
@@ -32,60 +33,7 @@
         </header>
 
         <div class="page-wrapper">
-            <div class="about-wrapper">
-                <div class="timeline-img-container">
-                    <div class="personal-img-container">
-                        <img src="/assets/img/me-min.jpg">
-                    </div>
-
-                    <!-- Only for mobile devices -->
-                    <div class="scroll-down-indicator">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-
-                <div class="timeline-container">
-                    <div class="container">
-                        <h1 data-reveal-type="fade" class="typewriter revealable"> <%- docText.about_page.timeline_headline %> </h1>
-                        <div data-reveal-type="fade" class="seperator-big revealable">
-                            <div class="line-1"></div>
-                            <div class="line-2"></div>
-                        </div>
-
-                        <div data-reveal-type="fadeUp" class="timeline revealable">
-                            <div data-reveal-type="fadeUp" class="timeline-item revealable">
-                                <span class="timestamp"> <i class="fas fa-clock"></i> <%- docText.about_page.timeline_item_first_timestamp %> </span>
-                                <div class="item-icon">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <h2> <%- docText.about_page.timeline_item_first_headline %> </h2>
-                                <p> <%- docText.about_page.timeline_item_first_location %> </p>
-                            </div>
-
-                            <div data-reveal-type="fadeUp" class="timeline-item revealable">
-                                <span class="timestamp"> <i class="fas fa-clock"></i> <%- docText.about_page.timeline_item_second_timestamp %>
-                                </span>
-                                <div class="item-icon">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <h2> <%- docText.about_page.timeline_item_second_headline %> </h2>
-                                <p> <%- docText.about_page.timeline_item_second_location %> </p>
-                            </div>
-
-                            <div data-reveal-type="fadeUp" class="timeline-item revealable">
-                                <span class="timestamp"> <i class="fas fa-clock"></i> <%- docText.about_page.timeline_item_third_timestamp %> </span>
-                                <div class="item-icon">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <h2> <%- docText.about_page.timeline_item_third_headline %> </h2>
-                                <p> <%- docText.about_page.timeline_item_third_location %> </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="about-hero">
                 <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
                     <path d="M-0.27,135.69 C149.99,150.00 291.48,73.52 501.97,135.69 L500.00,150.00 L0.00,150.00 Z"
                         style="stroke: none; fill: #f7f7f7;"></path>
@@ -100,52 +48,143 @@
                     <path d="M0.28,131.73 C149.99,150.00 354.12,40.95 501.97,147.53 L501.97,153.45 L0.00,150.00 Z"
                         style="stroke: none; fill: #f7f7f7; fill-opacity: 0.5"></path>
                 </svg>
+
+                <div data-reveal-type="scaleXFromRight" class="decorator-line revealable"></div>
             </div>
 
-            <div class="techstack-wrapper">
-                <div class="container tech-intro">
-                    <h1 data-reveal-type="fade" class="typewriter revealable"> <%- docText.about_page.technologies_headline %> </h1>
-
-                    <div data-reveal-type="fade" class="seperator-big revealable">
-                        <div class="line-1"></div>
-                        <div class="line-2"></div>
+            <div data-reveal-type="fade" class="about-intro revealable">
+                <div class="container">
+                    <div class="prev-heading-wrapper">
+                        <h3> <%- docText.about_page.prev_heading %> </h3>
+                        <span class="heading-line"></span>
                     </div>
+                    <h1> <%- docText.about_page.cv_headline %> </h1>
+
+                    <div class="bg-points"></div>
                 </div>
+            </div>
 
-                <div class="wave-container">
-                    <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
-                        <path d="M-0.27,135.69 C149.99,150.00 291.48,73.52 501.97,135.69 L500.00,150.00 L0.00,150.00 Z"
-                            style="stroke: none; fill: #EEE;"></path>
-                    </svg>
-                </div>
+            <div class="timeline-wrapper">
+                <div class="container">
+                    <h1 data-reveal-type="fade" class="timeline-heading revealable"> <%- docText.about_page.timeline_headline %> </h1>
 
-                <div class="techstack-container">
-                    <div class="techstack-item">
-                        <div data-reveal-type="fadeAndZoomIn" class="techstack-img html5 revealable"></div>
-                    </div>
-                    <div class="techstack-item">
-                        <div data-reveal-type="fadeAndZoomIn" class="techstack-img css3 revealable"></div>
-                    </div>
-                    <div class="techstack-item">
-                        <div data-reveal-type="fadeAndZoomIn" class="techstack-img js revealable"></div>
-                    </div>
-                    <div class="techstack-item">
-                        <div data-reveal-type="fadeAndZoomIn" class="techstack-img java revealable"></div>
-                    </div>
-                    <div class="techstack-item">
-                        <div data-reveal-type="fadeAndZoomIn" class="techstack-img python revealable"></div>
-                    </div>
-                    <div class="techstack-item">
-                        <div data-reveal-type="fadeAndZoomIn" class="techstack-img mongodb revealable"></div>
-                    </div>
-                    <div class="techstack-item">
-                        <div data-reveal-type="fadeAndZoomIn" class="techstack-img sql revealable"></div>
-                    </div>
-                    <div class="techstack-item">
-                        <div data-reveal-type="fadeAndZoomIn" class="techstack-img git revealable"></div>
+                    <div data-reveal-type="timeline" class="timeline revealable">
+                        <div data-reveal-type="fadeUp" class="timeline-item right revealable">
+                            <div class="timeline-item-content">
+                                <div class="item-icon-container">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <span class="timestamp"> <%- docText.about_page.timeline_item_first_timestamp %> </span>
+                                <h1 class="item-title"> <%- docText.about_page.timeline_item_first_headline %> </h1>
+                                <h3 class="item-location"> <%- docText.about_page.timeline_item_first_location %> </h3>
+                            </div>
+                        </div>
+
+                        <div data-reveal-type="fadeUp" class="timeline-item left revealable">
+                            <div class="timeline-item-content">
+                                <div class="item-icon-container">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <span class="timestamp"> <%- docText.about_page.timeline_item_second_timestamp %> </span>
+                                <h1 class="item-title"> <%- docText.about_page.timeline_item_second_headline %> </h1>
+                                <h3 class="item-location"> <%- docText.about_page.timeline_item_second_location %> </h3>
+                            </div>
+                        </div>
+
+                        <div data-reveal-type="fadeUp" class="timeline-item right revealable">
+                            <div class="timeline-item-content">
+                                <div class="item-icon-container">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <span class="timestamp"> <%- docText.about_page.timeline_item_third_timestamp %> </span>
+                                <h1 class="item-title"> <%- docText.about_page.timeline_item_third_headline %> </h1>
+                                <h3 class="item-location"> <%- docText.about_page.timeline_item_third_location %> </h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="personal-info-wrapper">
+                <div class="container">
+                    <div data-reveal-type="fade" class="personal-intro revealable">
+                        <div class="prev-heading-wrapper">
+                            <h3> <%- docText.about_page.prev_heading %> </h3>
+                            <span class="heading-line"></span>
+                        </div>
+                        <h1> <%- docText.about_page.personal_headline %> </h1>
+                    </div>
+
+                    <div class="personal-info-content">
+                        <img data-reveal-type="fade" class="personal-image revealable" src="/assets/img/FaktorZehnBild.jpg">
+                        <div data-reveal-type="fade" class="personal-info revealable">
+                            <h3 class="info-item"> <%- docText.about_page.personal_name_key %> </h3>
+                            <h3 class="info-item gray-colored "> <%- docText.about_page.personal_name_value %> </h3>
+                            <h3 class="info-item"> <%- docText.about_page.personal_age_key %> </h3>
+                            <h3 class="info-item gray-colored "> <%- docText.about_page.personal_age_value %> </h3>
+                            <h3 class="info-item"> <%- docText.about_page.personal_lang_key %> </h3>
+                            <h3 class="info-item gray-colored "> <%- docText.about_page.personal_lang_value %> </h3>
+                            <h3 class="info-item"> <%- docText.about_page.personal_email_key %> </h3>
+                            <h3 class="info-item gray-colored "> <%- docText.about_page.personal_email_value %> </h3>
+                        </div>
+                    </div>
+
+                    <span class="decorator-line-thin"></span>
+                    <span class="decorator-line-thick"></span>
+                    <div class="bg-points"></div>
+                </div>
+            </div>
+
+            <div class="tech-wrapper">
+                <div data-reveal-type="scaleXFromLeft" class="decorator-line revealable"></div>
+                <h1 data-reveal-type="fade" class="tech-heading revealable"> <%- docText.about_page.technologies_prev_headline %> </h1>
+
+                <div class="tech-stack">
+                    <div data-reveal-type="fade" class="tech-stack-intro revealable">
+                        <div class="prev-heading">
+                            <span class="heading-line"></span>
+                            <h3> <%- docText.about_page.prev_heading %> </h3>
+                            <span class="heading-line"></span>
+                        </div>
+                        <h1> <%- docText.about_page.technologies_headline %> </h1>
+                    </div>
+
+                    <div data-reveal-type="fade" class="tech-glider revealable">
+                        <div data-glide-el="track" class="glide__track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide">
+                                    <div class="tech-glider-item html5"></div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="tech-glider-item css3"></div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="tech-glider-item js"></div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="tech-glider-item java"></div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="tech-glider-item python"></div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="tech-glider-item mongodb"></div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="tech-glider-item sql"></div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="tech-glider-item git"></div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="tech-glider-item js"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <%- include ('partials/contactSection.ejs') %>
 
@@ -172,6 +211,8 @@
     <script defer src="/assets/js/fontawesome.min.js"></script>
     <script defer src="/assets/js/all.min.js"></script>
 
+    <script src="/assets/js/glide.min.js"></script>
+    <script type="module" src="/assets/js/gliderabout.js"></script>
     <script type="module" src="/assets/js/select-language.js"></script>
     <script type="module" src="/assets/js/mobile-navigation.js"></script>
     <script type="module" src="/assets/js/animations.js"></script>

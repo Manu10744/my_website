@@ -55,7 +55,7 @@
 }
 
 .intro-section {
-    margin: 100px 0 300px 0;
+    margin: 100px 0 200px 0;
     position: relative;
 
     .welcome-heading {
@@ -209,7 +209,8 @@
     overflow: hidden;
     padding-bottom: 50px;
     margin-top: 50px;
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
