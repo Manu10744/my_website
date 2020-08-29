@@ -13,6 +13,8 @@
   position: relative;
   padding-top: calc(70px + 10vh);
   padding-bottom: 30vh;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .welcome-section {
@@ -524,6 +526,8 @@
 @media (min-width: 768px) {
   .welcome-wrapper {
     background-attachment: fixed;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
   .welcome-section .heading-big h1 {
@@ -887,7 +891,7 @@
 .timeline-wrapper .timeline .timeline-item .timeline-item-content {
   padding: 25px 20px 20px 20px;
   background: #F0F0F0;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e5e5;
   position: relative;
 }
 .timeline-wrapper .timeline .timeline-item .timeline-item-content .item-icon-container {
@@ -1018,10 +1022,10 @@
   position: relative;
 }
 .tech-wrapper .decorator-line {
-  margin-top: 100px;
+  margin-top: 150px;
 }
 .tech-wrapper .tech-heading {
-  margin: 50px 0;
+  margin: 80px 0 50px 0;
   font-size: 4em;
   color: #eeeeee;
   text-align: left;
@@ -1033,6 +1037,10 @@
   background: #0E0E0E;
   border-top-left-radius: 50px;
   position: relative;
+  padding-bottom: 20px;
+}
+.tech-wrapper .tech-stack .tech-stack-intro {
+  margin-bottom: 15px;
 }
 .tech-wrapper .tech-stack .tech-stack-intro .prev-heading {
   padding-top: 30px;
@@ -1098,6 +1106,11 @@
   background-image: url("/assets/img/CSS3.svg");
 }
 
+.tailwind {
+  background-image: url("/assets/img/tailwind.svg");
+  width: 100% !important;
+}
+
 .js {
   background-image: url("/assets/img/JavaScript.svg");
 }
@@ -1120,6 +1133,10 @@
 
 .git {
   background-image: url("/assets/img/git.svg");
+}
+
+.figma {
+  background-image: url("/assets/img/figma.svg");
 }
 
 .animate-timeline-scaleY::before {
@@ -1292,12 +1309,12 @@
 @media (min-width: 1540px) {
   .about-intro h1 {
     font-size: 4em;
-    margin-top: -10px;
+    margin-top: -5px;
   }
 
   .personal-info-wrapper .personal-intro h1 {
     font-size: 4em;
-    margin-top: -10px;
+    margin-top: -5px;
   }
 
   .about-intro .bg-points {
@@ -1489,7 +1506,7 @@ header .navigation {
   position: fixed;
   top: 0;
   left: 0;
-  background: black;
+  background: #0E0E0E;
   width: 100%;
   height: 100%;
   overflow: hidden;

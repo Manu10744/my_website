@@ -1,7 +1,7 @@
-const typewriters = document.querySelectorAll(".typewriter");
 import { barbaIsRunning } from './barbaConfig.js';
 
 export const typewriterList = [];
+const typewriters = document.querySelectorAll(".typewriter");
 
 /**
  * Creates a Typewriter object

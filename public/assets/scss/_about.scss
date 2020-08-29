@@ -72,7 +72,7 @@
             .timeline-item-content {
                 padding: 25px 20px 20px 20px; 
                 background: #F0F0F0;
-                box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+                border: 1px solid #e5e5e5;
                 position: relative;
 
                 .item-icon-container {
@@ -216,11 +216,11 @@
     position: relative;
 
     .decorator-line {
-        margin-top: 100px;
+        margin-top: 150px;
     }
 
     .tech-heading {
-        margin: 50px 0;
+        margin: 80px 0 50px 0;
         font-size: 4em;
         color: #eeeeee;
         text-align: left;
@@ -233,8 +233,11 @@
         background: #0E0E0E;
         border-top-left-radius: 50px;
         position: relative;
+        padding-bottom: 20px;
 
         .tech-stack-intro {
+            margin-bottom: 15px; 
+
             .prev-heading {
                 padding-top: 30px;
                 display: flex;
@@ -306,13 +309,14 @@
 
 .html5 { background-image: url('/assets/img/HTML5.svg'); }
 .css3 { background-image: url('/assets/img/CSS3.svg'); }
+.tailwind { background-image: url('/assets/img/tailwind.svg'); width: 100%!important; }
 .js { background-image: url('/assets/img/JavaScript.svg'); }
 .java { background-image: url('/assets/img/Java.svg'); }
 .python { background-image: url('/assets/img/Python.svg'); }
 .mongodb { background-image: url('/assets/img/mongodb.svg'); }
 .sql { background-image: url('/assets/img/mysql.svg'); }
 .git { background-image: url('/assets/img/git.svg'); }
-
+.figma { background-image: url('/assets/img/figma.svg'); }
 
 // Animates the timeline from top to bottom
 .animate-timeline-scaleY::before {
@@ -502,8 +506,8 @@
 }
 
 @media (min-width: 1540px) {
-    .about-intro h1 { font-size: 4em; margin-top: -10px }
-    .personal-info-wrapper .personal-intro h1 { font-size: 4em; margin-top: -10px; }
+    .about-intro h1 { font-size: 4em; margin-top: -5px }
+    .personal-info-wrapper .personal-intro h1 { font-size: 4em; margin-top: -5px; }
 
     .about-intro .bg-points {
         bottom: -250px;

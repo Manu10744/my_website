@@ -10,6 +10,8 @@
     position: relative;
     padding-top: calc(70px + 10vh);
     padding-bottom: 30vh;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .welcome-section {
@@ -567,7 +569,7 @@
 }
 
 @media (min-width: 768px) {
-    .welcome-wrapper { background-attachment: fixed; }
+    .welcome-wrapper { background-attachment: fixed; padding-left: 10%; padding-right: 10%; }
     .welcome-section {
         .heading-big h1 {
             font-size: 10em;
