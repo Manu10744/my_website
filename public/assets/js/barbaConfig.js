@@ -26,7 +26,22 @@ barba.init({
                 // Page transition is 50% and ready to switch containers, so show next container
                 data.next.container.style.display = 'block';
             },
-        }]
+        }],
+    views: [{
+        namespace: 'about',
+        beforeEnter({ current, next }) {
+            // Fetch Glide.js Library and add it
+            let gliderScript = document.createElement("script");
+            gliderScript.src = "/assets/js/glide.min.js";
+            next.container.appendChild(gliderScript);
+        },
+        afterEnter({ current, next }) {
+            // (Re)initialize the Glider components
+            let scriptForTechStackGlider = document.createElement("script");
+            scriptForTechStackGlider.src = "/assets/js/gliderabout.js"
+            next.container.appendChild(scriptForTechStackGlider);
+        }   
+    }]
 })
 
 barba.hooks.after((data) => {

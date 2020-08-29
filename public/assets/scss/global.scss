@@ -1,8 +1,13 @@
 /* Partials */
+
+/* Library-related CSS as .scss */
+@use '_gliderjs.scss';
+/*                              */
+
+/* CSS for views */
 @use '_index.scss';
 @use '_about.scss';
 @use '_portfolio.scss';
-
 @import 'utility/_variables.scss';
 
 /* Fonts */
