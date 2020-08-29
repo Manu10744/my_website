@@ -55,7 +55,9 @@
         "services_item_five_text": "Most of the users value short loading time as well as an easy usability - These things are always taken into account by me."
     },
     "about_page": {
-        "timeline_headline": "Curriculum Vitae",
+        "prev_heading": "ABOUT ME",
+        "cv_headline": "Curriculum Vitae",
+        "timeline_headline": "Timeline",
         "timeline_item_first_timestamp": "2018 - Today",
         "timeline_item_first_headline": "Studies of Computer Science and Computational Linguistics",
         "timeline_item_first_location": "Ludwig-Maximilians-University of Munich",
@@ -65,6 +67,16 @@
         "timeline_item_third_timestamp": "2014",
         "timeline_item_third_headline": "Secondary School Certificate",
         "timeline_item_third_location": "Secondary School, Geretsried",
+        "personal_headline": "Personal Information",
+        "personal_name_key": "Name:",
+        "personal_name_value": "Manuel Neumayer",
+        "personal_age_key": "Age:",
+        "personal_age_value": 22,
+        "personal_lang_key": "Languages:",
+        "personal_lang_value": "German / Native Speaker, English / Fluent",
+        "personal_email_key": "E-Mail:",
+        "personal_email_value": "kontakt@manuelneumayer.com",
+        "technologies_prev_headline": "IT-Skills",
         "technologies_headline": "Programing languages &amp; other technologies"
     }
 }

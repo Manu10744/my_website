@@ -2,6 +2,9 @@
    ANIMATIONS ON SCROLL 
 */
 const revealables = document.querySelectorAll(".revealable");
+const ANIMATION_STAGGER_AMOUNT = 300;
+const ANIME_ANIMATION_DURATION = 800;
+
 let observerConfig = {
 	rootMargin: '-70px'
 }
@@ -17,7 +20,7 @@ export const observer = new IntersectionObserver((entries) => {
 	}
 
 	for (const element of intersectedElements) {
-		animationDelay += 200;
+		animationDelay += ANIMATION_STAGGER_AMOUNT;
 
 		let revealType = element.getAttribute("data-reveal-type");
 		
@@ -37,6 +40,18 @@ export const observer = new IntersectionObserver((entries) => {
 			case "fadeAndZoomIn": 
 				fadeAndZoomIn(element, animationDelay);
 				break;
+			case "timeline": 
+				timelineAnimation(element, animationDelay);
+				break;
+			case "revealTextFromOverflow": 
+				revealUpFromOverflow(element, animationDelay);
+				break;
+			case "scaleXFromLeft":
+				scaleXFromLeft(element, animationDelay);
+				break;
+			case "scaleXFromRight": 
+				scaleXFromRight(element, animationDelay);
+				break;
 		}
 
 		observer.unobserve(element);
@@ -52,7 +67,7 @@ function fade(element, animationDelay) {
 	anime({
 		targets: element,
 		opacity: [0, 1],
-		duration: 800,
+		duration: ANIME_ANIMATION_DURATION,
 		delay: animationDelay,
 		easing: 'easeInQuad'
 	})
@@ -63,7 +78,7 @@ function fadeUp(element, animationDelay) {
 		targets: element,
 		opacity: [0, 1],
 		translateY: ['50px', '0px'],
-		duration: 800,
+		duration: ANIME_ANIMATION_DURATION,
 		delay: animationDelay,
 		easing: 'easeInQuad'
 	})
@@ -74,7 +89,7 @@ function fadeFromLeft(element, animationDelay) {
 		targets: element,
 		opacity: [0, 1],
 		translateX: ['-100px', '0px'],
-		duration: 800,
+		duration: ANIME_ANIMATION_DURATION,
 		delay: animationDelay,
 		easing: 'easeInQuad'
 	})
@@ -85,7 +100,7 @@ function fadeFromRight(element, animationDelay) {
 		targets: element,
 		opacity: [0, 1],
 		translateX: ['100px', '0px'],
-		duration: 800,
+		duration: ANIME_ANIMATION_DURATION,
 		delay: animationDelay,
 		easing: 'easeInQuad'
 	})
@@ -96,8 +111,70 @@ function fadeAndZoomIn(element, animationDelay) {
 		targets: element,
 		opacity: [0, 1],
 		scale: [0, 1],
-		duration: 800,
+		duration: ANIME_ANIMATION_DURATION,
 		delay: animationDelay,
 		easing: 'easeInQuad'
 	})
+}
+
+function scaleXFromLeft(element, animationDelay) {
+	anime({
+		targets: element, 
+		opacity: [0, 1],
+		scaleX: [0, 1],
+		duration: ANIME_ANIMATION_DURATION,
+		delay: animationDelay,
+		easing: 'easeInQuad',
+		begin: () => { element.style.transformOrigin = 'left'; }
+	})
+}
+
+function scaleXFromRight(element, animationDelay) {
+	anime({
+		targets: element, 
+		opacity: [0, 1],
+		scaleX: [0, 1],
+		duration: ANIME_ANIMATION_DURATION,
+		delay: animationDelay,
+		easing: 'easeInQuad',
+		begin: () => { element.style.transformOrigin = 'right'; }
+	})
+}
+
+// function revealUpFromOverflow(element, animationDelay) {
+// 	// Wrap Element into a Wrapper with Overflow hidden
+// 	let wrapper = document.createElement("div");
+// 	wrapper.style.overflowY = "hidden";
+// 	element.parentNode.insertBefore(wrapper, element);
+// 	wrapper.appendChild(element);
+
+// 	anime({
+// 		targets: element,
+// 		translateY: ['50%', '0'],
+// 		delay: animationDelay,
+// 		duration: ANIME_ANIMATION_DURATION,
+// 		easing: 'easeInQuad',
+// 		begin: () => {
+// 			anime({
+// 				targets: element,
+// 				opacity: [0, 1],
+// 				delay: ANIME_ANIMATION_DURATION - 100,
+// 				duration: ANIME_ANIMATION_DURATION,
+// 				easing: 'easeInQuad',
+// 			})
+// 		}
+// 	})
+// }
+
+/* /////////////////////////////////////// */
+/* 	   TIMELINE ANIMATION RELATED CODE	   */
+
+/**
+ * Reveals the timeline from top to bottom by using CSS KeyFrames Animation.
+ * Not possible with AnimeJS, as the timeline is a :before (pseudo) element of
+ * the timeline container.
+ */
+function timelineAnimation(element, animationDelay) {
+	element.style.opacity = 1;
+	element.classList.add('animate-timeline-scaleY');
 }
