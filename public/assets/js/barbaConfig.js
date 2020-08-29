@@ -37,11 +37,27 @@ barba.init({
         },
         afterEnter({ current, next }) {
             // (Re)initialize the Glider components
-            let scriptForTechStackGlider = document.createElement("script");
-            scriptForTechStackGlider.src = "/assets/js/gliderabout.js"
-            next.container.appendChild(scriptForTechStackGlider);
+            let gliderConfigScript = document.createElement("script");
+            gliderConfigScript.src = "/assets/js/gliderabout.js"
+            next.container.appendChild(gliderConfigScript);
         }   
-    }]
+    },
+    {
+        namespace: 'home',
+        beforeEnter({ current, next }) {
+            // Fetch Glider.js Library and add it
+            let sliderScript = document.createElement("script");
+            sliderScript.src = "/assets/js/glider.min.js";
+            next.container.appendChild(sliderScript);
+        },
+        afterEnter({ current, next}) {
+            // (Re)initialize the glider components
+            let sliderConfigScript = document.createElement("script");
+            sliderConfigScript.src = "/assets/js/slider.js";
+            next.container.appendChild(sliderConfigScript);
+        }
+    }
+    ]
 })
 
 barba.hooks.after((data) => {
@@ -49,7 +65,7 @@ barba.hooks.after((data) => {
     reinitLanguageSelectionListeners();
     reinitTypewriters();
     reinitIntersectionObserver();
-    reinitSliders();
+    // reinitSliders();
 })
 
 
