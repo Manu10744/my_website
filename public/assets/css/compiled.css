@@ -1281,7 +1281,7 @@
   margin: 0 auto;
 }
 .tech-wrapper .tech-stack .tech-glider {
-  padding: 30px 0;
+  padding-top: 10px;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
@@ -1552,6 +1552,15 @@
   }
 }
 /* GLOBAL SCSS VARIALBES */
+.portfolio-intro {
+  background: #000;
+  padding-top: 200px;
+  padding-left: 70px;
+}
+.portfolio-intro h1 {
+  font-size: 3em;
+}
+
 .under-construction {
   min-height: 100vh;
   background-color: #000;
@@ -1601,6 +1610,23 @@ body {
   background-size: contain;
   width: 80px;
   height: 100px;
+}
+
+.glide__bullets {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.glide__bullets .glide__bullet {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #999;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.glide__bullets .glide__bullet--active {
+  background: #F7F7F7;
 }
 
 .decorator-line {

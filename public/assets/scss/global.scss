@@ -51,6 +51,26 @@ body {
     height: 100px;
 }
 
+// GlideJS Glider Controls
+.glide__bullets {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    .glide__bullet {
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background: #999;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    
+    .glide__bullet--active {
+        background: $dark-white;
+    }
+}
+
 .decorator-line {
     width: 33%;
     height: 2px;

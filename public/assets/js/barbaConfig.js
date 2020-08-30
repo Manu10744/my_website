@@ -38,7 +38,7 @@ barba.init({
         afterEnter({ current, next }) {
             // (Re)initialize the Glider components
             let gliderConfigScript = document.createElement("script");
-            gliderConfigScript.src = "/assets/js/gliderabout.js"
+            gliderConfigScript.src = "/assets/js/glideJSConfig.js"
             next.container.appendChild(gliderConfigScript);
         }   
     },
@@ -53,7 +53,7 @@ barba.init({
         afterEnter({ current, next}) {
             // (Re)initialize the glider components
             let sliderConfigScript = document.createElement("script");
-            sliderConfigScript.src = "/assets/js/slider.js";
+            sliderConfigScript.src = "/assets/js/gliderJSConfig.js";
             next.container.appendChild(sliderConfigScript);
         }
     }
@@ -65,7 +65,6 @@ barba.hooks.after((data) => {
     reinitLanguageSelectionListeners();
     reinitTypewriters();
     reinitIntersectionObserver();
-    // reinitSliders();
 })
 
 
@@ -225,28 +224,4 @@ function reinitIntersectionObserver() {
     for (const element of revealables) {
         observer.observe(element);
     }
-}
-
-function reinitSliders() {
-    new Glider(document.querySelector(".glider"), {
-        slidesToShow: 'auto',
-        itemWidth: 400,
-        // dots: '#dots',
-        draggable: true,
-        exactWidth: true,
-        arrows: {
-            prev: '.glider-prev',
-            next: '.glider-next',
-        }, 
-        responsive: [
-            {
-                // screens greater than >= 1024px
-                breakpoint: 1079,
-                settings: {
-                    itemWidth: 1000,
-                    dragVelocity: 1.75
-                }
-            }
-        ]
-    })
 }

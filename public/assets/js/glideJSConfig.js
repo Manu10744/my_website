@@ -1,7 +1,7 @@
 if (document.querySelector('.tech-glider')) {
     new Glide('.tech-glider', {
         perView: 6,
-        bound: true,
+        bound: false,
         autoplay: 2000,
         hoverpause: true,
         touchRatio: 1,

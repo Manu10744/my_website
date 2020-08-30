@@ -26,7 +26,6 @@ export function fadeNavigationIn() {
             duration: 800,
             begin: () => { 
                 document.querySelector(".navigation").style.display = 'block'; 
-                document.querySelector(".page-wrapper").classList.add("blurred");
             }
         })
         .add({
@@ -63,7 +62,6 @@ export function fadeNavigationOut() {
         .add({
             targets: '.navigation',
             opacity: [1, 0],
-            begin: () => { document.querySelector(".page-wrapper").classList.remove("blurred"); },
             complete: () => { 
                 document.querySelector(".navigation").style.display = ''; 
             }

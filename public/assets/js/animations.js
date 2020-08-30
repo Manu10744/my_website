@@ -52,6 +52,8 @@ export const observer = new IntersectionObserver((entries) => {
 			case "scaleXFromRight": 
 				scaleXFromRight(element, animationDelay);
 				break;
+			case "textRevealFromOverflow":
+				revealUpFromOverflow(element, animationDelay);
 		}
 
 		observer.unobserve(element);
@@ -141,30 +143,22 @@ function scaleXFromRight(element, animationDelay) {
 	})
 }
 
-// function revealUpFromOverflow(element, animationDelay) {
-// 	// Wrap Element into a Wrapper with Overflow hidden
-// 	let wrapper = document.createElement("div");
-// 	wrapper.style.overflowY = "hidden";
-// 	element.parentNode.insertBefore(wrapper, element);
-// 	wrapper.appendChild(element);
+function revealUpFromOverflow(element, animationDelay) {
+	// Wrap Element into a Wrapper with Overflow hidden
+	let wrapper = document.createElement("div");
+	wrapper.style.overflowY = "hidden";
+	element.parentNode.insertBefore(wrapper, element);
+	wrapper.appendChild(element);
 
-// 	anime({
-// 		targets: element,
-// 		translateY: ['50%', '0'],
-// 		delay: animationDelay,
-// 		duration: ANIME_ANIMATION_DURATION,
-// 		easing: 'easeInQuad',
-// 		begin: () => {
-// 			anime({
-// 				targets: element,
-// 				opacity: [0, 1],
-// 				delay: ANIME_ANIMATION_DURATION - 100,
-// 				duration: ANIME_ANIMATION_DURATION,
-// 				easing: 'easeInQuad',
-// 			})
-// 		}
-// 	})
-// }
+	anime({
+		targets: element,
+		translateY: ['110%', '0'],
+		opacity: [0, 1],
+		delay: animationDelay,
+		duration: ANIME_ANIMATION_DURATION + 200,
+		easing: 'easeOutCubic'
+	})
+}
 
 /* /////////////////////////////////////// */
 /* 	   TIMELINE ANIMATION RELATED CODE	   */
