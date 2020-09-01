@@ -51,13 +51,13 @@
                 <div data-reveal-type="scaleXFromRight" class="decorator-line revealable"></div>
             </div>
 
-            <div data-reveal-type="fade" class="about-intro revealable">
+            <div class="about-intro">
                 <div class="container">
-                    <div class="prev-heading-wrapper">
+                    <div data-reveal-type="textRevealFromOverflow" class="prev-heading-wrapper revealable">
                         <h3> <%- docText.about_page.prev_heading %> </h3>
                         <span class="heading-line"></span>
                     </div>
-                    <h1 class="typewriter"> <%- docText.about_page.cv_headline %> </h1>
+                    <h1 data-reveal-type="textRevealFromOverflow" class="typewriter revealable"> <%- docText.about_page.cv_headline %> </h1>
 
                     <div class="bg-points"></div>
                 </div>
@@ -71,7 +71,7 @@
                         <div data-reveal-type="fadeUp" class="timeline-item right revealable">
                             <div class="timeline-item-content">
                                 <div class="item-icon-container">
-                                    <i class="fas fa-graduation-cap"></i>
+                                    <i class="fas fa-briefcase"></i>
                                 </div>
                                 <span class="timestamp"> <%- docText.about_page.timeline_item_first_timestamp %> </span>
                                 <h1 class="item-title typewriter"> <%- docText.about_page.timeline_item_first_headline %> </h1>
@@ -117,12 +117,12 @@
 
             <div class="personal-info-wrapper">
                 <div class="container">
-                    <div data-reveal-type="fade" class="personal-intro revealable">
-                        <div class="prev-heading-wrapper">
+                    <div class="personal-intro">
+                        <div data-reveal-type="textRevealFromOverflow" class="prev-heading-wrapper revealable">
                             <h3> <%- docText.about_page.prev_heading %> </h3>
                             <span class="heading-line"></span>
                         </div>
-                        <h1 class="typewriter"> <%- docText.about_page.personal_headline %> </h1>
+                        <h1 data-reveal-type="textRevealFromOverflow" class="typewriter revealable"> <%- docText.about_page.personal_headline %> </h1>
                     </div>
 
                     <div class="personal-info-content">
@@ -150,13 +150,13 @@
                 <h1 data-reveal-type="fade" class="tech-heading revealable"> <%- docText.about_page.technologies_prev_headline %> </h1>
 
                 <div class="tech-stack">
-                    <div data-reveal-type="fade" class="tech-stack-intro revealable">
-                        <div class="prev-heading">
+                    <div class="tech-stack-intro">
+                        <div data-reveal-type="textRevealFromOverflow" class="prev-heading revealable">
                             <span class="heading-line"></span>
                             <h3> <%- docText.about_page.prev_heading %> </h3>
                             <span class="heading-line"></span>
                         </div>
-                        <h1 class="typewriter"> <%- docText.about_page.technologies_headline %> </h1>
+                        <h1 data-reveal-type="textRevealFromOverflow" class="typewriter revealable"> <%- docText.about_page.technologies_headline %> </h1>
                     </div>
 
                     <div data-reveal-type="fade" class="tech-glider revealable">
@@ -173,6 +173,12 @@
                                 </li>
                                 <li class="glide__slide">
                                     <div class="tech-glider-item tailwind"></div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="tech-glider-item sass"></div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="tech-glider-item nodejs"></div>
                                 </li>
                                 <li class="glide__slide">
                                     <div class="tech-glider-item java"></div>
@@ -205,6 +211,8 @@
                             <button class="glide__bullet" data-glide-dir="=7"></button>
                             <button class="glide__bullet" data-glide-dir="=8"></button>
                             <button class="glide__bullet" data-glide-dir="=9"></button>
+                            <button class="glide__bullet" data-glide-dir="=10"></button>
+                            <button class="glide__bullet" data-glide-dir="=11"></button>
                         </div>
                     </div>
                 </div>

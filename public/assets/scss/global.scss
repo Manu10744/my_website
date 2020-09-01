@@ -29,6 +29,17 @@ body {
     background: $dark-white;
 }
 
+.prev-heading-wrapper {
+    display: flex;
+    align-items: center;
+
+    h3 {
+        color: $light-gray;
+        font-weight: 400;
+        font-size: 1em;
+    }
+}
+
 .transition-container {
     position: fixed;
     width: 100%;
