@@ -75,133 +75,56 @@
             </div>
 
             <div class="intro-section">
-                <h1 data-reveal-type="fadeUp" class="welcome-heading revealable">
-                    <%- docText.index_page.intro_background_headline %> </h1>
+                <div class="container">
+                    <div class="intro-content-container">
+                        <div class="intro-content">
+                            <div data-reveal-type="revealTextFromOverflow" class="prev-heading-wrapper revealable">
+                                <h3>HOME</h3>
+                                <span class="heading-line"></span>
+                            </div>
+                            <div class="intro-heading">
+                                <h1 data-reveal-type="revealTextFromOverflow" class="revealable">Web Development.</h1>
+                                <h1 data-reveal-type="revealTextFromOverflow" class="revealable"><strong>Individuell.</strong><h1>
+                            </div>
 
-                <div data-reveal-type="fade" class="intro-image-container revealable">
-                    <div class="bg-points intro-image-points-decorator"></div>
-                </div>
-                <div data-reveal-type="fade" class="intro-content-container revealable">
-                    <div class="intro-content">
-                        <div class="intro-heading">
-                            <h1>Web Development.</h1>
-                            <h1><strong>Individuell.</strong>
-                                <h1>
+                            <div data-reveal-type="fade" class="intro-text revealable">
+                                <p>Als Entwickler mit Fokus auf Fullstack-Entwicklung bin ich Ihr Ansprechpartner für Fragen und Ideen im Bereich Web- und Softwareentwicklung - ich berate Sie gerne zu Entwicklung von Websites, Integration von Services in bestehende Anwendungen und vielem mehr - ich freue mich darauf, von Ihnen zu hören!</p>
+                            </div>
                         </div>
-
-                        <div class="intro-text">
-                            <p>Ich bin Ihr Ansprechpartner für alles, was das Web angeht. Egal ob Development, Design
-                                oder Hosting - ich berate Sie gerne!</p>
-                        </div>
-
-                        <div class="decorator-small decorator-top-top-left"></div>
-                        <div class="decorator-small decorator-top-top-right"></div>
-                        <div class="decorator-small decorator-top-bottom-left"></div>
-                        <div class="decorator-small decorator-top-bottom-right"></div>
-
-                        <div class="decorator-big decorator-bottom-top-left"></div>
-                        <div class="decorator-big decorator-bottom-top-right"></div>
-                        <div class="decorator-big decorator-bottom-bottom-left"></div>
-                        <div class="decorator-big decorator-bottom-bottom-right"></div>
-
-                        <div class="bg-points intro-content-points-decorator"></div>
                     </div>
                 </div>
             </div>
 
-            <div class="offers-slider">
-                <div data-reveal-type="scaleXFromLeft" class="decorator-line revealable"></div>
-                <h1 data-reveal-type="fade" class="offers-heading revealable"> <%- docText.index_page.offers_background_headline %> </h1>
-                
-                <h1 data-reveal-type="fade" class="offers-intro typewriter revealable"> <%- docText.index_page.offers_headline %> </h1>
+            <div class="offers-wrapper">
+                <div class="container">
+                    <h1 data-reveal-type="fade" class="offers-heading revealable"> <%- docText.index_page.offers_background_headline %> </h1>
 
-
-                <div class="glider glider-contain">
-                    <div data-reveal-type="fadeUp" class="slider-item revealable">
-                        <div class="slide-image-container"></div>
-                        <div class="slide-content-container">
-                            <div class="category-info">
-                                <p> <%- docText.index_page.offers_card_title %> </p>
-                                <span class="info-line"></span>
-                            </div>
-                            <div class="offer-index">/ 1</div>
-                            <div class="offer-description">
-                                <h1> <%- docText.index_page.offers_blogs %> </h1>
-                                <p> <%- docText.index_page.offers_blogs_desc %> </p>
-                            </div>
-                        </div>
+                    <div data-reveal-type="textRevealFromOverflow" class="prev-heading-wrapper revealable">
+                        <h3>HOME</h3>
+                        <span class="heading-line"></span>
                     </div>
+                    <h1 data-reveal-type="textRevealFromOverflow" class="revealable typewriter offers-intro"> <%- docText.index_page.offers_headline %> </h1>
 
-                    <div data-reveal-type="fadeUp" class="slider-item revealable">
-                        <div class="slide-image-container"></div>
-                        <div class="slide-content-container">
-                            <div class="category-info">
-                                <p> <%- docText.index_page.offers_card_title %> </p>
-                                <span class="info-line"></span>
-                            </div>
-                            <div class="offer-index">/ 2</div>
-                            <div class="offer-description">
-                                <h1> <%- docText.index_page.offers_business %> </h1>
-                                <p> <%- docText.index_page.offers_business_desc %> </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div data-reveal-type="fadeUp" class="slider-item revealable">
-                        <div class="slide-image-container"></div>
-                        <div class="slide-content-container">
-                            <div class="category-info">
-                                <p> <%- docText.index_page.offers_card_title %> </p>
-                                <span class="info-line"></span>
-                            </div>
-                            <div class="offer-index">/ 3</div>
-                            <div class="offer-description">
-                                <h1> <%- docText.index_page.offers_maintenance %> </h1>
-                                <p> <%- docText.index_page.offers_maintenance_desc %> </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div data-reveal-type="fadeUp" class="test-item slider-item revealable">
-                        <div class="slide-image-container"></div>
-                        <div class="slide-content-container">
-                            <div class="category-info">
-                                <p> <%- docText.index_page.offers_card_title %> </p>
-                                <span class="info-line"></span>
-                            </div>
-                            <div class="offer-index">/ 4</div>
-                            <div class="offer-description">
-                                <h1 style="color: black;"> <%- docText.index_page.offers_ecommerce %> </h1>
-                                <p> <%- docText.index_page.offers_ecommerce_desc %> </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div data-reveal-type="fadeUp" class="test-item slider-item revealable">
-                        <div class="slide-image-container"></div>
-                        <div class="slide-content-container">
-                            <div class="category-info">
-                                <p> <%- docText.index_page.offers_card_title %> </p>
-                                <span class="info-line"></span>
-                            </div>
-                            <div class="offer-index">/ 5</div>
-                            <div class="offer-description">
-                                <h1> <%- docText.index_page.offers_other %> </h1>
-                                <p> <%- docText.index_page.offers_other_desc %> </p>
-                            </div>
-                        </div>
+                    <div data-reveal-type="fade" class="offers revealable">
+                        <h3 data-reveal-type="fade" class="offer-item revealable">Entwicklung und Pflege von Websites</h3>
+                        <h3 data-reveal-type="fade" class="offer-item revealable">Entwicklung von Datenbankanwendungen</h3>
+                        <h3 data-reveal-type="fade" class="offer-item revealable">Unterstützung in Entwicklungsteams</h3>
+                        <h3 data-reveal-type="fade" class="offer-item revealable">Entwicklung und Integration von Services wie RESTful APIs</h3>
+                        <h3 data-reveal-type="fade" class="offer-item revealable">E-Commerce</h3>
                     </div>
                 </div>
 
-                <button aria-label="Previous" class="glider-prev">«</button>
-                <button aria-label="Next" class="glider-next">»</button>
-                <div id="dots" role="tablist" class="dots"></div>
+                <span class="decorator-line-thin"></span>
+                <span class="decorator-line-thick"></span>
             </div>
+
+            <div data-reveal-type="scaleXFromLeft" class="decorator-line revealable" style="margin-top: 150px;"></div>
+            <h1 data-reveal-type="fade" class="props-heading revealable"> Services </h1>
 
             <div class="props-wrapper">
                 <div data-reveal-type="fade" class="props-image-container revealable"></div>
                 <div class="props-content-container">
-                    <div class="services-headline-container">
+                    <div data-reveal-type="textRevealFromOverflow" class="revealable services-headline-container">
                         <hr>
                         <h1 class="services-headline typewriter"><%- docText.index_page.services_headline %></h1>
                         <hr>
