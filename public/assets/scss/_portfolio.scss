@@ -1,12 +1,8 @@
 @import 'utility/_variables.scss';
 
-.under-construction {
-    min-height: 100vh;
-    background-color: $black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.portfolio-intro {
+    padding: 170px 20px 170px 20px;
+    background: $black;
 
-    h1 { color: white; font-size: 1em; }
-    svg { margin-right: 20px; }
+    h1 { font-size: 2em; color: $dark-white; }
 }
