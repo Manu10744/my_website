@@ -35,27 +35,21 @@
         <div class="page-wrapper">
             <div class="welcome-wrapper">
                 <div data-reveal-type="fade" class="welcome-section revealable">
-                    <div class="heading-big">
-                        <h1 class="no-letter-spacing"> <%- docText.index_page.welcome_heading_big %> </h1>
+                    <div class="heading">
+                        <h1 class="no-letter-spacing"> <%- docText.index_page.welcome_heading %> </h1>
                     </div>
-                    <div class="heading-small">
-                        <h2 class="no-letter-spacing"> <%- docText.index_page.welcome_heading_big_upper %> </h2>
-                        <h3 class="no-letter-spacing"> <%- docText.index_page.welcome_heading_big_lower %> </h3>
+
+                    <div class="subheading">
+                        <h1 class="typewriter">
+                            <%- docText.index_page.welcome_heading_subtitle %> </h1>
                     </div>
-                </div>
-                <div data-reveal-type="fade" class="seperator revealable">
-                    <div class="line-1"></div>
-                    <div class="line-2"></div>
-                </div>
-                <div class="seperator-title">
-                    <h1 data-reveal-type="fade" class="typewriter revealable">
-                        <%- docText.index_page.welcome_heading_subtitle %> </h1>
-                </div>
-                <div data-reveal-type="fade" class="contact-section revealable">
-                    <p> <%- docText.index_page.welcome_text_left %>
-                        <span class="colored"> <%- docText.index_page.welcome_text_highlighted %> </span>
-                        <%- docText.index_page.welcome_text_right %>
-                    </p>
+
+                    <div class="contact-section">
+                        <p> <%- docText.index_page.welcome_text_left %>
+                            <span class="colored"> <%- docText.index_page.welcome_text_highlighted %> </span>
+                            <%- docText.index_page.welcome_text_right %>
+                        </p>
+                    </div>
                 </div>
 
                 <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%;">
@@ -78,13 +72,13 @@
                 <div class="container">
                     <div class="intro-content-container">
                         <div class="intro-content">
-                            <div data-reveal-type="revealTextFromOverflow" class="prev-heading-wrapper revealable">
+                            <div data-reveal-type="textRevealFromOverflow" class="prev-heading-wrapper revealable">
                                 <h3>HOME</h3>
                                 <span class="heading-line"></span>
                             </div>
                             <div class="intro-heading">
-                                <h1 data-reveal-type="revealTextFromOverflow" class="revealable">Web Development.</h1>
-                                <h1 data-reveal-type="revealTextFromOverflow" class="revealable"><strong>Individuell.</strong><h1>
+                                <h1 data-reveal-type="textRevealFromOverflow" class="revealable">Web Development.</h1>
+                                <h1 data-reveal-type="textRevealFromOverflow" class="revealable"><strong>Individuell.</strong><h1>
                             </div>
 
                             <div data-reveal-type="fade" class="intro-text revealable">
@@ -124,12 +118,6 @@
             <div class="props-wrapper">
                 <div data-reveal-type="fade" class="props-image-container revealable"></div>
                 <div class="props-content-container">
-                    <div data-reveal-type="textRevealFromOverflow" class="revealable services-headline-container">
-                        <hr>
-                        <h1 class="services-headline typewriter"><%- docText.index_page.services_headline %></h1>
-                        <hr>
-                    </div>
-
                     <div class="props">
                         <div data-reveal-type="fade" class="prop-item revealable">
                             <div class="icon-container">

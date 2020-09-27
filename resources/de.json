@@ -21,9 +21,7 @@
         "contact_form_submit_button": "Senden"
     },
     "index_page": {
-        "welcome_heading_big": "Hi,",
-        "welcome_heading_big_upper": "Ich bin",
-        "welcome_heading_big_lower": "Manu!",
+        "welcome_heading": "Manuel Neumayer",
         "welcome_heading_subtitle": "Computer Science Student",
         "welcome_text_left": "Ich heiße",
         "welcome_text_highlighted": "Manuel Neumayer",
@@ -42,7 +40,6 @@
         "offers_ecommerce_desc": "Das Internet ist bekanntlich der beste Ort, um für eigene Produkte zu werben und diese zu verkaufen. Mithilfe eines Online-Shops können Sie dieses Ziel effizient erreichen.",
         "offers_other": "Freelancing",
         "offers_other_desc": "Nicht das dabei, wonach sie gesucht haben? Kein Problem! Ich würde mich trotzdem freuen, von Ihnen zu hören - stets auf unverbindlicher Ebene.",
-        "services_headline": "Qualität & Service.",
         "services_item_one_headline": "Neueste Technologien",
         "services_item_one_text": "Jegliche von mir erstellten Produkte sind standardmäßig mit modernen Technologien entwickelt, wobei auf wartbaren Code großen Wert gelegt wird.",
         "services_item_two_headline": "Flexibel kommunikativ",

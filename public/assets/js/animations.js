@@ -43,9 +43,6 @@ export const observer = new IntersectionObserver((entries) => {
 			case "timeline": 
 				timelineAnimation(element, animationDelay);
 				break;
-			case "revealTextFromOverflow": 
-				revealUpFromOverflow(element, animationDelay);
-				break;
 			case "scaleXFromLeft":
 				scaleXFromLeft(element, animationDelay);
 				break;
@@ -54,6 +51,7 @@ export const observer = new IntersectionObserver((entries) => {
 				break;
 			case "textRevealFromOverflow":
 				revealUpFromOverflow(element, animationDelay);
+				break;
 		}
 
 		observer.unobserve(element);

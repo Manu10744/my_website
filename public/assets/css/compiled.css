@@ -225,47 +225,36 @@
   height: 100%;
   background: url("/assets/img/welcome-bg-min.jpg");
   background-size: cover;
+  background-position: bottom;
   background-repeat: no-repeat;
   position: relative;
-  padding-top: calc(70px + 10vh);
-  padding-bottom: 30vh;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-top: 140px;
+  padding-bottom: 20vh;
+  padding-left: 10%;
+  padding-right: 10%;
   max-height: 1000px;
 }
 
 .welcome-section {
-  display: flex;
   position: relative;
-  max-width: 350px;
 }
-.welcome-section .heading-big h1 {
-  font-size: 6em;
-  color: #01CCD9;
-  text-shadow: 0px 4px 4px #0C0000;
-  display: inline-block;
+.welcome-section .heading h1 {
+  color: #F7F7F7;
+  font-size: 3em;
+  margin-bottom: 5px;
+  letter-spacing: -0.05em;
 }
-.welcome-section .heading-small h2 {
-  font-size: 2.25em;
-  text-shadow: 0px 4px 4px #0C0000;
-  padding-top: 20px;
-  line-height: 0.8em;
-  font-weight: 400;
-}
-.welcome-section .heading-small h3 {
-  font-size: 3.25em;
-  text-shadow: 0px 4px 4px #0C0000;
-  line-height: 0.8em;
-}
-
-.contact-section {
-  max-width: 400px;
-  margin: 50px 0 0 30px;
-}
-.contact-section p {
+.welcome-section .subheading h1 {
+  color: #999;
   font-size: 1.5em;
-  font-weight: 400;
-  margin-bottom: 20px;
+  font-weight: normal;
+}
+.welcome-section .contact-section {
+  max-width: 300px;
+  margin: 30px 0;
+}
+.welcome-section .contact-section p {
+  font-size: 1.25em;
 }
 
 .intro-section {
@@ -291,9 +280,6 @@
   flex-direction: column;
   justify-content: center;
   padding: 20px;
-}
-.intro-section .intro-content-container .intro-content .prev-heading-wrapper {
-  margin-bottom: 10px;
 }
 .intro-section .intro-content-container .intro-content .intro-heading h1 {
   color: #333;
@@ -362,7 +348,6 @@
   color: #999;
   font-weight: 400;
   position: relative;
-  display: inline-block;
   margin: 3px 22px;
 }
 .offers-wrapper .offers .offer-item::after {
@@ -433,6 +418,7 @@
   width: 100%;
   min-height: 300px;
   background: #F7F7F7;
+  padding: 80px 30px 60px 30px;
 }
 .props-wrapper .props-content-container .services-headline-container {
   display: flex;
@@ -456,10 +442,11 @@
   background-color: #999;
 }
 .props-wrapper .props-content-container .props {
-  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 .props-wrapper .props-content-container .props .prop-item {
   display: flex;
@@ -467,7 +454,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 20px 0;
+  margin: 30px 0;
   max-width: 500px;
 }
 .props-wrapper .props-content-container .props .prop-item .icon-container {
@@ -518,7 +505,7 @@
 .props-wrapper .props-content-container .props .prop-item .seperator {
   width: 50%;
   height: 1px;
-  margin: 30px auto;
+  margin: 30px auto 0 auto;
   background: #EAEAEA;
 }
 .props-wrapper .props-points-decorator {
@@ -544,17 +531,6 @@
   }
 }
 @media (min-width: 480px) {
-  .welcome-section .heading-big h1 {
-    font-size: 8em;
-  }
-  .welcome-section .heading-small h2 {
-    font-size: 3em;
-    padding-top: 22px;
-  }
-  .welcome-section .heading-small h3 {
-    font-size: 5em;
-  }
-
   .intro-section .intro-content-container .intro-content .intro-heading h1 {
     font-size: 3em;
   }
@@ -576,17 +552,6 @@
     background-attachment: fixed;
     padding-left: 10%;
     padding-right: 10%;
-  }
-
-  .welcome-section .heading-big h1 {
-    font-size: 10em;
-  }
-  .welcome-section .heading-small h2 {
-    font-size: 3.25em;
-    padding-top: 30px;
-  }
-  .welcome-section .heading-small h3 {
-    font-size: 6.5em;
   }
 
   .intro-section .intro-content-container .intro-content .intro-heading h1 {
@@ -640,15 +605,11 @@
   }
 }
 @media (min-width: 1080px) {
-  .welcome-section .heading-big h1 {
-    font-size: 12em;
+  .welcome-section .heading h1 {
+    font-size: 4em;
   }
-  .welcome-section .heading-small h2 {
-    font-size: 3.5em;
-    padding-top: 37px;
-  }
-  .welcome-section .heading-small h3 {
-    font-size: 7.5em;
+  .welcome-section .subheading h1 {
+    font-size: 1.75em;
   }
 
   .intro-section .intro-content-container .intro-content .intro-heading h1 {
@@ -686,21 +647,18 @@
     height: 800px;
     top: -400px;
   }
-  .props-wrapper .props-content-container .props {
-    padding: 0 30px;
-  }
   .props-wrapper .props-content-container .props .prop-item {
     flex-basis: 33.3%;
   }
   .props-wrapper .props-content-container::before {
     height: 125px;
     background: #494949;
-    top: -116px;
+    top: -166px;
     right: calc(20% - 2px);
   }
   .props-wrapper .props-content-container::after {
     height: 250px;
-    top: -180px;
+    top: -230px;
     right: 20%;
   }
   .props-wrapper .props-points-decorator {
@@ -708,6 +666,16 @@
   }
 }
 @media (min-width: 1200px) {
+  .welcome-section .heading h1 {
+    font-size: 4.75em;
+  }
+  .welcome-section .subheading h1 {
+    font-size: 2em;
+  }
+  .welcome-section p {
+    font-size: 1.5em;
+  }
+
   .props-wrapper .props .prop {
     flex: calc(33.3% - 50px);
   }
@@ -720,15 +688,11 @@
   }
 }
 @media (min-width: 1540px) {
-  .welcome-section .heading-big h1 {
-    font-size: 13em;
+  .welcome-section .heading h1 {
+    font-size: 6em;
   }
-  .welcome-section .heading-small h2 {
-    font-size: 4.5em;
-    padding-top: 42px;
-  }
-  .welcome-section .heading-small h3 {
-    font-size: 8em;
+  .welcome-section .subheading h1 {
+    font-size: 2em;
   }
 
   .offers-wrapper .offers-intro {
@@ -812,7 +776,7 @@
   padding-left: 40px;
 }
 .timeline-wrapper .timeline .timeline-item .timeline-item-content {
-  padding: 25px 20px 20px 20px;
+  padding: 30px 20px 20px 20px;
   background: #F0F0F0;
   border: 1px solid #e5e5e5;
   position: relative;
@@ -835,11 +799,10 @@
   color: #494949;
 }
 .timeline-wrapper .timeline .timeline-item .timeline-item-content .timestamp {
-  font-weight: bold;
   display: inline-block;
   color: #999;
   margin-bottom: 5px;
-  padding: 2px 5px;
+  padding: 3px 10px;
   background: #494949;
   border-radius: 5px;
   color: #F7F7F7;
@@ -865,7 +828,7 @@
   border-radius: 50%;
   border: 2px solid #494949;
   transform: translateY(-50%);
-  background: #F7F7F7;
+  background: #ccc;
 }
 .timeline-wrapper .timeline .timeline-item .timeline-item-content::after {
   content: "";
@@ -1137,15 +1100,6 @@
     left: 0;
     padding: 0 40px 0 0;
   }
-  .timeline-wrapper .timeline .left .timestamp {
-    position: absolute;
-    top: 50%;
-    left: calc(100% + 60px);
-    transform: translateY(-50%);
-    background: none;
-    color: #999;
-    font-weight: 400;
-  }
   .timeline-wrapper .timeline .right {
     left: 50%;
   }
@@ -1162,32 +1116,6 @@
   }
   .timeline-wrapper .timeline::before {
     left: 50%;
-  }
-
-  /* Adjusting timestamps */
-  .timeline-wrapper .timeline .left .timeline-item-content .timestamp {
-    position: absolute;
-    top: 50%;
-    left: calc(100% + 60px);
-    transform: translateY(-50%);
-    background: none;
-    color: #999;
-    font-weight: 400;
-    width: 100%;
-    font-size: 1em;
-  }
-
-  .timeline-wrapper .timeline .right .timeline-item-content .timestamp {
-    position: absolute;
-    top: 50%;
-    right: auto;
-    left: -155px;
-    transform: translateY(-50%);
-    background: none;
-    color: #999;
-    font-weight: 400;
-    width: 50%;
-    font-size: 1em;
   }
 
   .tech-wrapper .tech-stack .tech-stack-intro h1 {
@@ -1476,7 +1404,7 @@ header .navigation ul .active-nav-item a {
 header .navigation ul li {
   height: 100%;
   padding: 10px 20px;
-  margin: 20px 0;
+  margin: 10px 0;
   font-size: 1.375em;
   transition: transform 0.4s ease;
   list-style: square;
@@ -1506,24 +1434,6 @@ header .navigation .navigation-personal-info-wrapper {
   align-items: center;
   width: 100%;
   margin-top: 50px;
-}
-header .navigation .navigation-personal-info-wrapper .seperator-line {
-  width: 75%;
-  position: relative;
-  border-color: #999;
-  margin-bottom: 20px;
-  overflow: visible;
-  border-radius: 1px;
-}
-header .navigation .navigation-personal-info-wrapper .personal-info {
-  text-align: center;
-  flex-basis: 60%;
-  margin: 0 10px;
-}
-header .navigation .navigation-personal-info-wrapper .personal-info p {
-  font-family: Arial, sans-serif;
-  margin-bottom: 5px;
-  color: #999;
 }
 header .navigation .navigation-personal-info-wrapper .navigation-socials {
   display: flex;
@@ -1555,42 +1465,6 @@ header .logo h3 {
 header .logo p {
   font-size: 0.5em;
   text-align: center;
-}
-
-.seperator div {
-  margin: 10px 0;
-  background: #FAFF00;
-}
-.seperator .line-1 {
-  height: 1px;
-  max-width: 45px;
-  width: 40%;
-}
-.seperator .line-2 {
-  height: 1px;
-  max-width: 80px;
-  width: 80%;
-}
-
-.seperator-big div {
-  margin: 10px 0;
-  background: #01CCD9;
-}
-.seperator-big .line-1 {
-  height: 1px;
-  width: 80px;
-}
-.seperator-big .line-2 {
-  height: 1px;
-  width: 140px;
-}
-
-.seperator-title {
-  max-width: 200px;
-  margin-left: 15px;
-}
-.seperator-title h1 {
-  font-size: 1.5em;
 }
 
 .language-selection {

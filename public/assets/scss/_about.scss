@@ -59,7 +59,7 @@
             padding-left: 40px;
 
             .timeline-item-content {
-                padding: 25px 20px 20px 20px; 
+                padding: 30px 20px 20px 20px; 
                 background: #F0F0F0;
                 border: 1px solid #e5e5e5;
                 position: relative;
@@ -82,11 +82,10 @@
                 }
     
                 .timestamp {
-                    font-weight: bold;
                     display: inline-block;
                     color: $light-gray;
                     margin-bottom: 5px;
-                    padding: 2px 5px;
+                    padding: 3px 10px;
                     background: $dark-gray;
                     border-radius: 5px;
                     color: $dark-white;
@@ -117,7 +116,7 @@
             border-radius: 50%;
             border: 2px solid $dark-gray;
             transform: translateY(-50%);
-            background: $dark-white;
+            background: #ccc;
         }
 
         // Arrow indicator pointing to circle
@@ -381,16 +380,6 @@
             .left {
                 left: 0;
                 padding: 0 40px 0 0;
-
-                .timestamp {
-                    position: absolute;
-                    top: 50%;
-                    left: calc(100% + 60px);
-                    transform: translateY(-50%);
-                    background: none;
-                    color: $light-gray;
-                    font-weight: 400;
-                }
             }
 
             .right {
@@ -416,32 +405,6 @@
         .timeline::before {
             left: 50%;
         }
-    }
-
-    /* Adjusting timestamps */
-    .timeline-wrapper .timeline .left .timeline-item-content .timestamp {
-        position: absolute;
-        top: 50%;
-        left: calc(100% + 60px);
-        transform: translateY(-50%);
-        background: none;
-        color: $light-gray;
-        font-weight: 400;
-        width: 100%;
-        font-size: 1em;
-    }
-    
-    .timeline-wrapper .timeline .right .timeline-item-content .timestamp {
-        position: absolute;
-        top: 50%;
-        right: auto;
-        left: -155px;
-        transform: translateY(-50%);
-        background: none;
-        color: $light-gray;
-        font-weight: 400;
-        width: 50%;
-        font-size: 1em;
     }
 
     .tech-wrapper .tech-stack .tech-stack-intro h1 { font-size: 1.5em; }

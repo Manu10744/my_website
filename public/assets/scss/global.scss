@@ -199,10 +199,9 @@ header {
             li {
                 height: 100%;
                 padding: 10px 20px;
-                margin: 20px 0;
+                margin: 10px 0;
                 font-size: 1.375em;
                 transition: transform 0.4s ease;
-                //font-weight: bold;
                 list-style: square;
 
                 a { transition: 0.4s color ease; position: relative; color: $dark-white; }
@@ -228,28 +227,6 @@ header {
             align-items: center;
             width: 100%;
             margin-top: 50px;
-
-            .seperator-line {
-                width: 75%;
-                position: relative;
-                border-color: $light-gray;
-                margin-bottom: 20px;
-                overflow: visible;
-                border-radius: 1px;
-            }
-
-
-            .personal-info {
-                text-align: center;
-                flex-basis: 60%;
-                margin: 0 10px;
-
-                p { 
-                    font-family: Arial, sans-serif; 
-                    margin-bottom: 5px; 
-                    color: $light-gray;
-                }
-            }
             
             .navigation-socials {
                 display: flex;
@@ -280,41 +257,6 @@ header {
     
         h3 {  text-align: center; font-size: 0.75em; letter-spacing: -0.05em; font-weight: 400; }
         p { font-size: 0.5em; text-align: center; }
-    }
-}
-
-.seperator {
-    div { margin: 10px 0; background: $sunny-yellow; }
-    .line-1 {
-        height: 1px;
-        max-width: 45px;
-        width: 40%;
-    }
-
-    .line-2 {
-        height: 1px;
-        max-width: 80px;
-        width: 80%;
-    }
-}
-
-.seperator-big {
-    div { margin: 10px 0; background: $sky-blue; }
-    .line-1 {
-        height: 1px;
-        width: 80px;
-    }
-    .line-2 {
-        height: 1px; width: 140px;
-    }
-}
-
-.seperator-title {
-    max-width: 200px;
-    margin-left: 15px;
-
-    h1 {
-        font-size: 1.5em;
     }
 }
 
